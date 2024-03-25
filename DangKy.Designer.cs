@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(242, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 28);
-            this.comboBox1.TabIndex = 0;
             // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
             this.Name = "DangKy";
             this.Text = "DangKy";
             this.ResumeLayout(false);
@@ -52,7 +42,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
