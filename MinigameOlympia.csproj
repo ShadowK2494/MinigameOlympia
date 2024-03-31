@@ -117,6 +117,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PhongCho.resx">
+      <DependentUpon>PhongCho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,6 +145,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\Room.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\ButtonHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\Add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\ButtonHome.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
