@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhongCho));
             this.panelHeader = new System.Windows.Forms.Panel();
             this.ptbHome = new System.Windows.Forms.PictureBox();
             this.lblRoom = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.ptbPlayer4 = new System.Windows.Forms.PictureBox();
             this.ptbPlayer1 = new System.Windows.Forms.PictureBox();
             this.grbFriends = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblRoomCode = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -54,6 +57,8 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.Transparent;
+            this.panelHeader.Controls.Add(this.lblRoomCode);
+            this.panelHeader.Controls.Add(this.label1);
             this.panelHeader.Controls.Add(this.ptbHome);
             this.panelHeader.Controls.Add(this.lblRoom);
             this.panelHeader.Location = new System.Drawing.Point(25, 28);
@@ -63,9 +68,9 @@
             // 
             // ptbHome
             // 
-            this.ptbHome.BackgroundImage = global::MinigameOlympia.Properties.Resources.ButtonHome3;
+            this.ptbHome.BackgroundImage = global::MinigameOlympia.Properties.Resources.ButtonHome;
+            this.ptbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbHome.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ptbHome.Image = global::MinigameOlympia.Properties.Resources.ButtonHome4;
             this.ptbHome.Location = new System.Drawing.Point(0, 0);
             this.ptbHome.Name = "ptbHome";
             this.ptbHome.Size = new System.Drawing.Size(43, 43);
@@ -79,7 +84,7 @@
             this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRoom.Location = new System.Drawing.Point(0, 0);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(595, 43);
+            this.lblRoom.Size = new System.Drawing.Size(408, 43);
             this.lblRoom.TabIndex = 1;
             this.lblRoom.Text = "Phòng chờ";
             this.lblRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,9 +163,9 @@
             // 
             // ptbPlayer2
             // 
-            this.ptbPlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ptbPlayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer2.BackgroundImage")));
+            this.ptbPlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbPlayer2.Image = global::MinigameOlympia.Properties.Resources.plus2;
             this.ptbPlayer2.Location = new System.Drawing.Point(187, 69);
             this.ptbPlayer2.Name = "ptbPlayer2";
             this.ptbPlayer2.Size = new System.Drawing.Size(81, 81);
@@ -170,8 +175,9 @@
             // 
             // ptbPlayer3
             // 
+            this.ptbPlayer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer3.BackgroundImage")));
+            this.ptbPlayer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbPlayer3.Image = global::MinigameOlympia.Properties.Resources.plus2;
             this.ptbPlayer3.Location = new System.Drawing.Point(327, 68);
             this.ptbPlayer3.Name = "ptbPlayer3";
             this.ptbPlayer3.Size = new System.Drawing.Size(81, 81);
@@ -181,8 +187,9 @@
             // 
             // ptbPlayer4
             // 
+            this.ptbPlayer4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer4.BackgroundImage")));
+            this.ptbPlayer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbPlayer4.Image = global::MinigameOlympia.Properties.Resources.plus2;
             this.ptbPlayer4.Location = new System.Drawing.Point(465, 68);
             this.ptbPlayer4.Name = "ptbPlayer4";
             this.ptbPlayer4.Size = new System.Drawing.Size(81, 81);
@@ -211,6 +218,29 @@
             this.grbFriends.TabIndex = 2;
             this.grbFriends.TabStop = false;
             this.grbFriends.Text = "Bạn bè";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(397, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 43);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mã phòng:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblRoomCode
+            // 
+            this.lblRoomCode.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblRoomCode.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblRoomCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRoomCode.Location = new System.Drawing.Point(504, 0);
+            this.lblRoomCode.Name = "lblRoomCode";
+            this.lblRoomCode.Size = new System.Drawing.Size(91, 43);
+            this.lblRoomCode.TabIndex = 4;
+            this.lblRoomCode.Text = "Code";
+            this.lblRoomCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PhongCho
             // 
@@ -251,5 +281,7 @@
         private System.Windows.Forms.PictureBox ptbPlayer2;
         private System.Windows.Forms.PictureBox ptbHome;
         private System.Windows.Forms.Button BtnStart;
+        public System.Windows.Forms.Label lblRoomCode;
+        public System.Windows.Forms.Label label1;
     }
 }

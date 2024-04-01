@@ -76,6 +76,11 @@
     <Compile Include="PhongCho.Designer.cs">
       <DependentUpon>PhongCho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QuenMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,15 +129,10 @@
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,16 +153,10 @@
     <None Include="picture\ButtonHome.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="picture\plus.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="picture\Add.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="picture\plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="picture\ButtonHome.jpg" />
+    <None Include="Resources\ButtonHome.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
