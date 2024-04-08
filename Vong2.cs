@@ -16,5 +16,10 @@ namespace MinigameOlympia
         {
             InitializeComponent();
         }
+
+        private void Vong2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

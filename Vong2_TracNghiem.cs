@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MinigameOlympia
 {
-    public partial class Form1 : Form
+    public partial class Vong2_TracNghiem : Form
     {
-        public Form1()
+        public Vong2_TracNghiem()
         {
             InitializeComponent();
         }

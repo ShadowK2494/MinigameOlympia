@@ -52,6 +52,18 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vong2_HinhAnh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vong2_HinhAnh.Designer.cs">
+      <DependentUpon>Vong2_HinhAnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vong2_TracNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vong2_TracNghiem.Designer.cs">
+      <DependentUpon>Vong2_TracNghiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KetQua.resx">
+      <DependentUpon>KetQua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhongCho.resx">
       <DependentUpon>PhongCho.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,18 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vong1.resx">
+      <DependentUpon>Vong1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vong2.resx">
+      <DependentUpon>Vong2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vong2_HinhAnh.resx">
+      <DependentUpon>Vong2_HinhAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vong2_TracNghiem.resx">
+      <DependentUpon>Vong2_TracNghiem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,6 +184,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ButtonHome.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\KetQua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\wreath.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
