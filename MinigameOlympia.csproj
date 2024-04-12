@@ -81,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Content>
+    <Compile Include="Properties\Resources.cs" />
     <Compile Include="QuenMK.cs">
       <SubType>Form</SubType>
     </Compile>

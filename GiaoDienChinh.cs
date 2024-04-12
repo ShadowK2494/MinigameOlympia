@@ -25,8 +25,8 @@ namespace MinigameOlympia
 
         private void button3_Click(object sender, EventArgs e)
         {
-        //    DSBanBe dSBanBe = new DSBanBe();
-        //    dSBanBe.ShowDialog();
+            DSBanBe dSBanBe = new DSBanBe();
+            dSBanBe.ShowDialog();
         }
 
      }
