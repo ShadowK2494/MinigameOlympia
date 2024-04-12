@@ -39,20 +39,20 @@
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.groupBox1.Location = new System.Drawing.Point(96, 52);
+            this.groupBox1.Location = new System.Drawing.Point(103, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(732, 459);
+            this.groupBox1.Size = new System.Drawing.Size(645, 431);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng Xếp Hạng Bạn Bè";
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listView1.BackColor = System.Drawing.SystemColors.Menu;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(67, 98);
+            this.listView1.Location = new System.Drawing.Point(53, 78);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(589, 325);
+            this.listView1.Size = new System.Drawing.Size(546, 311);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -62,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(956, 547);
+            this.ClientSize = new System.Drawing.Size(881, 553);
             this.Controls.Add(this.groupBox1);
             this.Name = "DSBanBe";
             this.Text = "DSBanBe";
