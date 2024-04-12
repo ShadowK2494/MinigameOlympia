@@ -76,11 +76,11 @@
     <Compile Include="PhongCho.Designer.cs">
       <DependentUpon>PhongCho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Content Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    </Content>
     <Compile Include="QuenMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +122,12 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienChinh.resx">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSoNV.resx">
+      <DependentUpon>HoSoNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhongCho.resx">
       <DependentUpon>PhongCho.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ButtonHome.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhdaidien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="picture\anhdaidien.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

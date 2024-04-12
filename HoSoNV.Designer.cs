@@ -41,7 +41,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::MinigameOlympia.Properties.Resources.tải_xuống__2_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(137, 46);
             this.pictureBox1.Name = "pictureBox1";
