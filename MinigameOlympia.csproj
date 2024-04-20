@@ -155,8 +155,5 @@
   <ItemGroup>
     <None Include="picture\plus.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ButtonHome.bmp" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
