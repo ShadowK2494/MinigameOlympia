@@ -170,12 +170,6 @@
     <EmbeddedResource Include="Vong2.resx">
       <DependentUpon>Vong2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vong2_HinhAnh.resx">
-      <DependentUpon>Vong2_HinhAnh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vong2_TracNghiem.resx">
-      <DependentUpon>Vong2_TracNghiem.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
