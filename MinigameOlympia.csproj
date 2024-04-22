@@ -132,11 +132,21 @@
     <Compile Include="Vong2.Designer.cs">
       <DependentUpon>Vong2.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSBanBe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSBanBe.Designer.cs">
+      <DependentUpon>DSBanBe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DSBanBe.resx">
+      <DependentUpon>DSBanBe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KetQua.resx">
       <DependentUpon>KetQua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienChinh.resx">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
     </EmbeddedResource>
