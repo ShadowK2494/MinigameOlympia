@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace MinigameOlympia
 {
-    public partial class HoSoNV : Form
+    public partial class DSBanBe : Form
     {
-        public HoSoNV()
+        public DSBanBe()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -70,6 +70,13 @@ namespace MinigameOlympia.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap anhdaidien {
+            get {
+                object obj = ResourceManager.GetObject("anhdaidien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -83,9 +90,17 @@ namespace MinigameOlympia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        
         public static System.Drawing.Bitmap KetQua {
             get {
                 object obj = ResourceManager.GetObject("KetQua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +131,12 @@ namespace MinigameOlympia.Properties {
         public static System.Drawing.Bitmap wreath {
             get {
                 object obj = ResourceManager.GetObject("wreath", resourceCulture);
+               return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        public static System.Drawing.Bitmap tải_xuống {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

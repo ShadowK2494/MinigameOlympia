@@ -16,7 +16,7 @@ namespace MinigameOlympia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PhongCho());
+            Application.Run(new RootForm());
         }
     }
 }
