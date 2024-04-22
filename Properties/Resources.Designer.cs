@@ -63,16 +63,19 @@ namespace MinigameOlympia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap background {
+        public static System.Drawing.Bitmap anhdaidien {
             get {
-                object obj = ResourceManager.GetObject("background", resourceCulture);
+                object obj = ResourceManager.GetObject("anhdaidien", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        public static System.Drawing.Bitmap anhdaidien {
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap background {
             get {
-                object obj = ResourceManager.GetObject("anhdaidien", resourceCulture);
+                object obj = ResourceManager.GetObject("background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -90,17 +93,19 @@ namespace MinigameOlympia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        
-        public static System.Drawing.Bitmap KetQua {
+        public static System.Drawing.Bitmap images {
             get {
-                object obj = ResourceManager.GetObject("KetQua", resourceCulture);
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        public static System.Drawing.Bitmap images {
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KetQua {
             get {
-                object obj = ResourceManager.GetObject("images", resourceCulture);
+                object obj = ResourceManager.GetObject("KetQua", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -128,15 +133,19 @@ namespace MinigameOlympia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap wreath {
-            get {
-                object obj = ResourceManager.GetObject("wreath", resourceCulture);
-               return ((System.Drawing.Bitmap)(obj));
-            }
-        }
         public static System.Drawing.Bitmap tải_xuống {
             get {
                 object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wreath {
+            get {
+                object obj = ResourceManager.GetObject("wreath", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
