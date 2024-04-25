@@ -56,8 +56,6 @@
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs" />
-     <SubType>Form</SubType>
-    </Compile>
     <Compile Include="GiaoDienChinh.cs">
      <SubType>Form</SubType>
     </Compile>
