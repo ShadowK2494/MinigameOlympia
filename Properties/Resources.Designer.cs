@@ -63,6 +63,12 @@ namespace MinigameOlympia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Background {
+            get {
+                object obj = ResourceManager.GetObject("Background", resourceCulture);
+                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         public static System.Drawing.Bitmap anhdaidien {
             get {
                 object obj = ResourceManager.GetObject("anhdaidien", resourceCulture);

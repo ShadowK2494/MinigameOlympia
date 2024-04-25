@@ -30,44 +30,38 @@
         {
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.btnQuenMK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(324, 110);
+            this.btnDangNhap.Location = new System.Drawing.Point(216, 72);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(141, 53);
+            this.btnDangNhap.Size = new System.Drawing.Size(94, 34);
             this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Text = "Dang Nhap";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(330, 199);
+            this.btnDangKy.Location = new System.Drawing.Point(220, 129);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(141, 53);
+            this.btnDangKy.Size = new System.Drawing.Size(94, 34);
             this.btnDangKy.TabIndex = 1;
             this.btnDangKy.Text = "Dang Ky";
             this.btnDangKy.UseVisualStyleBackColor = true;
-            // 
-            // btnQuenMK
-            // 
-            this.btnQuenMK.Location = new System.Drawing.Point(330, 284);
-            this.btnQuenMK.Name = "btnQuenMK";
-            this.btnQuenMK.Size = new System.Drawing.Size(141, 53);
-            this.btnQuenMK.TabIndex = 2;
-            this.btnQuenMK.Text = "QuenMK";
-            this.btnQuenMK.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // RootForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnQuenMK);
+            this.ClientSize = new System.Drawing.Size(533, 224);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RootForm";
             this.Text = "RootForm";
             this.ResumeLayout(false);
@@ -78,7 +72,6 @@
 
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnDangKy;
-        private System.Windows.Forms.Button btnQuenMK;
     }
 }
 

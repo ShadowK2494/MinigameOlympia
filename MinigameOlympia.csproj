@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,8 +55,11 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-       <Compile Include="GiaoDienChinh.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Gender.cs" />
+    <SubType>Gender.cs</SubType>
+    </Compile>
+    <Compile Include="GiaoDienChinh.cs">
+     <SubType>Form</SubType>
     </Compile>
     <Compile Include="GiaoDienChinh.Designer.cs">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
@@ -76,6 +82,11 @@
     <Compile Include="PhongCho.Designer.cs">
       <DependentUpon>PhongCho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
+   <SubType>Player.cs</SubType>
+    </Compile>
+    <Compile Include="PlayerSignUp.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
     <Content Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +119,12 @@
     <Compile Include="Server.Designer.cs">
       <DependentUpon>Server.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaoLaiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoLaiMatKhau.Designer.cs">
+      <DependentUpon>TaoLaiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vong1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +137,9 @@
     <Compile Include="Vong2.Designer.cs">
       <DependentUpon>Vong2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="DSBanBe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +164,9 @@
     <EmbeddedResource Include="PhongCho.resx">
       <DependentUpon>PhongCho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuenMK.resx">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +175,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="TaoLaiMatKhau.resx">
+      <DependentUpon>TaoLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <EmbeddedResource Include="Vong1.resx">
       <DependentUpon>Vong1.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,7 +208,8 @@
     <None Include="picture\plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ButtonHome.bmp" />
+    <Content Include="picture\Background.jpg" />
+    <Content Include="picture\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="picture\background.png" />

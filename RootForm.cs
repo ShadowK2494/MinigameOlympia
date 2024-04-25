@@ -16,5 +16,17 @@ namespace MinigameOlympia
         {
             InitializeComponent();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e) {
+            //Visible = false;
+            //DangNhap dangNhap = new DangNhap();
+            //dangNhap.Show();
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e) {
+            //Visible = false;
+            //DangKy dangKy = new DangKy();
+            //dangKy.Show();
+        }
     }
 }
