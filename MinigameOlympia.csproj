@@ -55,9 +55,7 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gender.cs">
-     <SubType>Gender.cs</SubType>
-    </Compile>
+    <Compile Include="Gender.cs" />
     <Compile Include="GiaoDienChinh.cs">
      <SubType>Form</SubType>
     </Compile>
@@ -83,11 +81,7 @@
       <DependentUpon>PhongCho.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
-   <SubType>Player.cs</SubType>
-    </Compile>
     <Compile Include="PlayerSignUp.cs" />
-    <SubType>PlayerSignUp.cs</SubType>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs" />
     <Content Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
