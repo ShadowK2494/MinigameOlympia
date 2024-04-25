@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MinigameOlympia
 {
-    public partial class Vong1 : Form
+    public partial class DSBanBe : Form
     {
-        public Vong1()
+        public DSBanBe()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

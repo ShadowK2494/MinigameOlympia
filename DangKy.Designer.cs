@@ -316,6 +316,11 @@
             this.lblAlertPhone.TabIndex = 30;
             this.lblAlertPhone.Text = "a";
             // 
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -349,6 +354,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "DangKy";
             this.Text = "Đăng ký";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
