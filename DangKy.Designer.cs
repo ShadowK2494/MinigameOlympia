@@ -316,11 +316,6 @@
             this.lblAlertPhone.TabIndex = 30;
             this.lblAlertPhone.Text = "a";
             // 
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
