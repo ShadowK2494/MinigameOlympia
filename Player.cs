@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,16 @@ using System.Threading.Tasks;
 
 namespace MinigameOlympia {
     internal class Player {
+=======
+﻿using MinigameOlympia;
+using OlympiaWebService.Helper;
+using System.Collections.Generic;
+
+namespace OlympiaWebService.Models
+{
+    public class Player
+    {
+>>>>>>> DinhQuang
         public string IDPlayer { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }
@@ -14,5 +25,12 @@ namespace MinigameOlympia {
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public int WinCount { get; set; }
+<<<<<<< HEAD
+=======
+        public ICollection<Match> Matches { get; set; }
+        public ICollection<Friend> FriendOfs { get; set; }
+        public ICollection<Friend> Friends { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
+>>>>>>> DinhQuang
     }
 }
