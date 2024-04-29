@@ -35,15 +35,14 @@ namespace MinigameOlympia
                     string jsonContent = await response.Content.ReadAsStringAsync();
                     Player player = JsonConvert.DeserializeObject<Player>(jsonContent);
                     if (tbPassword.Text.Trim() == player.Password) {
-                        MessageBox.Show("Sign in successfully");
                         Close();
                         GiaoDienChinh giaoDienChinh = new GiaoDienChinh();
                         giaoDienChinh.Show();
                     } else {
-                        MessageBox.Show("Wrong password");
+                        MessageBox.Show("Sai mật khẩu!");
                     }
                 } else {
-                    MessageBox.Show("Player doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Thông tin đăng nhập không chính xác!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception ex) {
 
@@ -51,15 +50,15 @@ namespace MinigameOlympia
         }
 
         private void btnSignUp_Click(object sender, EventArgs e) {
-            //Close();
-            //DangKy dangKy = new DangKy();
-            //dangKy.Show();
+            Close();
+            DangKy dangKy = new DangKy();
+            dangKy.Show();
         }
 
         private void ForgetPassword(object sender, EventArgs e) {
-            //Close();
-            //QuenMK quenMK = new QuenMK();
-            //quenMK.Show();
+            Close();
+            QuenMK quenMK = new QuenMK();
+            quenMK.Show();
         }
     }
 }
