@@ -30,20 +30,31 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user1 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user2 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user3 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user4 = new System.Windows.Forms.GroupBox();
-            this.progressBar_time = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label_answerA = new System.Windows.Forms.Label();
-            this.label_answerC = new System.Windows.Forms.Label();
-            this.label_answerB = new System.Windows.Forms.Label();
-            this.label_answerD = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox_user4 = new System.Windows.Forms.GroupBox();
+            this.groupBox_user3 = new System.Windows.Forms.GroupBox();
+            this.groupBox_user2 = new System.Windows.Forms.GroupBox();
+            this.groupBox_user1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.questionPicture = new System.Windows.Forms.PictureBox();
+            this.coverPicture1 = new System.Windows.Forms.PictureBox();
+            this.coverPicture2 = new System.Windows.Forms.PictureBox();
+            this.coverPicture3 = new System.Windows.Forms.PictureBox();
+            this.coverPicture4 = new System.Windows.Forms.PictureBox();
+            this.coverPicture5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.questionPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -60,68 +71,23 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.label_answerD);
-            this.groupBox1.Controls.Add(this.label_answerB);
-            this.groupBox1.Controls.Add(this.label_answerC);
-            this.groupBox1.Controls.Add(this.label_answerA);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.groupBox1.Location = new System.Drawing.Point(375, 32);
+            this.groupBox1.Location = new System.Drawing.Point(28, 283);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(696, 481);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(559, 259);
+            this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Câu hỏi";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox_user1
+            // panel1
             // 
-            this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user1.Location = new System.Drawing.Point(27, 81);
-            this.groupBox_user1.Name = "groupBox_user1";
-            this.groupBox_user1.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user1.TabIndex = 2;
-            this.groupBox_user1.TabStop = false;
-            this.groupBox_user1.Text = "Thí sinh 1";
-            // 
-            // groupBox_user2
-            // 
-            this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user2.Location = new System.Drawing.Point(27, 186);
-            this.groupBox_user2.Name = "groupBox_user2";
-            this.groupBox_user2.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user2.TabIndex = 3;
-            this.groupBox_user2.TabStop = false;
-            this.groupBox_user2.Text = "Thí sinh 2";
-            // 
-            // groupBox_user3
-            // 
-            this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user3.Location = new System.Drawing.Point(27, 299);
-            this.groupBox_user3.Name = "groupBox_user3";
-            this.groupBox_user3.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user3.TabIndex = 3;
-            this.groupBox_user3.TabStop = false;
-            this.groupBox_user3.Text = "Thí sinh 3";
-            // 
-            // groupBox_user4
-            // 
-            this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user4.Location = new System.Drawing.Point(27, 411);
-            this.groupBox_user4.Name = "groupBox_user4";
-            this.groupBox_user4.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user4.TabIndex = 3;
-            this.groupBox_user4.TabStop = false;
-            this.groupBox_user4.Text = "Thí sinh 4";
-            // 
-            // progressBar_time
-            // 
-            this.progressBar_time.BackColor = System.Drawing.Color.IndianRed;
-            this.progressBar_time.ForeColor = System.Drawing.Color.Green;
-            this.progressBar_time.Location = new System.Drawing.Point(299, 32);
-            this.progressBar_time.Name = "progressBar_time";
-            this.progressBar_time.Size = new System.Drawing.Size(46, 481);
-            this.progressBar_time.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(6, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(547, 209);
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -132,88 +98,219 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Câu hỏi gì đó?";
             // 
-            // panel1
+            // groupBox_user4
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(652, 259);
-            this.panel1.TabIndex = 1;
+            this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox_user4.Location = new System.Drawing.Point(860, 408);
+            this.groupBox_user4.Name = "groupBox_user4";
+            this.groupBox_user4.Size = new System.Drawing.Size(183, 88);
+            this.groupBox_user4.TabIndex = 38;
+            this.groupBox_user4.TabStop = false;
+            this.groupBox_user4.Text = "Thí sinh 4";
             // 
-            // label_answerA
+            // groupBox_user3
             // 
-            this.label_answerA.AutoSize = true;
-            this.label_answerA.Location = new System.Drawing.Point(11, 337);
-            this.label_answerA.Name = "label_answerA";
-            this.label_answerA.Size = new System.Drawing.Size(149, 29);
-            this.label_answerA.TabIndex = 2;
-            this.label_answerA.Text = "A. Đáp án A";
+            this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox_user3.Location = new System.Drawing.Point(671, 408);
+            this.groupBox_user3.Name = "groupBox_user3";
+            this.groupBox_user3.Size = new System.Drawing.Size(183, 88);
+            this.groupBox_user3.TabIndex = 39;
+            this.groupBox_user3.TabStop = false;
+            this.groupBox_user3.Text = "Thí sinh 3";
             // 
-            // label_answerC
+            // groupBox_user2
             // 
-            this.label_answerC.AutoSize = true;
-            this.label_answerC.Location = new System.Drawing.Point(11, 396);
-            this.label_answerC.Name = "label_answerC";
-            this.label_answerC.Size = new System.Drawing.Size(151, 29);
-            this.label_answerC.TabIndex = 3;
-            this.label_answerC.Text = "C. Đáp án C";
+            this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox_user2.Location = new System.Drawing.Point(860, 314);
+            this.groupBox_user2.Name = "groupBox_user2";
+            this.groupBox_user2.Size = new System.Drawing.Size(183, 88);
+            this.groupBox_user2.TabIndex = 40;
+            this.groupBox_user2.TabStop = false;
+            this.groupBox_user2.Text = "Thí sinh 2";
             // 
-            // label_answerB
+            // groupBox_user1
             // 
-            this.label_answerB.AutoSize = true;
-            this.label_answerB.Location = new System.Drawing.Point(415, 337);
-            this.label_answerB.Name = "label_answerB";
-            this.label_answerB.Size = new System.Drawing.Size(149, 29);
-            this.label_answerB.TabIndex = 4;
-            this.label_answerB.Text = "B. Đáp án B";
+            this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox_user1.Location = new System.Drawing.Point(671, 314);
+            this.groupBox_user1.Name = "groupBox_user1";
+            this.groupBox_user1.Size = new System.Drawing.Size(183, 88);
+            this.groupBox_user1.TabIndex = 37;
+            this.groupBox_user1.TabStop = false;
+            this.groupBox_user1.Text = "Thí sinh 1";
             // 
-            // label_answerD
+            // tableLayoutPanel4
             // 
-            this.label_answerD.AutoSize = true;
-            this.label_answerD.Location = new System.Drawing.Point(415, 396);
-            this.label_answerD.Name = "label_answerD";
-            this.label_answerD.Size = new System.Drawing.Size(151, 29);
-            this.label_answerD.TabIndex = 5;
-            this.label_answerD.Text = "D. Đáp án D";
+            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(655, 217);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(300, 60);
+            this.tableLayoutPanel4.TabIndex = 36;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 6;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(655, 151);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(300, 60);
+            this.tableLayoutPanel3.TabIndex = 35;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(655, 19);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 60);
+            this.tableLayoutPanel1.TabIndex = 34;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(655, 85);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(300, 60);
+            this.tableLayoutPanel2.TabIndex = 33;
+            // 
+            // questionPicture
+            // 
+            this.questionPicture.Location = new System.Drawing.Point(34, 29);
+            this.questionPicture.Name = "questionPicture";
+            this.questionPicture.Size = new System.Drawing.Size(398, 208);
+            this.questionPicture.TabIndex = 47;
+            this.questionPicture.TabStop = false;
+            // 
+            // coverPicture1
+            // 
+            this.coverPicture1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.coverPicture1.Location = new System.Drawing.Point(34, 30);
+            this.coverPicture1.Name = "coverPicture1";
+            this.coverPicture1.Size = new System.Drawing.Size(199, 104);
+            this.coverPicture1.TabIndex = 48;
+            this.coverPicture1.TabStop = false;
+            // 
+            // coverPicture2
+            // 
+            this.coverPicture2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.coverPicture2.Location = new System.Drawing.Point(234, 29);
+            this.coverPicture2.Name = "coverPicture2";
+            this.coverPicture2.Size = new System.Drawing.Size(199, 104);
+            this.coverPicture2.TabIndex = 49;
+            this.coverPicture2.TabStop = false;
+            // 
+            // coverPicture3
+            // 
+            this.coverPicture3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.coverPicture3.Location = new System.Drawing.Point(34, 134);
+            this.coverPicture3.Name = "coverPicture3";
+            this.coverPicture3.Size = new System.Drawing.Size(199, 104);
+            this.coverPicture3.TabIndex = 46;
+            this.coverPicture3.TabStop = false;
+            // 
+            // coverPicture4
+            // 
+            this.coverPicture4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.coverPicture4.Location = new System.Drawing.Point(234, 133);
+            this.coverPicture4.Name = "coverPicture4";
+            this.coverPicture4.Size = new System.Drawing.Size(199, 104);
+            this.coverPicture4.TabIndex = 42;
+            this.coverPicture4.TabStop = false;
+            // 
+            // coverPicture5
+            // 
+            this.coverPicture5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.coverPicture5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.coverPicture5.Location = new System.Drawing.Point(143, 85);
+            this.coverPicture5.Name = "coverPicture5";
+            this.coverPicture5.Size = new System.Drawing.Size(199, 104);
+            this.coverPicture5.TabIndex = 50;
+            this.coverPicture5.TabStop = false;
             // 
             // Vong1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 554);
-            this.Controls.Add(this.progressBar_time);
+            this.Controls.Add(this.coverPicture5);
+            this.Controls.Add(this.coverPicture4);
+            this.Controls.Add(this.coverPicture3);
+            this.Controls.Add(this.coverPicture2);
+            this.Controls.Add(this.coverPicture1);
+            this.Controls.Add(this.questionPicture);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_user4);
             this.Controls.Add(this.groupBox_user3);
             this.Controls.Add(this.groupBox_user2);
             this.Controls.Add(this.groupBox_user1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tableLayoutPanel4);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Vong1";
             this.Text = "Vong1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.questionPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPicture5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox_user1;
-        private System.Windows.Forms.GroupBox groupBox_user2;
-        private System.Windows.Forms.GroupBox groupBox_user3;
-        private System.Windows.Forms.GroupBox groupBox_user4;
-        private System.Windows.Forms.ProgressBar progressBar_time;
-        private System.Windows.Forms.Label label_answerD;
-        private System.Windows.Forms.Label label_answerB;
-        private System.Windows.Forms.Label label_answerC;
-        private System.Windows.Forms.Label label_answerA;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox_user4;
+        private System.Windows.Forms.GroupBox groupBox_user3;
+        private System.Windows.Forms.GroupBox groupBox_user2;
+        private System.Windows.Forms.GroupBox groupBox_user1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox questionPicture;
+        private System.Windows.Forms.PictureBox coverPicture1;
+        private System.Windows.Forms.PictureBox coverPicture2;
+        private System.Windows.Forms.PictureBox coverPicture3;
+        private System.Windows.Forms.PictureBox coverPicture4;
+        private System.Windows.Forms.PictureBox coverPicture5;
     }
 }

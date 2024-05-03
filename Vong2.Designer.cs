@@ -28,32 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.progressBar_time = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label_answerD = new System.Windows.Forms.Label();
+            this.label_answerB = new System.Windows.Forms.Label();
+            this.label_answerC = new System.Windows.Forms.Label();
+            this.label_answerA = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox_user4 = new System.Windows.Forms.GroupBox();
             this.groupBox_user3 = new System.Windows.Forms.GroupBox();
             this.groupBox_user2 = new System.Windows.Forms.GroupBox();
             this.groupBox_user1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox7.Image = global::MinigameOlympia.Properties.Resources.Room;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(1109, 554);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 33;
+            this.pictureBox7.TabStop = false;
+            // 
+            // progressBar_time
+            // 
+            this.progressBar_time.BackColor = System.Drawing.Color.IndianRed;
+            this.progressBar_time.ForeColor = System.Drawing.Color.Green;
+            this.progressBar_time.Location = new System.Drawing.Point(304, 33);
+            this.progressBar_time.Name = "progressBar_time";
+            this.progressBar_time.Size = new System.Drawing.Size(46, 481);
+            this.progressBar_time.TabIndex = 34;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.label_answerD);
+            this.groupBox1.Controls.Add(this.label_answerB);
+            this.groupBox1.Controls.Add(this.label_answerC);
+            this.groupBox1.Controls.Add(this.label_answerA);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.groupBox1.Location = new System.Drawing.Point(380, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(696, 481);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Câu hỏi";
+            // 
+            // label_answerD
+            // 
+            this.label_answerD.AutoSize = true;
+            this.label_answerD.Location = new System.Drawing.Point(415, 396);
+            this.label_answerD.Name = "label_answerD";
+            this.label_answerD.Size = new System.Drawing.Size(151, 29);
+            this.label_answerD.TabIndex = 5;
+            this.label_answerD.Text = "D. Đáp án D";
+            // 
+            // label_answerB
+            // 
+            this.label_answerB.AutoSize = true;
+            this.label_answerB.Location = new System.Drawing.Point(415, 337);
+            this.label_answerB.Name = "label_answerB";
+            this.label_answerB.Size = new System.Drawing.Size(149, 29);
+            this.label_answerB.TabIndex = 4;
+            this.label_answerB.Text = "B. Đáp án B";
+            // 
+            // label_answerC
+            // 
+            this.label_answerC.AutoSize = true;
+            this.label_answerC.Location = new System.Drawing.Point(11, 396);
+            this.label_answerC.Name = "label_answerC";
+            this.label_answerC.Size = new System.Drawing.Size(151, 29);
+            this.label_answerC.TabIndex = 3;
+            this.label_answerC.Text = "C. Đáp án C";
+            // 
+            // label_answerA
+            // 
+            this.label_answerA.AutoSize = true;
+            this.label_answerA.Location = new System.Drawing.Point(11, 337);
+            this.label_answerA.Name = "label_answerA";
+            this.label_answerA.Size = new System.Drawing.Size(149, 29);
+            this.label_answerA.TabIndex = 2;
+            this.label_answerA.Text = "A. Đáp án A";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(16, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(652, 259);
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -64,242 +136,84 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Câu hỏi gì đó?";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.groupBox1.Location = new System.Drawing.Point(28, 283);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(559, 259);
-            this.groupBox1.TabIndex = 31;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Câu hỏi";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(6, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(547, 209);
-            this.panel1.TabIndex = 1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Location = new System.Drawing.Point(125, 87);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(199, 104);
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox4.Location = new System.Drawing.Point(233, 151);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(199, 104);
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox2.Location = new System.Drawing.Point(233, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(199, 104);
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 151);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(199, 104);
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox6.Location = new System.Drawing.Point(28, 41);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(199, 104);
-            this.pictureBox6.TabIndex = 26;
-            this.pictureBox6.TabStop = false;
-            // 
             // groupBox_user4
             // 
             this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user4.Location = new System.Drawing.Point(860, 408);
+            this.groupBox_user4.Location = new System.Drawing.Point(42, 382);
             this.groupBox_user4.Name = "groupBox_user4";
             this.groupBox_user4.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user4.TabIndex = 23;
+            this.groupBox_user4.TabIndex = 37;
             this.groupBox_user4.TabStop = false;
             this.groupBox_user4.Text = "Thí sinh 4";
             // 
             // groupBox_user3
             // 
             this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user3.Location = new System.Drawing.Point(671, 408);
+            this.groupBox_user3.Location = new System.Drawing.Point(42, 270);
             this.groupBox_user3.Name = "groupBox_user3";
             this.groupBox_user3.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user3.TabIndex = 24;
+            this.groupBox_user3.TabIndex = 38;
             this.groupBox_user3.TabStop = false;
             this.groupBox_user3.Text = "Thí sinh 3";
             // 
             // groupBox_user2
             // 
             this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user2.Location = new System.Drawing.Point(860, 314);
+            this.groupBox_user2.Location = new System.Drawing.Point(42, 157);
             this.groupBox_user2.Name = "groupBox_user2";
             this.groupBox_user2.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user2.TabIndex = 25;
+            this.groupBox_user2.TabIndex = 39;
             this.groupBox_user2.TabStop = false;
             this.groupBox_user2.Text = "Thí sinh 2";
             // 
             // groupBox_user1
             // 
             this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user1.Location = new System.Drawing.Point(671, 314);
+            this.groupBox_user1.Location = new System.Drawing.Point(42, 52);
             this.groupBox_user1.Name = "groupBox_user1";
             this.groupBox_user1.Size = new System.Drawing.Size(183, 88);
-            this.groupBox_user1.TabIndex = 22;
+            this.groupBox_user1.TabIndex = 36;
             this.groupBox_user1.TabStop = false;
             this.groupBox_user1.Text = "Thí sinh 1";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 6;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(554, 217);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(300, 60);
-            this.tableLayoutPanel4.TabIndex = 21;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 6;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(752, 151);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(300, 60);
-            this.tableLayoutPanel3.TabIndex = 20;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(704, 19);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 60);
-            this.tableLayoutPanel1.TabIndex = 19;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(655, 85);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(300, 60);
-            this.tableLayoutPanel2.TabIndex = 18;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::MinigameOlympia.Properties.Resources.Room;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1109, 554);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // Vong2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 554);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.groupBox_user4);
             this.Controls.Add(this.groupBox_user3);
             this.Controls.Add(this.groupBox_user2);
             this.Controls.Add(this.groupBox_user1);
-            this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.progressBar_time);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox7);
             this.Name = "Vong2";
             this.Text = "Vong2";
             this.Load += new System.EventHandler(this.Vong2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.ProgressBar progressBar_time;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label_answerD;
+        private System.Windows.Forms.Label label_answerB;
+        private System.Windows.Forms.Label label_answerC;
+        private System.Windows.Forms.Label label_answerA;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox_user4;
         private System.Windows.Forms.GroupBox groupBox_user3;
         private System.Windows.Forms.GroupBox groupBox_user2;
         private System.Windows.Forms.GroupBox groupBox_user1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
