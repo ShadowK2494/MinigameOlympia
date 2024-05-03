@@ -35,7 +35,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.Location = new System.Drawing.Point(216, 72);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(94, 34);
             this.btnDangNhap.TabIndex = 0;
@@ -46,7 +46,7 @@
             // btnDangKy
             // 
             this.btnDangKy.Location = new System.Drawing.Point(220, 129);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(94, 34);
             this.btnDangKy.TabIndex = 1;
@@ -61,9 +61,10 @@
             this.ClientSize = new System.Drawing.Size(533, 224);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RootForm";
             this.Text = "RootForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RootFormClosing);
             this.ResumeLayout(false);
 
         }

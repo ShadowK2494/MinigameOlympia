@@ -24,9 +24,13 @@ namespace MinigameOlympia
         }
 
         private void btnDangKy_Click(object sender, EventArgs e) {
-            //Visible = false;
-            //DangKy dangKy = new DangKy();
-            //dangKy.Show();
+            Visible = false;
+            DangKy dangKy = new DangKy();
+            dangKy.Show();
+        }
+
+        private void RootFormClosing(object sender, FormClosingEventArgs e) {
+            Application.Exit();
         }
     }
 }
