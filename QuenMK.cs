@@ -69,6 +69,7 @@ namespace MinigameOlympia
             {
                 MessageBox.Show("Xác minh thành công!");
                 TaoLaiMatKhau nextForm = new TaoLaiMatKhau(); //Di chuyển đến form tại lại mật khẩu
+                nextForm.show();
             }
             else
             {
