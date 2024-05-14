@@ -26,11 +26,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.buttonSend = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxCode = new System.Windows.Forms.TextBox();
+            this.buttonVerify = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@
             this.label2.Size = new System.Drawing.Size(220, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quên mật khẩu";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -58,7 +57,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 32);
             this.label3.TabIndex = 2;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -70,28 +68,26 @@
             this.label4.Size = new System.Drawing.Size(447, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Hãy nhập email và chúng tôi sẽ gửi code về cho bạn";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(387, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 46);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxEmail.Location = new System.Drawing.Point(387, 87);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxEmail.Multiline = true;
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(408, 46);
+            this.textBoxEmail.TabIndex = 4;
             // 
-            // button1
+            // buttonSend
             // 
-            this.button1.Location = new System.Drawing.Point(812, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 46);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Gửi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSend.Location = new System.Drawing.Point(812, 87);
+            this.buttonSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(85, 46);
+            this.buttonSend.TabIndex = 5;
+            this.buttonSend.Text = "Gửi";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
             // label5
             // 
@@ -103,28 +99,26 @@
             this.label5.Size = new System.Drawing.Size(98, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Nhập code";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox2
+            // textBoxCode
             // 
-            this.textBox2.Location = new System.Drawing.Point(387, 190);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(408, 47);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBoxCode.Location = new System.Drawing.Point(387, 190);
+            this.textBoxCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCode.Multiline = true;
+            this.textBoxCode.Name = "textBoxCode";
+            this.textBoxCode.Size = new System.Drawing.Size(408, 47);
+            this.textBoxCode.TabIndex = 7;
             // 
-            // button2
+            // buttonVerify
             // 
-            this.button2.Location = new System.Drawing.Point(812, 190);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 47);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Xác nhận";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonVerify.Location = new System.Drawing.Point(812, 190);
+            this.buttonVerify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonVerify.Name = "buttonVerify";
+            this.buttonVerify.Size = new System.Drawing.Size(83, 47);
+            this.buttonVerify.TabIndex = 8;
+            this.buttonVerify.Text = "Xác nhận";
+            this.buttonVerify.UseVisualStyleBackColor = true;
+            this.buttonVerify.Click += new System.EventHandler(this.buttonVerify_Click);
             // 
             // pictureBox1
             // 
@@ -136,7 +130,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label6
             // 
@@ -148,7 +141,6 @@
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 20;
             this.label6.Text = "Back";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -160,7 +152,6 @@
             this.label1.Size = new System.Drawing.Size(22, 23);
             this.label1.TabIndex = 21;
             this.label1.Text = "X";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // QuenMK
             // 
@@ -170,11 +161,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.buttonVerify);
+            this.Controls.Add(this.textBoxCode);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonSend);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -192,11 +183,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxCode;
+        private System.Windows.Forms.Button buttonVerify;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
