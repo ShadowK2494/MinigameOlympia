@@ -179,7 +179,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\RatingControllers.cs" />
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,14 +204,6 @@
     <Compile Include="KetQua.Designer.cs">
       <DependentUpon>KetQua.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Answer.cs" />
-    <Compile Include="Models\Match.cs" />
-    <Compile Include="Models\Friend.cs" />
-    <Compile Include="Models\GroupQuestion.cs" />
-    <Compile Include="Models\Player.cs" />
-    <Compile Include="Models\Question.cs" />
-    <Compile Include="Models\Rating.cs" />
-    <Compile Include="Models\Room.cs" />
     <Compile Include="PhongCho.cs">
       <SubType>Form</SubType>
     </Compile>
