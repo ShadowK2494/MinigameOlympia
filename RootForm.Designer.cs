@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -61,10 +62,11 @@
             this.ClientSize = new System.Drawing.Size(533, 224);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RootForm";
             this.Text = "RootForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RootFormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RootFormClosing);
             this.ResumeLayout(false);
 
         }

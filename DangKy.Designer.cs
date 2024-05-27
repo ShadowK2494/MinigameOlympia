@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -46,13 +47,13 @@
             this.lblAlertRePass = new System.Windows.Forms.Label();
             this.lblAlertEmail = new System.Windows.Forms.Label();
             this.lblAlertPhone = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ptbPassword = new System.Windows.Forms.PictureBox();
-            this.ptbRePass = new System.Windows.Forms.PictureBox();
             this.lblAlertGender = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).BeginInit();
+            this.ptbRePass = new System.Windows.Forms.PictureBox();
+            this.ptbPassword = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRePass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -301,27 +302,17 @@
             this.lblAlertPhone.Text = "a";
             this.lblAlertPhone.Visible = false;
             // 
-            // pictureBox1
+            // lblAlertGender
             // 
-            this.pictureBox1.Image = global::MinigameOlympia.Properties.Resources.BackgroundLogin;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(307, 428);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ptbPassword
-            // 
-            this.ptbPassword.BackColor = System.Drawing.Color.White;
-            this.ptbPassword.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
-            this.ptbPassword.Location = new System.Drawing.Point(593, 242);
-            this.ptbPassword.Name = "ptbPassword";
-            this.ptbPassword.Size = new System.Drawing.Size(29, 20);
-            this.ptbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbPassword.TabIndex = 31;
-            this.ptbPassword.TabStop = false;
-            this.ptbPassword.Click += new System.EventHandler(this.ptbPassword_Click);
+            this.lblAlertGender.AutoSize = true;
+            this.lblAlertGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertGender.ForeColor = System.Drawing.Color.Red;
+            this.lblAlertGender.Location = new System.Drawing.Point(659, 271);
+            this.lblAlertGender.Name = "lblAlertGender";
+            this.lblAlertGender.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertGender.TabIndex = 33;
+            this.lblAlertGender.Text = "a";
+            this.lblAlertGender.Visible = false;
             // 
             // ptbRePass
             // 
@@ -335,17 +326,27 @@
             this.ptbRePass.TabStop = false;
             this.ptbRePass.Click += new System.EventHandler(this.ptbRePass_Click);
             // 
-            // lblAlertGender
+            // ptbPassword
             // 
-            this.lblAlertGender.AutoSize = true;
-            this.lblAlertGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlertGender.ForeColor = System.Drawing.Color.Red;
-            this.lblAlertGender.Location = new System.Drawing.Point(659, 271);
-            this.lblAlertGender.Name = "lblAlertGender";
-            this.lblAlertGender.Size = new System.Drawing.Size(13, 13);
-            this.lblAlertGender.TabIndex = 33;
-            this.lblAlertGender.Text = "a";
-            this.lblAlertGender.Visible = false;
+            this.ptbPassword.BackColor = System.Drawing.Color.White;
+            this.ptbPassword.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
+            this.ptbPassword.Location = new System.Drawing.Point(593, 242);
+            this.ptbPassword.Name = "ptbPassword";
+            this.ptbPassword.Size = new System.Drawing.Size(29, 20);
+            this.ptbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPassword.TabIndex = 31;
+            this.ptbPassword.TabStop = false;
+            this.ptbPassword.Click += new System.EventHandler(this.ptbPassword_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MinigameOlympia.Properties.Resources.BackgroundLogin;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(307, 428);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
             // 
             // DangKy
             // 
@@ -381,13 +382,14 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DangKy";
             this.Text = "Đăng ký";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangKyClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangKyClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ptbRePass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

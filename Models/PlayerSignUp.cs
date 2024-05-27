@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinigameOlympia.Models {
-    internal class PlayerSignUp {
+    public class PlayerSignUp {
         public string Name { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }

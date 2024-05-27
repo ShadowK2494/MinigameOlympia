@@ -26,7 +26,7 @@ namespace MinigameOlympia {
         }
 
         // Nhận dữ liệu email từ form Đăng ký
-        public void DangKy_EmailSent(object sender, string data) {
+        public void SignUp_EmailSent(object sender, string data) {
             email = data;
         }
 

@@ -13,10 +13,11 @@ using MinigameOlympia.Models;
 using Newtonsoft.Json;
 
 namespace MinigameOlympia {
-    public partial class CreateAvatar : Form {
+    public partial class TaoAvatar : Form {
         private PlayerSignUp newPlayer = new PlayerSignUp();
         private bool selected = false;
-        public CreateAvatar() {
+        private event EventHandler<string> usernameSent;
+        public TaoAvatar() {
             InitializeComponent();
         }
 
@@ -44,8 +45,10 @@ namespace MinigameOlympia {
                 else {
                     PostPlayerAsync(newPlayer);
                     Close();
-                    GiaoDienChinh giaoDienChinh = new GiaoDienChinh();
-                    giaoDienChinh.Show();
+                    GiaoDienChinh mainScreen = new GiaoDienChinh();
+                    usernameSent += mainScreen.CreateAvatar_username;
+                    usernameSent?.Invoke(this, newPlayer.Username);
+                    mainScreen.Show();
                 }
             } else {
                 if (!selected)
@@ -53,8 +56,10 @@ namespace MinigameOlympia {
                 else {
                     PostPlayerAsync(newPlayer);
                     Close();
-                    GiaoDienChinh giaoDienChinh = new GiaoDienChinh();
-                    giaoDienChinh.Show();
+                    GiaoDienChinh mainScreen = new GiaoDienChinh();
+                    usernameSent += mainScreen.CreateAvatar_username;
+                    usernameSent?.Invoke(this, newPlayer.Username);
+                    mainScreen.Show();
                 }
             }
         }
@@ -95,7 +100,8 @@ namespace MinigameOlympia {
                     avatarData = ms.ToArray();
                 }
                 newPlayer.Avatar = avatarData;
-            } else selected = false;
+            } else
+                selected = false;
         }
 
         // Thêm tài khoản người chơi vào cơ sở dữ liệu

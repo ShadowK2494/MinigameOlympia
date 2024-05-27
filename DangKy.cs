@@ -14,6 +14,8 @@ using Unidecode.NET;
 using System.Net.Mail;
 using System.Xml.Schema;
 using System.Runtime.CompilerServices;
+using System.Xml.Linq;
+using MinigameOlympia;
 
 namespace MinigameOlympia {
     public partial class DangKy : Form {
@@ -29,15 +31,16 @@ namespace MinigameOlympia {
         private event EventHandler<string> EmailSent;
         private bool isEmailVerify;
         private event EventHandler<string[]> DataSent;
-        public DangKy() {
+        private RootForm _rootForm { get; set; }
+        public DangKy(RootForm rootForm) {
             InitializeComponent();
+            _rootForm = rootForm;
         }
 
         // Quay về Root Form
         private void BackToRootForm(object sender, EventArgs args) {
             Close();
-            RootForm rootForm = new RootForm();
-            rootForm.Show();
+            _rootForm.Visible = true;
         }
 
         // Lấy dữ liệu kết quả xác thực bên form Xác thực email
@@ -48,9 +51,10 @@ namespace MinigameOlympia {
         // Chuyển đến form xác thực email
         private async void btnSubmit_Click(object sender, EventArgs e) {
             if (isOKName && isOKUsername && isOKPassword && isOKRePassword && isOKEmail && isOKPhone && isOKGender) {
+
                 string data = tbEmail.Text;
                 VerifyEmail verifyEmail = new VerifyEmail();
-                EmailSent += verifyEmail.DangKy_EmailSent;
+                EmailSent += verifyEmail.SignUp_EmailSent;
                 EmailSent?.Invoke(this, data);
 
                 verifyEmail.isValid += VerifyEmail_isValid;
@@ -65,18 +69,15 @@ namespace MinigameOlympia {
                         tbEmail.Text.Trim(),
                         tbPhone.Text.Trim()
                     };
-                    CreateAvatar createAvatar = new CreateAvatar();
+                    TaoAvatar createAvatar = new TaoAvatar();
                     DataSent += createAvatar.DangKy_DataSent;
                     DataSent?.Invoke(this, playerData);
+                    Close();
                     createAvatar.Show();
                 }
             } else {
                 MessageBox.Show("Thông tin chưa hợp lệ", "Lỗi tạo tài khoản", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void DangKyClosing(object sender, FormClosingEventArgs e) {
-            Application.Exit();
         }
 
         // Kiểm tra điều kiện của "Nhập mật khẩu"
@@ -221,7 +222,6 @@ namespace MinigameOlympia {
                 return false;
             }
         }
-
 
         // Kiểm tra điều kiện của "Email"
         private async void tbEmail_TextChangedAsync(object sender, EventArgs e) {

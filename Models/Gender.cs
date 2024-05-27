@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinigameOlympia.Models {
-    internal enum Gender {
+    public enum Gender {
         Male,
         Female,
         Other

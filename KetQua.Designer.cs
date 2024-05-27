@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KetQua));
             this.label_name = new System.Windows.Forms.Label();
             this.label_score = new System.Windows.Forms.Label();
             this.pictureBox_avt = new System.Windows.Forms.PictureBox();
@@ -41,9 +42,10 @@
             this.label_name.AutoSize = true;
             this.label_name.BackColor = System.Drawing.Color.Transparent;
             this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label_name.Location = new System.Drawing.Point(413, 365);
+            this.label_name.Location = new System.Drawing.Point(310, 297);
+            this.label_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(263, 39);
+            this.label_name.Size = new System.Drawing.Size(209, 31);
             this.label_name.TabIndex = 2;
             this.label_name.Text = "Tên người thắng";
             this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,18 +56,20 @@
             this.label_score.BackColor = System.Drawing.Color.Transparent;
             this.label_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label_score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label_score.Location = new System.Drawing.Point(470, 423);
+            this.label_score.Location = new System.Drawing.Point(352, 344);
+            this.label_score.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_score.Name = "label_score";
-            this.label_score.Size = new System.Drawing.Size(142, 39);
+            this.label_score.Size = new System.Drawing.Size(113, 31);
             this.label_score.TabIndex = 3;
             this.label_score.Text = "Điểm số";
             this.label_score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox_avt
             // 
-            this.pictureBox_avt.Location = new System.Drawing.Point(434, 164);
+            this.pictureBox_avt.Location = new System.Drawing.Point(326, 133);
+            this.pictureBox_avt.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_avt.Name = "pictureBox_avt";
-            this.pictureBox_avt.Size = new System.Drawing.Size(224, 198);
+            this.pictureBox_avt.Size = new System.Drawing.Size(168, 161);
             this.pictureBox_avt.TabIndex = 1;
             this.pictureBox_avt.TabStop = false;
             // 
@@ -74,21 +78,24 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::MinigameOlympia.Properties.Resources.KetQua;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1109, 554);
+            this.pictureBox1.Size = new System.Drawing.Size(832, 450);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // KetQua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 554);
+            this.ClientSize = new System.Drawing.Size(832, 450);
             this.Controls.Add(this.label_score);
             this.Controls.Add(this.label_name);
             this.Controls.Add(this.pictureBox_avt);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "KetQua";
             this.Text = "KetQua";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_avt)).EndInit();
