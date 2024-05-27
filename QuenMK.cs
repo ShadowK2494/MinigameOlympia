@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,8 +77,7 @@ namespace MinigameOlympia {
                 MessageBox.Show("Mã OTP không chính xác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // Giao diện thay đổi khi gửi mã OTP
+// Giao diện thay đổi khi gửi mã OTP
         private void btnSendOTP_Click(object sender, EventArgs e) {
             if (isOKEmail) {
                 SendOTP(tbEmail.Text);
