@@ -103,6 +103,26 @@ namespace MinigameOlympia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap HidePass {
+            get {
+                object obj = ResourceManager.GetObject("HidePass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        public static System.Drawing.Icon Icon {
+            get {
+                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap KetQua {
             get {
                 object obj = ResourceManager.GetObject("KetQua", resourceCulture);
@@ -126,6 +146,16 @@ namespace MinigameOlympia.Properties {
         public static System.Drawing.Bitmap Room {
             get {
                 object obj = ResourceManager.GetObject("Room", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ShowPass {
+            get {
+                object obj = ResourceManager.GetObject("ShowPass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

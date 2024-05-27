@@ -1,7 +1,5 @@
-﻿namespace MinigameOlympia
-{
-    partial class GiaoDienChinh
-    {
+﻿namespace MinigameOlympia {
+    partial class GiaoDienChinh {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,119 +22,120 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiaoDienChinh));
+            this.grbRank = new System.Windows.Forms.GroupBox();
+            this.lvRank = new System.Windows.Forms.ListView();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ptbAvatar = new System.Windows.Forms.PictureBox();
+            this.lvFriends = new System.Windows.Forms.ListView();
+            this.grbRank.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // grbRank
             // 
-            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(199, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 101);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "BẮT ĐẦU THI";
-            this.button1.UseVisualStyleBackColor = false;
+            this.grbRank.BackColor = System.Drawing.Color.Transparent;
+            this.grbRank.Controls.Add(this.lvRank);
+            this.grbRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.grbRank.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.grbRank.Location = new System.Drawing.Point(613, 21);
+            this.grbRank.Margin = new System.Windows.Forms.Padding(2);
+            this.grbRank.Name = "grbRank";
+            this.grbRank.Padding = new System.Windows.Forms.Padding(2);
+            this.grbRank.Size = new System.Drawing.Size(243, 382);
+            this.grbRank.TabIndex = 4;
+            this.grbRank.TabStop = false;
+            this.grbRank.Text = "BẢNG XẾP HẠNG";
             // 
-            // button2
+            // lvRank
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(633, 475);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 66);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "XEM HỒ SƠ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lvRank.BackColor = System.Drawing.Color.LightBlue;
+            this.lvRank.HideSelection = false;
+            this.lvRank.Location = new System.Drawing.Point(16, 55);
+            this.lvRank.Margin = new System.Windows.Forms.Padding(2);
+            this.lvRank.Name = "lvRank";
+            this.lvRank.Size = new System.Drawing.Size(213, 307);
+            this.lvRank.TabIndex = 0;
+            this.lvRank.UseCompatibleStateImageBehavior = false;
             // 
-            // button3
+            // btnEnter
             // 
-            this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.button3.Location = new System.Drawing.Point(107, 475);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 66);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "BẠN BÈ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnEnter.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnEnter.Location = new System.Drawing.Point(300, 250);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(184, 66);
+            this.btnEnter.TabIndex = 0;
+            this.btnEnter.Text = "Vào phòng";
+            this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
-            // groupBox1
+            // label1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(107, 76);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(678, 325);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ĐƯỜNG LÊN ĐỈNH OLYMPIA";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(112, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(496, 39);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "ĐƯỜNG LÊN ĐỈNH OLYMPIA";
             // 
-            // groupBox2
+            // ptbAvatar
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.groupBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Location = new System.Drawing.Point(873, 80);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(365, 470);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "BẢNG XẾP HẠNG";
+            this.ptbAvatar.Location = new System.Drawing.Point(10, 8);
+            this.ptbAvatar.Name = "ptbAvatar";
+            this.ptbAvatar.Size = new System.Drawing.Size(93, 81);
+            this.ptbAvatar.TabIndex = 6;
+            this.ptbAvatar.TabStop = false;
+            this.ptbAvatar.Click += new System.EventHandler(this.ptbAvatar_Click);
             // 
-            // listView1
+            // lvFriends
             // 
-            this.listView1.BackColor = System.Drawing.Color.LightBlue;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(24, 85);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(317, 364);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvFriends.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lvFriends.HideSelection = false;
+            this.lvFriends.Location = new System.Drawing.Point(10, 118);
+            this.lvFriends.Name = "lvFriends";
+            this.lvFriends.Size = new System.Drawing.Size(93, 284);
+            this.lvFriends.TabIndex = 7;
+            this.lvFriends.UseCompatibleStateImageBehavior = false;
             // 
-            // GiaoDienChinh
+            // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1301, 637);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(867, 414);
+            this.Controls.Add(this.lvFriends);
+            this.Controls.Add(this.ptbAvatar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.grbRank);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "GiaoDienChinh";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MainScreen";
             this.Text = "GiaoDienChinh";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreenClosing);
+            this.grbRank.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        protected internal System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.GroupBox grbRank;
+        private System.Windows.Forms.ListView lvRank;
+        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox ptbAvatar;
+        private System.Windows.Forms.ListView lvFriends;
     }
 }

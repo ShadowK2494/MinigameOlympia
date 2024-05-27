@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.Location = new System.Drawing.Point(216, 72);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangNhap.Location = new System.Drawing.Point(82, 488);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(168, 68);
             this.btnDangNhap.TabIndex = 0;
@@ -47,10 +49,11 @@
             // 
             // btnDangKy
             // 
+            this.btnDangKy.Location = new System.Drawing.Point(220, 129);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangKy.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangKy.Location = new System.Drawing.Point(265, 488);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(168, 68);
             this.btnDangKy.TabIndex = 1;
@@ -67,8 +70,11 @@
             this.ClientSize = new System.Drawing.Size(497, 631);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RootForm";
             this.Text = "RootForm";
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RootFormClosing);
             this.ResumeLayout(false);
 
         }
