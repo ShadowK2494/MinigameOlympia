@@ -39,7 +39,7 @@ namespace MinigameOlympia {
             } else {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (!response.IsSuccessStatusCode) {
                         lblAlertUsername.Text = "ⓘ Username không tồn tại";
@@ -95,7 +95,7 @@ namespace MinigameOlympia {
             if (isOKUsername && isOKPassword) {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (response.IsSuccessStatusCode) {
                         string jsonContent = await response.Content.ReadAsStringAsync();
