@@ -197,7 +197,7 @@ namespace MinigameOlympia {
             } else {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (response.IsSuccessStatusCode) {
                         lblAlertUsername.Text = "ⓘ Username đã tồn tại";
@@ -237,7 +237,7 @@ namespace MinigameOlympia {
                 } else {
                     HttpClient client = new HttpClient();
                     try {
-                        string url = "http://localhost:2804/api/Player/email?lookup=" + tbEmail.Text.Trim();
+                        string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/email?lookup=" + tbEmail.Text.Trim();
                         var response = await client.GetAsync(url);
                         if (response.IsSuccessStatusCode) {
                             lblAlertEmail.Text = "ⓘ Email đã được sử dụng";
@@ -280,7 +280,7 @@ namespace MinigameOlympia {
                 } else {
                     HttpClient client = new HttpClient();
                     try {
-                        string url = "http://localhost:2804/api/Player/phone?lookup=" + tbPhone.Text.Trim();
+                        string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/phone?lookup=" + tbPhone.Text.Trim();
                         var response = await client.GetAsync(url);
                         if (response.IsSuccessStatusCode) {
                             lblAlertPhone.Text = "ⓘ Số điện thoại đã được sử dụng";

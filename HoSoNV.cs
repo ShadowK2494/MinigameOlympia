@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,6 +52,24 @@ namespace MinigameOlympia {
         private void ProfileClosing(object sender, FormClosingEventArgs e) {
             if (load.IsAlive)
                 load.Abort();
+        }
+
+        private void btnGGForm_Click(object sender, EventArgs e)
+        {
+            string url = "https://forms.gle/CudEUTRPV9XN27Pm6"; 
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "chrome.exe",
+                    Arguments = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not open the website. Make sure Google Chrome is installed. Error: " + ex.Message);
+            }
         }
     }
 }

@@ -110,7 +110,7 @@ namespace MinigameOlympia {
             var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
             HttpClient client = new HttpClient();
             try {
-                var response = await client.PostAsync("http://localhost:2804/api/Player", content);
+                var response = await client.PostAsync("https://86db-203-205-32-65.ngrok-free.app/api/Player", content);
                 if (response.IsSuccessStatusCode) {
                     MessageBox.Show("Tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
