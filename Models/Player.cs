@@ -13,6 +13,8 @@ namespace MinigameOlympia.Models {
         public Gender Gender { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        public int Score { get; set; }
+
         public int WinCount { get; set; }
         public byte[] Avatar { get; set; }
     }

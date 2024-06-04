@@ -42,9 +42,25 @@
             this.groupBox_user3 = new System.Windows.Forms.GroupBox();
             this.groupBox_user2 = new System.Windows.Forms.GroupBox();
             this.groupBox_user1 = new System.Windows.Forms.GroupBox();
+            this.ptbAvatar1 = new System.Windows.Forms.PictureBox();
+            this.ptbAvatar2 = new System.Windows.Forms.PictureBox();
+            this.ptbAvatar3 = new System.Windows.Forms.PictureBox();
+            this.ptbAvatar4 = new System.Windows.Forms.PictureBox();
+            this.label_score4 = new System.Windows.Forms.Label();
+            this.label_score3 = new System.Windows.Forms.Label();
+            this.label_score2 = new System.Windows.Forms.Label();
+            this.label_score1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox_user4.SuspendLayout();
+            this.groupBox_user3.SuspendLayout();
+            this.groupBox_user2.SuspendLayout();
+            this.groupBox_user1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox7
@@ -52,9 +68,9 @@
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox7.Image = global::MinigameOlympia.Properties.Resources.Room;
             this.pictureBox7.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(832, 450);
+            this.pictureBox7.Size = new System.Drawing.Size(1109, 554);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 33;
             this.pictureBox7.TabStop = false;
@@ -63,10 +79,10 @@
             // 
             this.progressBar_time.BackColor = System.Drawing.Color.IndianRed;
             this.progressBar_time.ForeColor = System.Drawing.Color.Green;
-            this.progressBar_time.Location = new System.Drawing.Point(228, 27);
-            this.progressBar_time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBar_time.Location = new System.Drawing.Point(304, 33);
+            this.progressBar_time.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar_time.Name = "progressBar_time";
-            this.progressBar_time.Size = new System.Drawing.Size(34, 391);
+            this.progressBar_time.Size = new System.Drawing.Size(45, 481);
             this.progressBar_time.TabIndex = 34;
             // 
             // groupBox1
@@ -78,11 +94,11 @@
             this.groupBox1.Controls.Add(this.label_answerA);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.groupBox1.Location = new System.Drawing.Point(285, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(380, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(522, 391);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(696, 481);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Câu hỏi";
@@ -90,40 +106,36 @@
             // label_answerD
             // 
             this.label_answerD.AutoSize = true;
-            this.label_answerD.Location = new System.Drawing.Point(311, 322);
-            this.label_answerD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_answerD.Location = new System.Drawing.Point(415, 396);
             this.label_answerD.Name = "label_answerD";
-            this.label_answerD.Size = new System.Drawing.Size(118, 25);
+            this.label_answerD.Size = new System.Drawing.Size(151, 29);
             this.label_answerD.TabIndex = 5;
             this.label_answerD.Text = "D. Đáp án D";
             // 
             // label_answerB
             // 
             this.label_answerB.AutoSize = true;
-            this.label_answerB.Location = new System.Drawing.Point(311, 274);
-            this.label_answerB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_answerB.Location = new System.Drawing.Point(415, 337);
             this.label_answerB.Name = "label_answerB";
-            this.label_answerB.Size = new System.Drawing.Size(116, 25);
+            this.label_answerB.Size = new System.Drawing.Size(149, 29);
             this.label_answerB.TabIndex = 4;
             this.label_answerB.Text = "B. Đáp án B";
             // 
             // label_answerC
             // 
             this.label_answerC.AutoSize = true;
-            this.label_answerC.Location = new System.Drawing.Point(8, 322);
-            this.label_answerC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_answerC.Location = new System.Drawing.Point(11, 396);
             this.label_answerC.Name = "label_answerC";
-            this.label_answerC.Size = new System.Drawing.Size(120, 25);
+            this.label_answerC.Size = new System.Drawing.Size(151, 29);
             this.label_answerC.TabIndex = 3;
             this.label_answerC.Text = "C. Đáp án C";
             // 
             // label_answerA
             // 
             this.label_answerA.AutoSize = true;
-            this.label_answerA.Location = new System.Drawing.Point(8, 274);
-            this.label_answerA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_answerA.Location = new System.Drawing.Point(11, 337);
             this.label_answerA.Name = "label_answerA";
-            this.label_answerA.Size = new System.Drawing.Size(118, 25);
+            this.label_answerA.Size = new System.Drawing.Size(149, 29);
             this.label_answerA.TabIndex = 2;
             this.label_answerA.Text = "A. Đáp án A";
             // 
@@ -131,75 +143,158 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(16, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 210);
+            this.panel1.Size = new System.Drawing.Size(652, 258);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(16, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 25);
+            this.label1.Size = new System.Drawing.Size(176, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Câu hỏi gì đó?";
             // 
             // groupBox_user4
             // 
+            this.groupBox_user4.Controls.Add(this.label_score4);
             this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user4.Location = new System.Drawing.Point(32, 310);
-            this.groupBox_user4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_user4.Location = new System.Drawing.Point(67, 382);
+            this.groupBox_user4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user4.Name = "groupBox_user4";
-            this.groupBox_user4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox_user4.Size = new System.Drawing.Size(137, 72);
+            this.groupBox_user4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_user4.Size = new System.Drawing.Size(183, 89);
             this.groupBox_user4.TabIndex = 37;
             this.groupBox_user4.TabStop = false;
             this.groupBox_user4.Text = "Thí sinh 4";
             // 
             // groupBox_user3
             // 
+            this.groupBox_user3.Controls.Add(this.label_score3);
             this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user3.Location = new System.Drawing.Point(32, 219);
-            this.groupBox_user3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_user3.Location = new System.Drawing.Point(65, 270);
+            this.groupBox_user3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user3.Name = "groupBox_user3";
-            this.groupBox_user3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox_user3.Size = new System.Drawing.Size(137, 72);
+            this.groupBox_user3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_user3.Size = new System.Drawing.Size(183, 89);
             this.groupBox_user3.TabIndex = 38;
             this.groupBox_user3.TabStop = false;
             this.groupBox_user3.Text = "Thí sinh 3";
             // 
             // groupBox_user2
             // 
+            this.groupBox_user2.Controls.Add(this.label_score2);
             this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user2.Location = new System.Drawing.Point(32, 128);
-            this.groupBox_user2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_user2.Location = new System.Drawing.Point(65, 158);
+            this.groupBox_user2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user2.Name = "groupBox_user2";
-            this.groupBox_user2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox_user2.Size = new System.Drawing.Size(137, 72);
+            this.groupBox_user2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_user2.Size = new System.Drawing.Size(183, 89);
             this.groupBox_user2.TabIndex = 39;
             this.groupBox_user2.TabStop = false;
             this.groupBox_user2.Text = "Thí sinh 2";
             // 
             // groupBox_user1
             // 
+            this.groupBox_user1.Controls.Add(this.label_score1);
             this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user1.Location = new System.Drawing.Point(32, 42);
-            this.groupBox_user1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_user1.Location = new System.Drawing.Point(65, 52);
+            this.groupBox_user1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user1.Name = "groupBox_user1";
-            this.groupBox_user1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox_user1.Size = new System.Drawing.Size(137, 72);
+            this.groupBox_user1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_user1.Size = new System.Drawing.Size(183, 89);
             this.groupBox_user1.TabIndex = 36;
             this.groupBox_user1.TabStop = false;
             this.groupBox_user1.Text = "Thí sinh 1";
             // 
+            // ptbAvatar1
+            // 
+            this.ptbAvatar1.Location = new System.Drawing.Point(8, 52);
+            this.ptbAvatar1.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbAvatar1.Name = "ptbAvatar1";
+            this.ptbAvatar1.Size = new System.Drawing.Size(50, 50);
+            this.ptbAvatar1.TabIndex = 40;
+            this.ptbAvatar1.TabStop = false;
+            // 
+            // ptbAvatar2
+            // 
+            this.ptbAvatar2.Location = new System.Drawing.Point(8, 158);
+            this.ptbAvatar2.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbAvatar2.Name = "ptbAvatar2";
+            this.ptbAvatar2.Size = new System.Drawing.Size(50, 50);
+            this.ptbAvatar2.TabIndex = 41;
+            this.ptbAvatar2.TabStop = false;
+            // 
+            // ptbAvatar3
+            // 
+            this.ptbAvatar3.Location = new System.Drawing.Point(8, 275);
+            this.ptbAvatar3.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbAvatar3.Name = "ptbAvatar3";
+            this.ptbAvatar3.Size = new System.Drawing.Size(50, 50);
+            this.ptbAvatar3.TabIndex = 42;
+            this.ptbAvatar3.TabStop = false;
+            // 
+            // ptbAvatar4
+            // 
+            this.ptbAvatar4.Location = new System.Drawing.Point(8, 382);
+            this.ptbAvatar4.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbAvatar4.Name = "ptbAvatar4";
+            this.ptbAvatar4.Size = new System.Drawing.Size(50, 50);
+            this.ptbAvatar4.TabIndex = 43;
+            this.ptbAvatar4.TabStop = false;
+            // 
+            // label_score4
+            // 
+            this.label_score4.AutoSize = true;
+            this.label_score4.Font = new System.Drawing.Font("UTM Loko", 15F);
+            this.label_score4.Location = new System.Drawing.Point(42, 26);
+            this.label_score4.Name = "label_score4";
+            this.label_score4.Size = new System.Drawing.Size(82, 40);
+            this.label_score4.TabIndex = 0;
+            this.label_score4.Text = "Điểm";
+            // 
+            // label_score3
+            // 
+            this.label_score3.AutoSize = true;
+            this.label_score3.Font = new System.Drawing.Font("UTM Loko", 15F);
+            this.label_score3.Location = new System.Drawing.Point(44, 27);
+            this.label_score3.Name = "label_score3";
+            this.label_score3.Size = new System.Drawing.Size(82, 40);
+            this.label_score3.TabIndex = 1;
+            this.label_score3.Text = "Điểm";
+            // 
+            // label_score2
+            // 
+            this.label_score2.AutoSize = true;
+            this.label_score2.Font = new System.Drawing.Font("UTM Loko", 15F);
+            this.label_score2.Location = new System.Drawing.Point(44, 32);
+            this.label_score2.Name = "label_score2";
+            this.label_score2.Size = new System.Drawing.Size(82, 40);
+            this.label_score2.TabIndex = 2;
+            this.label_score2.Text = "Điểm";
+            // 
+            // label_score1
+            // 
+            this.label_score1.AutoSize = true;
+            this.label_score1.Font = new System.Drawing.Font("UTM Loko", 15F);
+            this.label_score1.Location = new System.Drawing.Point(44, 29);
+            this.label_score1.Name = "label_score1";
+            this.label_score1.Size = new System.Drawing.Size(82, 40);
+            this.label_score1.TabIndex = 3;
+            this.label_score1.Text = "Điểm";
+            // 
             // Vong2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 450);
+            this.ClientSize = new System.Drawing.Size(1109, 554);
+            this.Controls.Add(this.ptbAvatar4);
+            this.Controls.Add(this.ptbAvatar3);
+            this.Controls.Add(this.ptbAvatar2);
+            this.Controls.Add(this.ptbAvatar1);
             this.Controls.Add(this.groupBox_user4);
             this.Controls.Add(this.groupBox_user3);
             this.Controls.Add(this.groupBox_user2);
@@ -208,7 +303,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox7);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Vong2";
             this.Text = "Vong2";
             this.Load += new System.EventHandler(this.Vong2_Load);
@@ -217,6 +312,18 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox_user4.ResumeLayout(false);
+            this.groupBox_user4.PerformLayout();
+            this.groupBox_user3.ResumeLayout(false);
+            this.groupBox_user3.PerformLayout();
+            this.groupBox_user2.ResumeLayout(false);
+            this.groupBox_user2.PerformLayout();
+            this.groupBox_user1.ResumeLayout(false);
+            this.groupBox_user1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +343,13 @@
         private System.Windows.Forms.GroupBox groupBox_user3;
         private System.Windows.Forms.GroupBox groupBox_user2;
         private System.Windows.Forms.GroupBox groupBox_user1;
+        private System.Windows.Forms.Label label_score4;
+        private System.Windows.Forms.Label label_score3;
+        private System.Windows.Forms.Label label_score2;
+        private System.Windows.Forms.Label label_score1;
+        private System.Windows.Forms.PictureBox ptbAvatar1;
+        private System.Windows.Forms.PictureBox ptbAvatar2;
+        private System.Windows.Forms.PictureBox ptbAvatar3;
+        private System.Windows.Forms.PictureBox ptbAvatar4;
     }
 }
