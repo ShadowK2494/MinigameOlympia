@@ -99,6 +99,7 @@
             // btnSignIn
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSignIn.ForeColor = System.Drawing.Color.White;
             this.btnSignIn.Location = new System.Drawing.Point(358, 299);
@@ -126,6 +127,7 @@
             // lblForgetPass
             // 
             this.lblForgetPass.AutoSize = true;
+            this.lblForgetPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgetPass.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgetPass.Location = new System.Drawing.Point(506, 231);
             this.lblForgetPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -138,6 +140,7 @@
             // btnSignUp
             // 
             this.btnSignUp.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(47, 299);
@@ -163,6 +166,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label10.Location = new System.Drawing.Point(12, 9);
@@ -175,6 +179,7 @@
             // ptbPassword
             // 
             this.ptbPassword.BackColor = System.Drawing.Color.White;
+            this.ptbPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPassword.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
             this.ptbPassword.Location = new System.Drawing.Point(563, 169);
             this.ptbPassword.Name = "ptbPassword";
@@ -208,7 +213,7 @@
             this.lblAlertPassword.Text = "a";
             this.lblAlertPassword.Visible = false;
             // 
-            // LogIn
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +236,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "LogIn";
+            this.Name = "DangNhap";
             this.Text = "SignIn";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();

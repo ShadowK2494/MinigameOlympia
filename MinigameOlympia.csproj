@@ -207,6 +207,12 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="TypeCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeCode.Designer.cs">
+      <DependentUpon>TypeCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Gender.cs" />
     <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
@@ -259,12 +265,6 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Server.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Server.Designer.cs">
-      <DependentUpon>Server.cs</DependentUpon>
-    </Compile>
     <Compile Include="TaoAvatar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeCode.resx">
+      <DependentUpon>TypeCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KetQua.resx">
       <DependentUpon>KetQua.cs</DependentUpon>

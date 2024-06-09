@@ -73,30 +73,35 @@
             // 
             // tbPhone
             // 
-            this.tbPhone.BackColor = System.Drawing.SystemColors.Control;
+            this.tbPhone.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPhone.Location = new System.Drawing.Point(449, 135);
             this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.ReadOnly = true;
-            this.tbPhone.Size = new System.Drawing.Size(171, 20);
+            this.tbPhone.Size = new System.Drawing.Size(171, 13);
             this.tbPhone.TabIndex = 5;
             // 
             // tbEmail
             // 
+            this.tbEmail.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Location = new System.Drawing.Point(449, 174);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.ReadOnly = true;
-            this.tbEmail.Size = new System.Drawing.Size(171, 20);
+            this.tbEmail.Size = new System.Drawing.Size(171, 13);
             this.tbEmail.TabIndex = 6;
             // 
             // tbWinCount
             // 
+            this.tbWinCount.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tbWinCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWinCount.Location = new System.Drawing.Point(449, 211);
             this.tbWinCount.Margin = new System.Windows.Forms.Padding(2);
             this.tbWinCount.Name = "tbWinCount";
             this.tbWinCount.ReadOnly = true;
-            this.tbWinCount.Size = new System.Drawing.Size(171, 20);
+            this.tbWinCount.Size = new System.Drawing.Size(171, 13);
             this.tbWinCount.TabIndex = 7;
             // 
             // pictureBox2
@@ -123,25 +128,27 @@
             // 
             // tbUsername
             // 
-            this.tbUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.tbUsername.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbUsername.Location = new System.Drawing.Point(449, 45);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.ReadOnly = true;
-            this.tbUsername.Size = new System.Drawing.Size(171, 26);
+            this.tbUsername.Size = new System.Drawing.Size(171, 19);
             this.tbUsername.TabIndex = 5;
             this.tbUsername.Text = "Username";
             // 
             // tbID
             // 
-            this.tbID.BackColor = System.Drawing.SystemColors.Control;
+            this.tbID.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbID.Location = new System.Drawing.Point(449, 75);
             this.tbID.Margin = new System.Windows.Forms.Padding(2);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
-            this.tbID.Size = new System.Drawing.Size(171, 20);
+            this.tbID.Size = new System.Drawing.Size(171, 13);
             this.tbID.TabIndex = 5;
             this.tbID.Text = "ID";
             // 
@@ -165,6 +172,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HoSoNV";
             this.Text = "HoSoNV";
+            this.Load += new System.EventHandler(this.HoSoNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             this.ResumeLayout(false);

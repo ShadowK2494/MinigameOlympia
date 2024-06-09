@@ -87,6 +87,7 @@
             // ptbHome
             // 
             this.ptbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbHome.Dock = System.Windows.Forms.DockStyle.Left;
             this.ptbHome.ErrorImage = null;
             this.ptbHome.Image = global::MinigameOlympia.Properties.Resources.ButtonHome;
@@ -96,6 +97,7 @@
             this.ptbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbHome.TabIndex = 2;
             this.ptbHome.TabStop = false;
+            this.ptbHome.Click += new System.EventHandler(this.ptbHome_Click);
             // 
             // lblRoom
             // 
@@ -128,6 +130,7 @@
             // BtnStart
             // 
             this.BtnStart.BackColor = System.Drawing.Color.LightCyan;
+            this.BtnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnStart.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BtnStart.Location = new System.Drawing.Point(213, 247);
             this.BtnStart.Name = "BtnStart";
@@ -144,6 +147,7 @@
             this.lblPlayer4.Name = "lblPlayer4";
             this.lblPlayer4.Size = new System.Drawing.Size(114, 23);
             this.lblPlayer4.TabIndex = 7;
+            this.lblPlayer4.Tag = "4";
             this.lblPlayer4.Text = "Player 4";
             this.lblPlayer4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -155,6 +159,7 @@
             this.lblPlayer3.Name = "lblPlayer3";
             this.lblPlayer3.Size = new System.Drawing.Size(114, 23);
             this.lblPlayer3.TabIndex = 6;
+            this.lblPlayer3.Tag = "3";
             this.lblPlayer3.Text = "Player 3";
             this.lblPlayer3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -166,6 +171,7 @@
             this.lblPlayer2.Name = "lblPlayer2";
             this.lblPlayer2.Size = new System.Drawing.Size(114, 23);
             this.lblPlayer2.TabIndex = 5;
+            this.lblPlayer2.Tag = "2";
             this.lblPlayer2.Text = "Player 2";
             this.lblPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -177,6 +183,7 @@
             this.lblPlayer1.Name = "lblPlayer1";
             this.lblPlayer1.Size = new System.Drawing.Size(114, 23);
             this.lblPlayer1.TabIndex = 4;
+            this.lblPlayer1.Tag = "1";
             this.lblPlayer1.Text = "Player 1";
             this.lblPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -185,46 +192,54 @@
             this.ptbPlayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer2.BackgroundImage")));
             this.ptbPlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPlayer2.Location = new System.Drawing.Point(187, 69);
             this.ptbPlayer2.Name = "ptbPlayer2";
             this.ptbPlayer2.Size = new System.Drawing.Size(81, 81);
-            this.ptbPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPlayer2.TabIndex = 3;
             this.ptbPlayer2.TabStop = false;
+            this.ptbPlayer2.Tag = "2";
             // 
             // ptbPlayer3
             // 
             this.ptbPlayer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer3.BackgroundImage")));
             this.ptbPlayer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPlayer3.Location = new System.Drawing.Point(327, 68);
             this.ptbPlayer3.Name = "ptbPlayer3";
             this.ptbPlayer3.Size = new System.Drawing.Size(81, 81);
-            this.ptbPlayer3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbPlayer3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPlayer3.TabIndex = 2;
             this.ptbPlayer3.TabStop = false;
+            this.ptbPlayer3.Tag = "3";
             // 
             // ptbPlayer4
             // 
             this.ptbPlayer4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer4.BackgroundImage")));
             this.ptbPlayer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPlayer4.Location = new System.Drawing.Point(465, 68);
             this.ptbPlayer4.Name = "ptbPlayer4";
             this.ptbPlayer4.Size = new System.Drawing.Size(81, 81);
-            this.ptbPlayer4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbPlayer4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPlayer4.TabIndex = 1;
             this.ptbPlayer4.TabStop = false;
+            this.ptbPlayer4.Tag = "4";
             // 
             // ptbPlayer1
             // 
             this.ptbPlayer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPlayer1.Location = new System.Drawing.Point(49, 69);
             this.ptbPlayer1.Name = "ptbPlayer1";
             this.ptbPlayer1.Size = new System.Drawing.Size(81, 81);
-            this.ptbPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPlayer1.TabIndex = 0;
             this.ptbPlayer1.TabStop = false;
+            this.ptbPlayer1.Tag = "1";
             // 
             // grbFriends
             // 
@@ -251,6 +266,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PhongCho";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhongCho_FormClosing);
+            this.Load += new System.EventHandler(this.PhongCho_Load);
             this.panelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).EndInit();
             this.panelMain.ResumeLayout(false);
