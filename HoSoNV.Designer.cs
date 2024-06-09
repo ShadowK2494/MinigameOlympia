@@ -75,7 +75,7 @@
             // 
             this.tbPhone.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPhone.Location = new System.Drawing.Point(449, 135);
+            this.tbPhone.Location = new System.Drawing.Point(449, 138);
             this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.ReadOnly = true;
@@ -86,7 +86,7 @@
             // 
             this.tbEmail.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbEmail.Location = new System.Drawing.Point(449, 174);
+            this.tbEmail.Location = new System.Drawing.Point(449, 177);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.ReadOnly = true;
@@ -97,7 +97,7 @@
             // 
             this.tbWinCount.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbWinCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbWinCount.Location = new System.Drawing.Point(449, 211);
+            this.tbWinCount.Location = new System.Drawing.Point(449, 213);
             this.tbWinCount.Margin = new System.Windows.Forms.Padding(2);
             this.tbWinCount.Name = "tbWinCount";
             this.tbWinCount.ReadOnly = true;

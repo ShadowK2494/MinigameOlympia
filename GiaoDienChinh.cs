@@ -23,8 +23,6 @@ namespace MinigameOlympia {
     public partial class GiaoDienChinh : Form {
         private string username;
         private Thread get;
-        private event EventHandler<Player> playerDataSent;
-        private event EventHandler<Image> imageSent;
         public Image image;
         public Player player;
         private List<List<Player>> friendList = new List<List<Player>>();
@@ -37,10 +35,8 @@ namespace MinigameOlympia {
 
         private void ptbAvatar_Click(object sender, EventArgs e) {
             HoSoNV profile = new HoSoNV();
-            playerDataSent += profile.MainScreen_Player;
-            playerDataSent?.Invoke(this, player);
-            imageSent += profile.MainScreen_Image;
-            imageSent?.Invoke(this, image);
+            profile.player = player;
+            profile.image = image;
             profile.ShowDialog();
         }
 
@@ -136,6 +132,11 @@ namespace MinigameOlympia {
             players.Sort((p1,p2) => p2.WinCount.CompareTo(p1.WinCount));
         }
 
+        private async Task SortFriend() {
+            await getFriend();
+            friendList[0].Sort((p1, p2) => p2.WinCount.CompareTo(p1.WinCount));
+        }
+
         private async void GiaoDienChinh_Load(object sender, EventArgs e) {
             await SortPlayer();
             int y = 0;
@@ -157,6 +158,7 @@ namespace MinigameOlympia {
                     Cursor = Cursors.Hand,
                     Tag = i
                 };
+                ptb.Click += Information_All;
                 pn.Controls.Add(ptb);
                 Label lb1 = new Label() {
                     AutoSize = true,
@@ -177,7 +179,7 @@ namespace MinigameOlympia {
                 y += 81;
             }
 
-            await getFriend();
+            await SortFriend();
             if (friendList.Count == 1) {
                 for (int i = 0; i < friendList[0].Count; i++) {
                     PictureBox ptb = new PictureBox() {
@@ -209,10 +211,17 @@ namespace MinigameOlympia {
             PictureBox ptb = (PictureBox)sender;
             Player p = friendList[0][int.Parse(ptb.Tag.ToString())];
             HoSoNV profile = new HoSoNV();
-            playerDataSent += profile.MainScreen_Player;
-            playerDataSent?.Invoke(this, p);
-            imageSent += profile.MainScreen_Image;
-            imageSent?.Invoke(this, ptb.Image);
+            profile.player = p;
+            profile.image = ptb.Image;
+            profile.ShowDialog();
+        }
+
+        private void Information_All(object sender, EventArgs e) {
+            PictureBox ptb = (PictureBox)sender;
+            Player p = players[int.Parse(ptb.Tag.ToString())];
+            HoSoNV profile = new HoSoNV();
+            profile.player = p;
+            profile.image = ptb.Image;
             profile.ShowDialog();
         }
 
@@ -220,6 +229,7 @@ namespace MinigameOlympia {
             PhongCho room = new PhongCho();
             room.player = player;
             room.image = image;
+            room.friendList = friendList;
             await CreateRoomCode();
             room.roomCode = roomCode;
             Visible = false;

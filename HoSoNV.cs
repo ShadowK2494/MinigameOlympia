@@ -12,19 +12,11 @@ using System.Windows.Forms;
 
 namespace MinigameOlympia {
     public partial class HoSoNV : Form {
-        private Player player;
-        private Image image;
+        public Player player;
+        public Image image;
         private Thread load;
         public HoSoNV() {
             InitializeComponent();
-        }
-
-        public void MainScreen_Player(object sender, Player data) {
-            player = data;
-        }
-
-        public void MainScreen_Image(object sender, Image data) {
-            image = data;
         }
 
         private void appendText_lblUsername(string text) {

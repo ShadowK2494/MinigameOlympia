@@ -24,15 +24,60 @@ namespace MinigameOlympia {
         private TcpClient client;
         private Thread receive;
         private int numConnection = 0;
+        public List<List<Player>> friendList;
+
         public PhongCho() {
             InitializeComponent();
         }
 
         private void PhongCho_Load(object sender, EventArgs e) {
             lblRoomCode.Text = roomCode;
+            LoadFriendList();
             Connect();
             SendData("CONNECT:" + lblRoomCode.Text + "-" + player.Username, client);
             PostMatch();
+        }
+
+        private void LoadFriendList() {
+            friendList[0].Sort((p1, p2) => p2.WinCount.CompareTo(p1.WinCount));
+            int y = 0;
+            for (int i = 0; i < friendList[0].Count; i++) {
+                Panel pn = new Panel() {
+                    Location = new Point(0, y),
+                    BorderStyle = BorderStyle.Fixed3D,
+                    Size = new Size(233, 81)
+                };
+                pnFriend.Controls.Add(pn);
+                PictureBox ptb = new PictureBox() {
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Image = LoadImage(friendList[0][i].Avatar),
+                    Dock = DockStyle.Left,
+                    BorderStyle = BorderStyle.Fixed3D,
+                    Size = new Size(81, 81),
+                    Cursor = Cursors.Hand,
+                    Tag = i
+                };
+                ptb.Click += Information;
+                pn.Controls.Add(ptb);
+                Label lb = new Label() {
+                    AutoSize = true,
+                    Location = new Point(95, 14),
+                    Text = friendList[0][i].Username,
+                    Font = new Font("Microsoft Sans Serif", 12F),
+                    ForeColor = Color.White
+                };
+                pn.Controls.Add(lb);
+                y += 81;
+            }
+        }
+
+        private void Information(object sender, EventArgs e) {
+            PictureBox ptb = (PictureBox)sender;
+            Player p = friendList[0][int.Parse(ptb.Tag.ToString())];
+            HoSoNV profile = new HoSoNV();
+            profile.player = p;
+            profile.image = ptb.Image;
+            profile.ShowDialog();
         }
 
         private void SendData(string message, TcpClient client) {

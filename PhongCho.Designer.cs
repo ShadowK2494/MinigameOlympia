@@ -40,6 +40,7 @@
             this.ptbPlayer4 = new System.Windows.Forms.PictureBox();
             this.ptbPlayer1 = new System.Windows.Forms.PictureBox();
             this.grbFriends = new System.Windows.Forms.GroupBox();
+            this.pnFriend = new System.Windows.Forms.Panel();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -47,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer1)).BeginInit();
+            this.grbFriends.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -244,14 +246,23 @@
             // grbFriends
             // 
             this.grbFriends.BackColor = System.Drawing.Color.Transparent;
+            this.grbFriends.Controls.Add(this.pnFriend);
             this.grbFriends.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grbFriends.ForeColor = System.Drawing.Color.White;
             this.grbFriends.Location = new System.Drawing.Point(626, 53);
             this.grbFriends.Name = "grbFriends";
-            this.grbFriends.Size = new System.Drawing.Size(179, 358);
+            this.grbFriends.Size = new System.Drawing.Size(238, 358);
             this.grbFriends.TabIndex = 2;
             this.grbFriends.TabStop = false;
             this.grbFriends.Text = "Bạn bè";
+            // 
+            // pnFriend
+            // 
+            this.pnFriend.AutoScroll = true;
+            this.pnFriend.Location = new System.Drawing.Point(2, 33);
+            this.pnFriend.Name = "pnFriend";
+            this.pnFriend.Size = new System.Drawing.Size(233, 319);
+            this.pnFriend.TabIndex = 1;
             // 
             // PhongCho
             // 
@@ -259,7 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(832, 450);
+            this.ClientSize = new System.Drawing.Size(890, 450);
             this.Controls.Add(this.grbFriends);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
@@ -275,6 +286,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer1)).EndInit();
+            this.grbFriends.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -297,5 +309,6 @@
         private System.Windows.Forms.Button BtnStart;
         public System.Windows.Forms.Label lblRoomCode;
         public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnFriend;
     }
 }
