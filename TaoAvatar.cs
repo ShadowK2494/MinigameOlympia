@@ -38,12 +38,12 @@ namespace MinigameOlympia {
         }
 
         // Tạo tái khoản + avatar + chuyển đến form Giao diện chính
-        private void btnSubmit_Click(object sender, EventArgs e) {
+        private async void btnSubmit_Click(object sender, EventArgs e) {
             if (!rdbSelect.Checked) {
                 if (!rdbDefault.Checked)
                     MessageBox.Show("Bạn chưa chọn hình đại diện", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else {
-                    PostPlayerAsync(newPlayer);
+                    await PostPlayerAsync(newPlayer);
                     Close();
                     GiaoDienChinh mainScreen = new GiaoDienChinh();
                     usernameSent += mainScreen.CreateAvatar_username;
@@ -54,7 +54,7 @@ namespace MinigameOlympia {
                 if (!selected)
                     MessageBox.Show("Bạn chưa chọn hình đại diện", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else {
-                    PostPlayerAsync(newPlayer);
+                    await PostPlayerAsync(newPlayer);
                     Close();
                     GiaoDienChinh mainScreen = new GiaoDienChinh();
                     usernameSent += mainScreen.CreateAvatar_username;
@@ -110,7 +110,7 @@ namespace MinigameOlympia {
             var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
             HttpClient client = new HttpClient();
             try {
-                var response = await client.PostAsync("https://86db-203-205-32-65.ngrok-free.app/api/Player", content);
+                var response = await client.PostAsync("http://localhost:2804/api/Player", content);
                 if (response.IsSuccessStatusCode) {
                     MessageBox.Show("Tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

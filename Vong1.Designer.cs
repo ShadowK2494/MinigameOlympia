@@ -262,7 +262,7 @@
             // coverPicture4
             // 
             this.coverPicture4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.coverPicture4.Location = new System.Drawing.Point(176, 108);
+            this.coverPicture4.Location = new System.Drawing.Point(176, 109);
             this.coverPicture4.Margin = new System.Windows.Forms.Padding(2);
             this.coverPicture4.Name = "coverPicture4";
             this.coverPicture4.Size = new System.Drawing.Size(149, 84);
@@ -273,7 +273,7 @@
             // 
             this.coverPicture5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.coverPicture5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.coverPicture5.Location = new System.Drawing.Point(107, 69);
+            this.coverPicture5.Location = new System.Drawing.Point(101, 66);
             this.coverPicture5.Margin = new System.Windows.Forms.Padding(2);
             this.coverPicture5.Name = "coverPicture5";
             this.coverPicture5.Size = new System.Drawing.Size(149, 84);

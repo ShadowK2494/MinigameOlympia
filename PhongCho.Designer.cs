@@ -41,6 +41,7 @@
             this.ptbPlayer1 = new System.Windows.Forms.PictureBox();
             this.grbFriends = new System.Windows.Forms.GroupBox();
             this.pnFriend = new System.Windows.Forms.Panel();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -134,12 +135,13 @@
             this.BtnStart.BackColor = System.Drawing.Color.LightCyan;
             this.BtnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnStart.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BtnStart.Location = new System.Drawing.Point(213, 247);
+            this.BtnStart.Location = new System.Drawing.Point(216, 247);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.Size = new System.Drawing.Size(146, 46);
             this.BtnStart.TabIndex = 8;
             this.BtnStart.Text = "Bắt đầu";
             this.BtnStart.UseVisualStyleBackColor = false;
+            this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // lblPlayer4
             // 
@@ -264,13 +266,25 @@
             this.pnFriend.Size = new System.Drawing.Size(233, 319);
             this.pnFriend.TabIndex = 1;
             // 
+            // lblInfo
+            // 
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblInfo.Location = new System.Drawing.Point(652, 13);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(190, 27);
+            this.lblInfo.TabIndex = 3;
+            this.lblInfo.Text = "Đang ghép phòng...";
+            this.lblInfo.Visible = false;
+            // 
             // PhongCho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LemonChiffon;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(890, 450);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.grbFriends);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
@@ -310,5 +324,6 @@
         public System.Windows.Forms.Label lblRoomCode;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnFriend;
+        private System.Windows.Forms.Label lblInfo;
     }
 }

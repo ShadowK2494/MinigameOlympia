@@ -21,6 +21,7 @@ namespace MinigameOlympia {
         public Player player;
         public Image image;
         public string roomCode;
+        public bool isAdmin = true;
         private TcpClient client;
         private Thread receive;
         private int numConnection = 0;
@@ -32,6 +33,7 @@ namespace MinigameOlympia {
 
         private void PhongCho_Load(object sender, EventArgs e) {
             lblRoomCode.Text = roomCode;
+            if (!isAdmin) BtnStart.Visible = false;
             LoadFriendList();
             Connect();
             SendData("CONNECT:" + lblRoomCode.Text + "-" + player.Username, client);
@@ -94,7 +96,7 @@ namespace MinigameOlympia {
                     break;
                 }
             }
-            SendData("DISCONNECT:" + lblRoomCode.Text + "-" + player.Username, client);
+            SendData("DISCONNECT:" + roomCode + "-" + player.Username, client);
             Thread.Sleep(1000);
             Close();
         }
@@ -172,56 +174,98 @@ namespace MinigameOlympia {
             switch (Payload[0]) {
                 case "INFO_CON":
                     string[] data = Payload[1].Split('-');
-                    numConnection = int.Parse(data[0]);
-                    byte[] avatarByte = await getAvatar(data[1]);
+                    roomCode = data[0];
+                    numConnection = int.Parse(data[1]);
+                    byte[] avatarByte = await getAvatar(data[2]);
+                    int i = 0;
                     foreach (Control c in panelMain.Controls) {
                         if (c is Label) {
                             Label l = (Label)c;
-                            if (l.Tag.ToString() == data[2]) {
-                                if (data[1] == player.Username) {
+                            if (l.Tag.ToString() == data[3]) {
+                                i++;
+                                if (data[2] == player.Username) {
                                     l.Text = player.Username;
                                     l.ForeColor = Color.Yellow;
+                                    lblRoomCode.Text = roomCode;
                                 } else {
-                                    l.Text = data[1];
+                                    l.Text = data[2];
+                                    l.ForeColor = Color.White;
                                 }
                             }
                         } else if (c is PictureBox) {
                             PictureBox p = (PictureBox)c;
-                            if (p.Tag.ToString() == data[2]) {
-                                if (data[1] == player.Username)
+                            if (p.Tag.ToString() == data[3]) {
+                                i++;
+                                if (data[2] == player.Username)
                                     p.Image = image;
                                 else
                                     p.Image = LoadImage(avatarByte);
                             }
                         }
+                        if (i == 2)
+                            break;
                     }
                     break;
                 case "INFO_DISCON":
                     RestoreDefault();
                     data = Payload[1].Split('-');
-                    numConnection = int.Parse(data[0]);
-                    avatarByte = await getAvatar(data[1]);
+                    numConnection = int.Parse(data[1]);
+                    if (numConnection == 1) {
+                        if (InvokeRequired) {
+                            Invoke(new MethodInvoker(delegate {
+                                BtnStart.Visible = true;
+                            }));
+                        } else {
+                            BtnStart.Visible = true;
+                        }
+                    }
+                    avatarByte = await getAvatar(data[2]);
+                    i = 0;
                     foreach (Control c in panelMain.Controls) {
                         if (c is Label) {
                             Label l = (Label)c;
-                            if (l.Tag.ToString() == data[2]) {
-                                if (data[1] == player.Username) {
+                            if (l.Tag.ToString() == data[3]) {
+                                i++;
+                                if (data[2] == player.Username) {
                                     l.Text = player.Username;
                                     l.ForeColor = Color.Yellow;
                                 } else {
-                                    l.Text = data[1];
+                                    l.Text = data[2];
+                                    l.ForeColor = Color.White;
                                 }
                             }
                         } else if (c is PictureBox) {
                             PictureBox p = (PictureBox)c;
-                            if (p.Tag.ToString() == data[2]) {
-                                if (data[1] == player.Username)
+                            if (p.Tag.ToString() == data[3]) {
+                                i++;
+                                if (data[2] == player.Username)
                                     p.Image = image;
                                 else
                                     p.Image = LoadImage(avatarByte);
                             }
                         }
+                        if (i == 2)
+                            break;
                     }
+                    break;
+                case "START":
+                    if (InvokeRequired) {
+                        Invoke(new MethodInvoker(delegate {
+                            Vong1 vong1 = new Vong1();
+                            Visible = false;
+                            vong1.Text = "Vượt chướng ngại vật - " + player.Username;
+                            vong1.Show();
+                        }));
+                    } else {
+                        Vong1 vong1 = new Vong1();
+                        Visible = false;
+                        vong1.Text = "Vượt chướng ngại vật - " + player.Username;
+                        vong1.Show();
+                    }
+                    break;
+                case "SYNC":
+                    SendData("FIND:" + roomCode + "-" + player.Username, client);
+                    lblInfo.Visible = true;
                     break;
             }
         }
@@ -241,6 +285,20 @@ namespace MinigameOlympia {
                 client.Close();
             if (receive.IsAlive)
                 receive.Abort();
+        }
+
+        private void BtnStart_Click(object sender, EventArgs e) {
+            if (numConnection == 4) {
+                SendData("START:" + roomCode, client);
+                Vong1 vong1 = new Vong1();
+                vong1.Text = "Vượt chướng ngại vật - " + player.Username;
+                Visible = false;
+                vong1.Show();
+            } else {
+                SendData("CONNECT_MATCH:" + roomCode, client);
+                SendData("FIND:" + roomCode + "-" + player.Username, client);
+                lblInfo.Visible = true;
+            }
         }
     }
 }

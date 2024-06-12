@@ -95,6 +95,7 @@ namespace MinigameOlympia {
             TypeCode tc = new TypeCode();
             tc.player = player;
             tc.image = image;
+            tc.friendList = friendList;
             tc.ShowDialog();
         }
 

@@ -39,7 +39,7 @@ namespace MinigameOlympia {
             } else {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (!response.IsSuccessStatusCode) {
                         lblAlertUsername.Text = "ⓘ Username không tồn tại";
@@ -122,12 +122,13 @@ namespace MinigameOlympia {
             if (isOKUsername && isOKPassword) {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (response.IsSuccessStatusCode) {
                         string jsonContent = await response.Content.ReadAsStringAsync();
                         Player player = JsonConvert.DeserializeObject<Player>(jsonContent);
-                        if (VerifyHashedPassword(HashPassword(tbPassword.Text), player.Password)) {
+                        //if (VerifyHashedPassword(player.Password, tbPassword.Text)) {
+                        if (tbPassword.Text == player.Password) {
                             Close();
                             GiaoDienChinh mainScreen = new GiaoDienChinh();
                             usernameSent += mainScreen.LogIn_username;
@@ -152,7 +153,7 @@ namespace MinigameOlympia {
 
         private void ForgetPassword(object sender, EventArgs e) {
             Visible = false;
-            QuenMK forgetPassword = new QuenMK(this);
+            QuenMK forgetPassword = new QuenMK();
             forgetPassword.Show();
         }
     }

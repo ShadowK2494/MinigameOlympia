@@ -16,6 +16,7 @@ namespace MinigameOlympia {
         public Player player;
         public Image image;
         public string roomCode = "";
+        public List<List<Player>> friendList;
         public TypeCode() {
             InitializeComponent();
         }
@@ -37,6 +38,8 @@ namespace MinigameOlympia {
                         pc.player = player;
                         pc.image = image;
                         pc.roomCode = roomCode;
+                        pc.friendList = friendList;
+                        pc.isAdmin = false;
                         pc.Show();
                         Close();
                         foreach (Form form in Application.OpenForms) {
