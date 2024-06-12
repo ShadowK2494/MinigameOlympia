@@ -36,12 +36,13 @@
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangNhap.Location = new System.Drawing.Point(54, 486);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangNhap.Location = new System.Drawing.Point(42, 313);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(168, 68);
+            this.btnDangNhap.Size = new System.Drawing.Size(112, 44);
             this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
             this.btnDangNhap.UseVisualStyleBackColor = false;
@@ -50,12 +51,13 @@
             // btnDangKy
             // 
             this.btnDangKy.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangKy.Location = new System.Drawing.Point(273, 486);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangKy.Location = new System.Drawing.Point(175, 313);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(168, 68);
+            this.btnDangKy.Size = new System.Drawing.Size(112, 44);
             this.btnDangKy.TabIndex = 1;
             this.btnDangKy.Text = "ĐĂNG KÝ";
             this.btnDangKy.UseVisualStyleBackColor = false;
@@ -63,15 +65,15 @@
             // 
             // RootForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.BackgroundLogin;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(497, 631);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(331, 410);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "RootForm";
             this.Text = "RootForm";
             this.ResumeLayout(false);

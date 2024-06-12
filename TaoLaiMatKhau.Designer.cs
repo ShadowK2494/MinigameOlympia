@@ -57,6 +57,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Location = new System.Drawing.Point(339, 248);
@@ -136,6 +137,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(11, 9);
@@ -144,10 +146,12 @@
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 31;
             this.label6.Text = "Quay về";
+            this.label6.Click += new System.EventHandler(this.BackToSignInForm);
             // 
             // ptbPassword
             // 
             this.ptbPassword.BackColor = System.Drawing.Color.White;
+            this.ptbPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPassword.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
             this.ptbPassword.Location = new System.Drawing.Point(534, 95);
             this.ptbPassword.Name = "ptbPassword";
@@ -160,6 +164,7 @@
             // ptbRePass
             // 
             this.ptbRePass.BackColor = System.Drawing.Color.White;
+            this.ptbRePass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbRePass.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
             this.ptbRePass.Location = new System.Drawing.Point(534, 174);
             this.ptbRePass.Name = "ptbRePass";
@@ -193,7 +198,7 @@
             this.lblAlertRePass.Text = "a";
             this.lblAlertRePass.Visible = false;
             // 
-            // CreateNewPassword
+            // TaoLaiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "CreateNewPassword";
+            this.Name = "TaoLaiMatKhau";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();

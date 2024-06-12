@@ -193,6 +193,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Location = new System.Drawing.Point(533, 372);
@@ -206,13 +207,14 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label10.Location = new System.Drawing.Point(12, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 19);
+            this.label10.Size = new System.Drawing.Size(66, 19);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Back";
+            this.label10.Text = "Quay về";
             this.label10.Click += new System.EventHandler(this.BackToRootForm);
             // 
             // cbbGender
@@ -317,6 +319,7 @@
             // ptbRePass
             // 
             this.ptbRePass.BackColor = System.Drawing.Color.White;
+            this.ptbRePass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbRePass.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
             this.ptbRePass.Location = new System.Drawing.Point(593, 320);
             this.ptbRePass.Name = "ptbRePass";
@@ -329,6 +332,7 @@
             // ptbPassword
             // 
             this.ptbPassword.BackColor = System.Drawing.Color.White;
+            this.ptbPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPassword.Image = global::MinigameOlympia.Properties.Resources.ShowPass;
             this.ptbPassword.Location = new System.Drawing.Point(593, 242);
             this.ptbPassword.Name = "ptbPassword";
@@ -386,7 +390,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DangKy";
             this.Text = "Đăng ký";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangKyClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ptbRePass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -85,6 +85,7 @@
             // 
             // btnSendOTP
             // 
+            this.btnSendOTP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSendOTP.Location = new System.Drawing.Point(609, 75);
             this.btnSendOTP.Margin = new System.Windows.Forms.Padding(2);
@@ -118,6 +119,7 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSubmit.Location = new System.Drawing.Point(609, 149);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
@@ -131,6 +133,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(9, 7);
@@ -164,7 +167,7 @@
             this.lblAlertEmail.Text = "a";
             this.lblAlertEmail.Visible = false;
             // 
-            // ForgetPassword
+            // QuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,7 +186,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ForgetPassword";
+            this.Name = "QuenMK";
             this.Text = "QuenMK";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ForgetPasswordClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

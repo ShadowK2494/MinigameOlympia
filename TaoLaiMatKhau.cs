@@ -30,9 +30,14 @@ namespace MinigameOlympia {
             email = data;
         }
 
-        private void BackToForgetPasswordForm(object sender, EventArgs args) {
+        private void BackToSignInForm(object sender, EventArgs args) {
+            foreach (Form form in Application.OpenForms) {
+                if (form.Name == "DangNhap") {
+                    form.Visible = true;
+                    break;
+                }
+            }
             Close();
-            _forgetPassword.Visible = true;
         }
 
 
