@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MinigameOlympia.Models;
 using MinigameOlympia;
+using System.Security.Cryptography;
 
 namespace MinigameOlympia {
     public partial class DangNhap : Form {
@@ -38,7 +39,7 @@ namespace MinigameOlympia {
             } else {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (!response.IsSuccessStatusCode) {
                         lblAlertUsername.Text = "ⓘ Username không tồn tại";
@@ -90,16 +91,43 @@ namespace MinigameOlympia {
             }
         }
 
+        // Phương thức băm mật khẩu bằng SHA-256
+        private string HashPassword(string password)
+        {
+            password += "group17";
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
+        }
+
+        // Phương thức xác thực mật khẩu đã băm
+        private bool VerifyHashedPassword(string hashedPassword, string password)
+        {
+            string hashOfInput = HashPassword(password);
+
+            return StringComparer.OrdinalIgnoreCase.Compare(hashedPassword, hashOfInput) == 0;
+        }
+
+
         private async void btnSignIn_Click(object sender, EventArgs e) {
             if (isOKUsername && isOKPassword) {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://86db-203-205-32-65.ngrok-free.app/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (response.IsSuccessStatusCode) {
                         string jsonContent = await response.Content.ReadAsStringAsync();
                         Player player = JsonConvert.DeserializeObject<Player>(jsonContent);
-                        if (tbPassword.Text == player.Password) {
+                        if (VerifyHashedPassword(HashPassword(tbPassword.Text), player.Password)) {
                             Close();
                             GiaoDienChinh mainScreen = new GiaoDienChinh();
                             usernameSent += mainScreen.LogIn_username;

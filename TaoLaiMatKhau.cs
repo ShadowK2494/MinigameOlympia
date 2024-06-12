@@ -135,7 +135,7 @@ namespace MinigameOlympia {
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
                 HttpClient client = new HttpClient();
                 try {
-                    var response = await client.PutAsync("http://localhost:2804/api/Player", content);
+                    var response = await client.PutAsync("https://86db-203-205-32-65.ngrok-free.app/api/Player", content);
                     if (response.IsSuccessStatusCode) {
                         MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();
