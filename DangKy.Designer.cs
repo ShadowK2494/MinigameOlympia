@@ -59,20 +59,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(551, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 31);
+            this.label1.Size = new System.Drawing.Size(169, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tạo tài khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(339, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Họ và tên:";
             // 
@@ -88,10 +88,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(658, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 19);
+            this.label3.Size = new System.Drawing.Size(50, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Email:";
             // 
@@ -107,30 +107,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(339, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 19);
+            this.label4.Size = new System.Drawing.Size(84, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Username:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(658, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(74, 18);
             this.label5.TabIndex = 10;
             this.label5.Text = "Giới tính:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(339, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 19);
+            this.label6.Size = new System.Drawing.Size(76, 18);
             this.label6.TabIndex = 12;
             this.label6.Text = "Mật khẩu:";
             // 
@@ -164,20 +164,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(658, 137);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 19);
+            this.label7.Size = new System.Drawing.Size(105, 18);
             this.label7.TabIndex = 16;
             this.label7.Text = "Số điện thoại:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(339, 296);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 19);
+            this.label8.Size = new System.Drawing.Size(136, 18);
             this.label8.TabIndex = 19;
             this.label8.Text = "Nhập lại mật khẩu:";
             // 
@@ -208,11 +208,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label10.Location = new System.Drawing.Point(12, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 19);
+            this.label10.Size = new System.Drawing.Size(66, 18);
             this.label10.TabIndex = 23;
             this.label10.Text = "Quay về";
             this.label10.Click += new System.EventHandler(this.BackToRootForm);
@@ -235,11 +235,11 @@
             // lblAlertName
             // 
             this.lblAlertName.AutoSize = true;
-            this.lblAlertName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertName.ForeColor = System.Drawing.Color.Red;
             this.lblAlertName.Location = new System.Drawing.Point(340, 116);
             this.lblAlertName.Name = "lblAlertName";
-            this.lblAlertName.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertName.Size = new System.Drawing.Size(13, 14);
             this.lblAlertName.TabIndex = 25;
             this.lblAlertName.Text = "a";
             this.lblAlertName.Visible = false;
@@ -247,11 +247,11 @@
             // lblAlertUsername
             // 
             this.lblAlertUsername.AutoSize = true;
-            this.lblAlertUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertUsername.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertUsername.ForeColor = System.Drawing.Color.Red;
             this.lblAlertUsername.Location = new System.Drawing.Point(340, 194);
             this.lblAlertUsername.Name = "lblAlertUsername";
-            this.lblAlertUsername.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertUsername.Size = new System.Drawing.Size(13, 14);
             this.lblAlertUsername.TabIndex = 26;
             this.lblAlertUsername.Text = "a";
             this.lblAlertUsername.Visible = false;
@@ -259,11 +259,11 @@
             // lblAlertPassword
             // 
             this.lblAlertPassword.AutoSize = true;
-            this.lblAlertPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertPassword.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertPassword.ForeColor = System.Drawing.Color.Red;
             this.lblAlertPassword.Location = new System.Drawing.Point(340, 271);
             this.lblAlertPassword.Name = "lblAlertPassword";
-            this.lblAlertPassword.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertPassword.Size = new System.Drawing.Size(13, 14);
             this.lblAlertPassword.TabIndex = 27;
             this.lblAlertPassword.Text = "a";
             this.lblAlertPassword.Visible = false;
@@ -271,11 +271,11 @@
             // lblAlertRePass
             // 
             this.lblAlertRePass.AutoSize = true;
-            this.lblAlertRePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertRePass.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertRePass.ForeColor = System.Drawing.Color.Red;
             this.lblAlertRePass.Location = new System.Drawing.Point(340, 349);
             this.lblAlertRePass.Name = "lblAlertRePass";
-            this.lblAlertRePass.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertRePass.Size = new System.Drawing.Size(13, 14);
             this.lblAlertRePass.TabIndex = 28;
             this.lblAlertRePass.Text = "a";
             this.lblAlertRePass.Visible = false;
@@ -283,11 +283,11 @@
             // lblAlertEmail
             // 
             this.lblAlertEmail.AutoSize = true;
-            this.lblAlertEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertEmail.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertEmail.ForeColor = System.Drawing.Color.Red;
             this.lblAlertEmail.Location = new System.Drawing.Point(659, 116);
             this.lblAlertEmail.Name = "lblAlertEmail";
-            this.lblAlertEmail.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertEmail.Size = new System.Drawing.Size(13, 14);
             this.lblAlertEmail.TabIndex = 29;
             this.lblAlertEmail.Text = "a";
             this.lblAlertEmail.Visible = false;
@@ -295,11 +295,11 @@
             // lblAlertPhone
             // 
             this.lblAlertPhone.AutoSize = true;
-            this.lblAlertPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertPhone.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertPhone.ForeColor = System.Drawing.Color.Red;
             this.lblAlertPhone.Location = new System.Drawing.Point(659, 194);
             this.lblAlertPhone.Name = "lblAlertPhone";
-            this.lblAlertPhone.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertPhone.Size = new System.Drawing.Size(13, 14);
             this.lblAlertPhone.TabIndex = 30;
             this.lblAlertPhone.Text = "a";
             this.lblAlertPhone.Visible = false;
@@ -307,11 +307,11 @@
             // lblAlertGender
             // 
             this.lblAlertGender.AutoSize = true;
-            this.lblAlertGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertGender.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlertGender.ForeColor = System.Drawing.Color.Red;
             this.lblAlertGender.Location = new System.Drawing.Point(659, 271);
             this.lblAlertGender.Name = "lblAlertGender";
-            this.lblAlertGender.Size = new System.Drawing.Size(13, 13);
+            this.lblAlertGender.Size = new System.Drawing.Size(13, 14);
             this.lblAlertGender.TabIndex = 33;
             this.lblAlertGender.Text = "a";
             this.lblAlertGender.Visible = false;

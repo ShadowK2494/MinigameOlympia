@@ -148,11 +148,11 @@
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.grbRank);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GiaoDienChinh";
-            this.Text = "GiaoDienChinh";
+            this.Text = "Giao diện chính";
             this.Load += new System.EventHandler(this.GiaoDienChinh_Load);
             this.grbRank.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();

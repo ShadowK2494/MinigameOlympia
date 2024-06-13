@@ -131,7 +131,7 @@ namespace MinigameOlympia {
                 } else {
                     HttpClient client = new HttpClient();
                     try {
-                        string url = "http://localhost:2804/api/Player/email?lookup=" + tbEmail.Text.Trim();
+                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + tbEmail.Text.Trim();
                         var response = await client.GetAsync(url);
                         if (!response.IsSuccessStatusCode) {
                             lblAlertEmail.Text = "ⓘ Email chưa được đăng ký";

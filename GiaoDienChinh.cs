@@ -59,7 +59,7 @@ namespace MinigameOlympia {
             player = null;
             HttpClient client = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/Player/username?lookup=" + username;
+                string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + username;
                 var response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     string jsonContent = await response.Content.ReadAsStringAsync();
@@ -103,7 +103,7 @@ namespace MinigameOlympia {
             await getAvatar();
             HttpClient client = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/Player/Friend/id?lookup=" + player.IDPlayer;
+                string url = "https://olympiawebservice.azurewebsites.net/api/Player/Friend/id?lookup=" + player.IDPlayer;
                 var response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     string jsonContent = await response.Content.ReadAsStringAsync();
@@ -117,7 +117,7 @@ namespace MinigameOlympia {
         private async Task GetAllPlayer() {
             HttpClient client = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/player";
+                string url = "https://olympiawebservice.azurewebsites.net/api/Player";
                 var response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     string jsonContent = await response.Content.ReadAsStringAsync();
@@ -241,7 +241,7 @@ namespace MinigameOlympia {
             Random random = new Random();
             HttpClient client = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/room";
+                string url = "https://olympiawebservice.azurewebsites.net/api/Room";
                 var response = await client.PostAsync(url, null);
                 if (response.IsSuccessStatusCode) {
                     var res = await response.Content.ReadAsStringAsync();

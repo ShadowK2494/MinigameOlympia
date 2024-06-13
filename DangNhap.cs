@@ -39,7 +39,7 @@ namespace MinigameOlympia {
             } else {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (!response.IsSuccessStatusCode) {
                         lblAlertUsername.Text = "ⓘ Username không tồn tại";
@@ -122,13 +122,12 @@ namespace MinigameOlympia {
             if (isOKUsername && isOKPassword) {
                 HttpClient client = new HttpClient();
                 try {
-                    string url = "http://localhost:2804/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                    string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
                     var response = await client.GetAsync(url);
                     if (response.IsSuccessStatusCode) {
                         string jsonContent = await response.Content.ReadAsStringAsync();
                         Player player = JsonConvert.DeserializeObject<Player>(jsonContent);
-                        //if (VerifyHashedPassword(player.Password, tbPassword.Text)) {
-                        if (tbPassword.Text == player.Password) {
+                        if (VerifyHashedPassword(player.Password, tbPassword.Text)) {
                             Close();
                             GiaoDienChinh mainScreen = new GiaoDienChinh();
                             usernameSent += mainScreen.LogIn_username;

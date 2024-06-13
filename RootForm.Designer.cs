@@ -40,7 +40,7 @@
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangNhap.Location = new System.Drawing.Point(42, 313);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(1);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(112, 44);
             this.btnDangNhap.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangKy.Location = new System.Drawing.Point(175, 313);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(1);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(112, 44);
             this.btnDangKy.TabIndex = 1;
@@ -72,10 +72,10 @@
             this.ClientSize = new System.Drawing.Size(331, 410);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "RootForm";
-            this.Text = "RootForm";
             this.ResumeLayout(false);
 
         }

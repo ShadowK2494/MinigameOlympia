@@ -151,7 +151,7 @@ namespace Server {
             numConnection.Remove(roomCode);
             using (HttpClient httpClient = new HttpClient()) {
                 try {
-                    string url = "http://localhost:2804/api/Room?idRoom=" + roomCode;
+                    string url = "https://olympiawebservice.azurewebsites.net/api/Room?idRoom=" + roomCode;
                     await httpClient.DeleteAsync(url);
                 } catch (Exception ex) {
                     MessageBox.Show(ex.Message);

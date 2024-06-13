@@ -77,7 +77,7 @@
             this.tbPhone.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPhone.Location = new System.Drawing.Point(449, 138);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(1);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.ReadOnly = true;
             this.tbPhone.Size = new System.Drawing.Size(114, 13);
@@ -88,7 +88,7 @@
             this.tbEmail.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Location = new System.Drawing.Point(449, 177);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(1);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.ReadOnly = true;
             this.tbEmail.Size = new System.Drawing.Size(114, 13);
@@ -99,7 +99,7 @@
             this.tbWinCount.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tbWinCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWinCount.Location = new System.Drawing.Point(449, 213);
-            this.tbWinCount.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tbWinCount.Margin = new System.Windows.Forms.Padding(1);
             this.tbWinCount.Name = "tbWinCount";
             this.tbWinCount.ReadOnly = true;
             this.tbWinCount.Size = new System.Drawing.Size(114, 13);
@@ -109,7 +109,7 @@
             // 
             this.pictureBox2.Image = global::MinigameOlympia.Properties.Resources.BackgroundLogin;
             this.pictureBox2.Location = new System.Drawing.Point(0, -12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(267, 366);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +121,7 @@
             this.ptbAvatar.BackgroundImage = global::MinigameOlympia.Properties.Resources.anhdaidien;
             this.ptbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ptbAvatar.Location = new System.Drawing.Point(351, 35);
-            this.ptbAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.ptbAvatar.Name = "ptbAvatar";
             this.ptbAvatar.Size = new System.Drawing.Size(64, 60);
             this.ptbAvatar.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbUsername.Location = new System.Drawing.Point(449, 45);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.ReadOnly = true;
             this.tbUsername.Size = new System.Drawing.Size(114, 19);
@@ -146,7 +146,7 @@
             this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbID.Location = new System.Drawing.Point(449, 75);
-            this.tbID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbID.Margin = new System.Windows.Forms.Padding(2);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(114, 13);
@@ -159,7 +159,7 @@
             this.btnGGForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGGForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGGForm.Location = new System.Drawing.Point(417, 266);
-            this.btnGGForm.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnGGForm.Margin = new System.Windows.Forms.Padding(1);
             this.btnGGForm.Name = "btnGGForm";
             this.btnGGForm.Size = new System.Drawing.Size(82, 32);
             this.btnGGForm.TabIndex = 9;
@@ -184,10 +184,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ptbAvatar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HoSoNV";
-            this.Text = "HoSoNV";
+            this.Text = "Hồ sơ";
             this.Load += new System.EventHandler(this.HoSoNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
