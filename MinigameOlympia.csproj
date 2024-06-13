@@ -201,6 +201,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Answers.Designer.cs">
+      <DependentUpon>Answers.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     <Compile Include="Vong2.Designer.cs">
       <DependentUpon>Vong2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Answers.resx">
+      <DependentUpon>Answers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,7 +385,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture\BackgroundLogin.jpg" />
+    <Content Include="picture\ckhung2.png" />
     <Content Include="picture\HidePass.png" />
+    <None Include="Resources\ckhung2.png" />
     <None Include="picture\Icon.ico" />
     <Content Include="picture\ShowPass.png" />
   </ItemGroup>
