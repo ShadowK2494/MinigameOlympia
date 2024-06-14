@@ -112,7 +112,7 @@ namespace MinigameOlympia {
             Player pTemp = new Player();
             HttpClient httpClient = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/Player/username?lookup=" + username;
+                string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + username;
                 var response = await httpClient.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     string jsonContent = await response.Content.ReadAsStringAsync();
@@ -273,7 +273,7 @@ namespace MinigameOlympia {
         private async void PostMatch() {
             HttpClient httpClient = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/Match?idPlayer=" + player.IDPlayer + "&idRoom=" + lblRoomCode.Text;
+                string url = "https://olympiawebservice.azurewebsites.net/api/Match?idPlayer=" + player.IDPlayer + "&idRoom=" + lblRoomCode.Text;
                 await httpClient.PostAsync(url, null);
             } catch (Exception ex) {
 

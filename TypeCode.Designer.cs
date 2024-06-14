@@ -72,9 +72,10 @@
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.tbRoomCode);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TypeCode";
-            this.Text = "TypeCode";
+            this.Text = "Nhập mã phòng";
             this.ResumeLayout(false);
             this.PerformLayout();
 

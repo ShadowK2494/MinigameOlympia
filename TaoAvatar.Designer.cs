@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaoAvatar));
-            this.label10 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -34,17 +33,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(17, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 19);
-            this.label10.TabIndex = 50;
-            this.label10.Text = "Back";
             // 
             // btnSubmit
             // 
@@ -72,10 +60,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(455, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 31);
+            this.label1.Size = new System.Drawing.Size(205, 29);
             this.label1.TabIndex = 34;
             this.label1.Text = "Tạo ảnh đại diện";
             // 
@@ -116,7 +104,7 @@
             this.rdbSelect.UseVisualStyleBackColor = true;
             this.rdbSelect.Click += new System.EventHandler(this.rdbSelect_Click);
             // 
-            // CreateAvatar
+            // TaoAvatar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,13 +112,13 @@
             this.Controls.Add(this.rdbSelect);
             this.Controls.Add(this.rdbDefault);
             this.Controls.Add(this.ptbAvatar);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CreateAvatar";
-            this.Text = "TaoAvatar";
+            this.Name = "TaoAvatar";
+            this.Text = "Tạo ảnh đại diện";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             this.ResumeLayout(false);
@@ -139,7 +127,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;

@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaoLaiMatKhau));
-            this.label5 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.tbRePass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -32,7 +31,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.ptbPassword = new System.Windows.Forms.PictureBox();
             this.ptbRePass = new System.Windows.Forms.PictureBox();
             this.lblAlertPassword = new System.Windows.Forms.Label();
@@ -41,18 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRePass)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(635, 9);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 19);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "X";
             // 
             // btnSubmit
             // 
@@ -82,11 +68,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(275, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 19);
+            this.label3.Size = new System.Drawing.Size(136, 18);
             this.label3.TabIndex = 26;
             this.label3.Text = "Nhập lại mật khẩu:";
             // 
@@ -104,22 +90,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(275, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 19);
+            this.label2.Size = new System.Drawing.Size(107, 18);
             this.label2.TabIndex = 24;
             this.label2.Text = "Mật khẩu mới:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(345, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 31);
+            this.label1.Size = new System.Drawing.Size(202, 29);
             this.label1.TabIndex = 23;
             this.label1.Text = "Tạo lại mật khẩu";
             // 
@@ -133,20 +119,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(11, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Quay về";
-            this.label6.Click += new System.EventHandler(this.BackToSignInForm);
             // 
             // ptbPassword
             // 
@@ -207,8 +179,6 @@
             this.Controls.Add(this.lblAlertPassword);
             this.Controls.Add(this.ptbRePass);
             this.Controls.Add(this.ptbPassword);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbRePass);
             this.Controls.Add(this.label3);
@@ -216,11 +186,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaoLaiMatKhau";
-            this.Text = "Form1";
+            this.Text = "Tạo lại mật khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRePass)).EndInit();
@@ -232,14 +202,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox tbRePass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox ptbPassword;
         private System.Windows.Forms.PictureBox ptbRePass;
         private System.Windows.Forms.Label lblAlertPassword;

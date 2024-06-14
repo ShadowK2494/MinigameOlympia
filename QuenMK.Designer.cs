@@ -187,7 +187,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuenMK";
-            this.Text = "QuenMK";
+            this.Text = "Quên mật khẩu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ForgetPasswordClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -20,14 +20,6 @@ namespace MinigameOlympia {
             InitializeComponent();
         }
 
-        private void appendText_lblUsername(string text) {
-            if (InvokeRequired) {
-                Invoke(new Action<string>(appendText_lblUsername), text);
-                return;
-            }
-            tbUsername.Text = text;
-        }
-
         private void HoSoNV_Load(object sender, EventArgs e) {
             tbUsername.Text = player.Username;
             tbID.Text = player.IDPlayer;

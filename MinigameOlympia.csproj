@@ -307,15 +307,6 @@
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="DSBanBe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DSBanBe.Designer.cs">
-      <DependentUpon>DSBanBe.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="DSBanBe.resx">
-      <DependentUpon>DSBanBe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>

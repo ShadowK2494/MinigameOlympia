@@ -24,7 +24,7 @@ namespace MinigameOlympia {
         private async void btnEnter_Click(object sender, EventArgs e) {
             HttpClient client = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/room/" + tbRoomCode.Text;
+                string url = "https://olympiawebservice.azurewebsites.net/api/Room/" + tbRoomCode.Text;
                 var response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     var res = await response.Content.ReadAsStringAsync();

@@ -288,9 +288,10 @@
             this.Controls.Add(this.grbFriends);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PhongCho";
+            this.Text = "Phòng chờ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhongCho_FormClosing);
             this.Load += new System.EventHandler(this.PhongCho_Load);
             this.panelHeader.ResumeLayout(false);
