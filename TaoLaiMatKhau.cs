@@ -30,9 +30,14 @@ namespace MinigameOlympia {
             email = data;
         }
 
-        private void BackToForgetPasswordForm(object sender, EventArgs args) {
+        private void BackToSignInForm(object sender, EventArgs args) {
+            foreach (Form form in Application.OpenForms) {
+                if (form.Name == "DangNhap") {
+                    form.Visible = true;
+                    break;
+                }
+            }
             Close();
-            _forgetPassword.Visible = true;
         }
 
 
@@ -40,7 +45,7 @@ namespace MinigameOlympia {
             Player player = null;
             HttpClient client = new HttpClient();
             try {
-                string url = "http://localhost:2804/api/Player/email?lookup=" + email;
+                string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + email;
                 var response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     string jsonContent = await response.Content.ReadAsStringAsync();
@@ -135,7 +140,7 @@ namespace MinigameOlympia {
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
                 HttpClient client = new HttpClient();
                 try {
-                    var response = await client.PutAsync("https://86db-203-205-32-65.ngrok-free.app/api/Player", content);
+                    var response = await client.PutAsync("https://olympiawebservice.azurewebsites.net/api/Player", content);
                     if (response.IsSuccessStatusCode) {
                         MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();

@@ -17,19 +17,22 @@ using System.Drawing.Text;
 
 namespace MinigameOlympia {
     public partial class QuenMK : Form {
-        private DangNhap _logIn { get; set; }
         private int otp;
         private Thread updateUI;
         private bool isOKEmail = false;
         private event EventHandler<string> EmailSent;
-        public QuenMK(DangNhap logIn) {
+        public QuenMK() {
             InitializeComponent();
-            _logIn = logIn;
         }
 
         private void BackToLogInForm(object sender, EventArgs args) {
+            foreach (Form form in Application.OpenForms) {
+                if (form.Name == "DangNhap") {
+                    form.Visible = true;
+                    break;
+                }
+            }
             Close();
-            _logIn.Visible = true;
         }
 
         // Gửi mã OTP
@@ -77,7 +80,8 @@ namespace MinigameOlympia {
                 MessageBox.Show("Mã OTP không chính xác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-// Giao diện thay đổi khi gửi mã OTP
+
+        // Giao diện thay đổi khi gửi mã OTP
         private void btnSendOTP_Click(object sender, EventArgs e) {
             if (isOKEmail) {
                 SendOTP(tbEmail.Text);
@@ -127,7 +131,7 @@ namespace MinigameOlympia {
                 } else {
                     HttpClient client = new HttpClient();
                     try {
-                        string url = "http://localhost:2804/api/Player/email?lookup=" + tbEmail.Text.Trim();
+                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + tbEmail.Text.Trim();
                         var response = await client.GetAsync(url);
                         if (!response.IsSuccessStatusCode) {
                             lblAlertEmail.Text = "ⓘ Email chưa được đăng ký";

@@ -95,10 +95,11 @@
             this.Controls.Add(this.tbOTP);
             this.Controls.Add(this.lblCaption);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "VerifyEmail";
-            this.Text = "VerifyEmail";
+            this.Text = "Xác thực email";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VerifyEmail_Closing);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MinigameOlympia
 {
-    public partial class DSBanBe : Form
+    public partial class Answers : Form
     {
-        public DSBanBe()
+        public Answers()
         {
             InitializeComponent();
         }
