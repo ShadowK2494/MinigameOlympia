@@ -213,6 +213,9 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\GroupQuestion.cs" />
+    <Compile Include="Models\Question.cs" />
     <Compile Include="TypeCode.cs">
       <SubType>Form</SubType>
     </Compile>

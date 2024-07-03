@@ -16,7 +16,7 @@ namespace MinigameOlympia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RootForm());
+            Application.Run(new Vong1());
             Application.ApplicationExit += Application_Exit;
             Application.Exit();
         }
