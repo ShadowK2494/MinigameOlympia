@@ -47,6 +47,10 @@
             this.coverPicture3 = new System.Windows.Forms.PictureBox();
             this.coverPicture4 = new System.Windows.Forms.PictureBox();
             this.coverPicture5 = new System.Windows.Forms.PictureBox();
+            this.progressBar_time = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label_timerNoti = new System.Windows.Forms.Label();
+            this.textBox_answer = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,7 +69,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1109, 554);
+            this.pictureBox1.Size = new System.Drawing.Size(1109, 600);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -79,7 +83,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(559, 258);
+            this.groupBox1.Size = new System.Drawing.Size(559, 200);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Câu hỏi";
@@ -91,7 +95,7 @@
             this.panel1.Location = new System.Drawing.Point(5, 34);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(547, 209);
+            this.panel1.Size = new System.Drawing.Size(547, 142);
             this.panel1.TabIndex = 1;
             // 
             // label_question
@@ -106,7 +110,7 @@
             // groupBox_user4
             // 
             this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user4.Location = new System.Drawing.Point(860, 409);
+            this.groupBox_user4.Location = new System.Drawing.Point(844, 394);
             this.groupBox_user4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user4.Name = "groupBox_user4";
             this.groupBox_user4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -118,7 +122,7 @@
             // groupBox_user3
             // 
             this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user3.Location = new System.Drawing.Point(671, 409);
+            this.groupBox_user3.Location = new System.Drawing.Point(655, 394);
             this.groupBox_user3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user3.Name = "groupBox_user3";
             this.groupBox_user3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -130,7 +134,7 @@
             // groupBox_user2
             // 
             this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user2.Location = new System.Drawing.Point(860, 314);
+            this.groupBox_user2.Location = new System.Drawing.Point(844, 299);
             this.groupBox_user2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user2.Name = "groupBox_user2";
             this.groupBox_user2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -142,7 +146,7 @@
             // groupBox_user1
             // 
             this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user1.Location = new System.Drawing.Point(671, 314);
+            this.groupBox_user1.Location = new System.Drawing.Point(655, 299);
             this.groupBox_user1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_user1.Name = "groupBox_user1";
             this.groupBox_user1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -279,11 +283,53 @@
             this.coverPicture5.TabIndex = 50;
             this.coverPicture5.TabStop = false;
             // 
+            // progressBar_time
+            // 
+            this.progressBar_time.BackColor = System.Drawing.Color.IndianRed;
+            this.progressBar_time.ForeColor = System.Drawing.Color.Green;
+            this.progressBar_time.Location = new System.Drawing.Point(28, 502);
+            this.progressBar_time.Margin = new System.Windows.Forms.Padding(2);
+            this.progressBar_time.Name = "progressBar_time";
+            this.progressBar_time.Size = new System.Drawing.Size(559, 40);
+            this.progressBar_time.TabIndex = 51;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 55;
+            // 
+            // label_timerNoti
+            // 
+            this.label_timerNoti.AutoSize = true;
+            this.label_timerNoti.BackColor = System.Drawing.Color.Transparent;
+            this.label_timerNoti.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_timerNoti.ForeColor = System.Drawing.Color.Red;
+            this.label_timerNoti.Location = new System.Drawing.Point(23, 544);
+            this.label_timerNoti.Name = "label_timerNoti";
+            this.label_timerNoti.Size = new System.Drawing.Size(202, 28);
+            this.label_timerNoti.TabIndex = 53;
+            this.label_timerNoti.Text = "Thời gian đã hết!";
+            this.label_timerNoti.Visible = false;
+            // 
+            // textBox_answer
+            // 
+            this.textBox_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox_answer.Location = new System.Drawing.Point(655, 536);
+            this.textBox_answer.Name = "textBox_answer";
+            this.textBox_answer.Size = new System.Drawing.Size(372, 36);
+            this.textBox_answer.TabIndex = 54;
+            // 
             // Vong1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 554);
+            this.ClientSize = new System.Drawing.Size(1109, 600);
+            this.Controls.Add(this.textBox_answer);
+            this.Controls.Add(this.label_timerNoti);
+            this.Controls.Add(this.progressBar_time);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.coverPicture5);
             this.Controls.Add(this.coverPicture4);
             this.Controls.Add(this.coverPicture3);
@@ -305,6 +351,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Vong1";
             this.Text = "Vòng thi Vượt chướng ngại vật";
+            this.Load += new System.EventHandler(this.Vong1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -316,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.coverPicture4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicture5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -338,5 +386,9 @@
         private System.Windows.Forms.PictureBox coverPicture3;
         private System.Windows.Forms.PictureBox coverPicture4;
         private System.Windows.Forms.PictureBox coverPicture5;
+        private System.Windows.Forms.ProgressBar progressBar_time;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label_timerNoti;
+        private System.Windows.Forms.TextBox textBox_answer;
     }
 }
