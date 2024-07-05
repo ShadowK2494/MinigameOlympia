@@ -48,12 +48,20 @@
             this.coverPicture4 = new System.Windows.Forms.PictureBox();
             this.coverPicture5 = new System.Windows.Forms.PictureBox();
             this.progressBar_time = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.label_timerNoti = new System.Windows.Forms.Label();
             this.textBox_answer = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_score1 = new System.Windows.Forms.Label();
+            this.label_score2 = new System.Windows.Forms.Label();
+            this.label_score3 = new System.Windows.Forms.Label();
+            this.label_score4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox_user4.SuspendLayout();
+            this.groupBox_user3.SuspendLayout();
+            this.groupBox_user2.SuspendLayout();
+            this.groupBox_user1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.questionPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicture2)).BeginInit();
@@ -109,6 +117,7 @@
             // 
             // groupBox_user4
             // 
+            this.groupBox_user4.Controls.Add(this.label_score4);
             this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox_user4.Location = new System.Drawing.Point(844, 394);
             this.groupBox_user4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -121,6 +130,7 @@
             // 
             // groupBox_user3
             // 
+            this.groupBox_user3.Controls.Add(this.label_score3);
             this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox_user3.Location = new System.Drawing.Point(655, 394);
             this.groupBox_user3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -133,6 +143,7 @@
             // 
             // groupBox_user2
             // 
+            this.groupBox_user2.Controls.Add(this.label_score2);
             this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox_user2.Location = new System.Drawing.Point(844, 299);
             this.groupBox_user2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -145,6 +156,7 @@
             // 
             // groupBox_user1
             // 
+            this.groupBox_user1.Controls.Add(this.label_score1);
             this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox_user1.Location = new System.Drawing.Point(655, 299);
             this.groupBox_user1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -293,13 +305,6 @@
             this.progressBar_time.Size = new System.Drawing.Size(559, 40);
             this.progressBar_time.TabIndex = 51;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 55;
-            // 
             // label_timerNoti
             // 
             this.label_timerNoti.AutoSize = true;
@@ -321,15 +326,63 @@
             this.textBox_answer.Size = new System.Drawing.Size(372, 36);
             this.textBox_answer.TabIndex = 54;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(652, 502);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 56;
+            // 
+            // label_score1
+            // 
+            this.label_score1.AutoSize = true;
+            this.label_score1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label_score1.Location = new System.Drawing.Point(55, 32);
+            this.label_score1.Name = "label_score1";
+            this.label_score1.Size = new System.Drawing.Size(27, 29);
+            this.label_score1.TabIndex = 4;
+            this.label_score1.Text = "0";
+            // 
+            // label_score2
+            // 
+            this.label_score2.AutoSize = true;
+            this.label_score2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label_score2.Location = new System.Drawing.Point(54, 32);
+            this.label_score2.Name = "label_score2";
+            this.label_score2.Size = new System.Drawing.Size(27, 29);
+            this.label_score2.TabIndex = 5;
+            this.label_score2.Text = "0";
+            // 
+            // label_score3
+            // 
+            this.label_score3.AutoSize = true;
+            this.label_score3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label_score3.Location = new System.Drawing.Point(55, 36);
+            this.label_score3.Name = "label_score3";
+            this.label_score3.Size = new System.Drawing.Size(27, 29);
+            this.label_score3.TabIndex = 5;
+            this.label_score3.Text = "0";
+            // 
+            // label_score4
+            // 
+            this.label_score4.AutoSize = true;
+            this.label_score4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label_score4.Location = new System.Drawing.Point(54, 36);
+            this.label_score4.Name = "label_score4";
+            this.label_score4.Size = new System.Drawing.Size(27, 29);
+            this.label_score4.TabIndex = 6;
+            this.label_score4.Text = "0";
+            // 
             // Vong1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 600);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_answer);
             this.Controls.Add(this.label_timerNoti);
             this.Controls.Add(this.progressBar_time);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.coverPicture5);
             this.Controls.Add(this.coverPicture4);
             this.Controls.Add(this.coverPicture3);
@@ -356,6 +409,14 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox_user4.ResumeLayout(false);
+            this.groupBox_user4.PerformLayout();
+            this.groupBox_user3.ResumeLayout(false);
+            this.groupBox_user3.PerformLayout();
+            this.groupBox_user2.ResumeLayout(false);
+            this.groupBox_user2.PerformLayout();
+            this.groupBox_user1.ResumeLayout(false);
+            this.groupBox_user1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.questionPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicture2)).EndInit();
@@ -387,8 +448,12 @@
         private System.Windows.Forms.PictureBox coverPicture4;
         private System.Windows.Forms.PictureBox coverPicture5;
         private System.Windows.Forms.ProgressBar progressBar_time;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_timerNoti;
         private System.Windows.Forms.TextBox textBox_answer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_score4;
+        private System.Windows.Forms.Label label_score3;
+        private System.Windows.Forms.Label label_score2;
+        private System.Windows.Forms.Label label_score1;
     }
 }
