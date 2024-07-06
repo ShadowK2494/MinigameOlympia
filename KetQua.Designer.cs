@@ -35,7 +35,6 @@
             // 
             // label_name
             // 
-            this.label_name.AutoSize = true;
             this.label_name.BackColor = System.Drawing.Color.Transparent;
             this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label_name.Location = new System.Drawing.Point(310, 248);
@@ -48,7 +47,6 @@
             // 
             // label_score
             // 
-            this.label_score.AutoSize = true;
             this.label_score.BackColor = System.Drawing.Color.Transparent;
             this.label_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label_score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));

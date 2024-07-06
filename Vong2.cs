@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -56,6 +57,7 @@ namespace MinigameOlympia {
         }
 
         private void Round2_Load(object sender, EventArgs e) {
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
             receive = new Thread(() => ReceiveMessage(client));
             receive.IsBackground = true;
             receive.Start();
@@ -161,12 +163,14 @@ namespace MinigameOlympia {
                         }
                         int time = int.Parse(data[3]);
                         progressbar.Maximum = time;
-                        if (time == 10)
-                            sound = new SoundPlayer(Properties.Resources.TT_10s);
-                        else if (time == 20)
-                            sound = new SoundPlayer(Properties.Resources.TT_20s);
-                        else if (time == 30) {
-                            sound = new SoundPlayer(Properties.Resources.TT_30s);
+                        if (!isVVW) {
+                            if (time == 10)
+                                sound = new SoundPlayer(Properties.Resources.TT_10s);
+                            else if (time == 20)
+                                sound = new SoundPlayer(Properties.Resources.TT_20s);
+                            else if (time == 30) {
+                                sound = new SoundPlayer(Properties.Resources.TT_30s);
+                            }
                         } else
                             sound = null;
                     }));
@@ -203,8 +207,10 @@ namespace MinigameOlympia {
                     show.client = client;
                     show.roomCode = roomCode;
                     show.round = 2;
-                    show.ShowDialog();
+                    show.WindowState = FormWindowState.Normal;
+                    show.Activate();
                     Visible = false;
+                    show.ShowDialog();
                     suspendEvent.Set();
                     if (total < 4) {
                         SendData($"GET_POINT_FN:{roomCode}", client);

@@ -547,7 +547,7 @@
             this.lblAns.Size = new System.Drawing.Size(428, 40);
             this.lblAns.TabIndex = 74;
             this.lblAns.Tag = "";
-            this.lblAns.Text = "Chướng ngại vật gồm có n ký tự";
+            this.lblAns.Text = "Tên hình ảnh gợi ý";
             this.lblAns.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAns.Visible = false;
             // 

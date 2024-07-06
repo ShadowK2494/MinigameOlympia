@@ -3,6 +3,7 @@ using MinigameOlympia;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -94,8 +95,11 @@ namespace MinigameOlympia {
         }
 
         private void Round1_Load(object sender, EventArgs e) {
-            sound = new SoundPlayer(Properties.Resources.VCNV_OpenCNV);
-            sound.Play();
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
+            Invoke(new MethodInvoker(delegate {
+                sound = new SoundPlayer(Properties.Resources.VCNV_OpenCNV);
+                sound.Play();
+            }));
             Cursor = Cursors.WaitCursor;
             SendData("INFO_START:" + roomCode, client);
             receive = new Thread(() => ReceiveMessage(client));
@@ -279,6 +283,7 @@ namespace MinigameOlympia {
                         btnQuest3.Enabled = false;
                         btnQuest4.Enabled = false;
                         Bell.Enabled = false;
+                        isPress = false;
                         remainPlayer--;
                         if (player.Username != playerTurn)
                             AddText(1, $"Lượt của người chơi {playerTurn}\r\n");
@@ -302,6 +307,7 @@ namespace MinigameOlympia {
                     data = Payload[1].Split('-');
                     if (data[0] == "0") {
                         remainPlayer--;
+                        isPress = false;
                         AddText(0, $"Không chính xác! Người chơi {data[1]} bị loại!\r\n");
                         btnAnswer.Enabled = true;
                         foreach (Button b in remainButton) {
@@ -443,10 +449,10 @@ namespace MinigameOlympia {
             form.client = client;
             form.roomCode = roomCode;
             form.player = player;
-            form.Visible = false;
+            form.isTerminated = isTerminated;
             Visible = false;
-            if (isTerminated)
-                form.Visible = false;
+            form.WindowState = FormWindowState.Normal;
+            form.Activate();
             form.ShowDialog();
             if (form.IsQuestDone()) {
                 suspendEvent.Reset();
@@ -454,6 +460,8 @@ namespace MinigameOlympia {
                 show.client = client;
                 show.roomCode = roomCode;
                 show.round = 1;
+                show.WindowState = FormWindowState.Normal;
+                show.Activate();
                 show.ShowDialog();
                 numGuess++;
                 if (show.IsGetPic()) {
@@ -723,8 +731,9 @@ namespace MinigameOlympia {
 
         private void countdownFinalTimer_Tick(object sender, EventArgs e) {
             if (finalTimeLeft.TotalSeconds > 0) {
-                if (!isPress)
+                if (!isPress) {
                     finalTimeLeft = finalTimeLeft.Subtract(TimeSpan.FromSeconds(1));
+                }
             } else {
                 countdownFinalTimer.Stop();
                 AddText(0, "Đã hết 5 giây cuối cùng, không ai trả lời được chướng ngại vật\r\n");

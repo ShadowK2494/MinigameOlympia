@@ -72,7 +72,6 @@ namespace MinigameOlympia {
                     if (data[0] == player.Username) {
                         lblYourScore.Visible = false;
                         player.WinCount++;
-                        MessageBox.Show(player.WinCount.ToString());
                         string jsonContent = JsonConvert.SerializeObject(player);
                         var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
                         using (HttpClient client = new HttpClient()) {
@@ -134,8 +133,8 @@ namespace MinigameOlympia {
                 endTimer.Stop();
                 foreach (Form form in Application.OpenForms) {
                     if (form.Name == "GiaoDienChinh") {
-                        ((GiaoDienChinh)form).username = player.Username;
                         form.Visible = true;
+                        ((GiaoDienChinh)form).suspendEvent.Set();
                         break;
                     }
                 }
@@ -147,7 +146,7 @@ namespace MinigameOlympia {
             if (receive.IsAlive)
                 receive.Abort();
             if (client.Connected) {
-                SendData($"END:{roomCode}", client);
+                SendData($"END:{roomCode}-{player.Username}", client);
                 client.Close();
             }
             sound.Stop();

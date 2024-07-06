@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using Newtonsoft;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -24,6 +23,7 @@ namespace Server {
         private string idQuestion;
         private string idAnswer;
         private List<string> roomCode = new List<string>();
+        private Dictionary<string, (TcpClient, bool)> onlinePlayers = new Dictionary<string, (TcpClient, bool)>();
         private Dictionary<string, int> isTrue = new Dictionary<string, int>();
         private Dictionary<string, string> ans = new Dictionary<string, string>();
         private Dictionary<string, List<List<string>>> playerAnswers = new Dictionary<string, List<List<string>>>();
@@ -77,8 +77,37 @@ namespace Server {
         private async void AnalyzeMessage(string message, TcpClient client) {
             string[] Payload = message.Split(':');
             switch (Payload[0]) {
-                case "CONNECT":
+                case "ONLINE":
+                    if (!onlinePlayers.ContainsKey(Payload[1])) {
+                        onlinePlayers[Payload[1]] = (client, true);
+                    }
+                    break;
+                case "OFFLINE":
+                    onlinePlayers.Remove(Payload[1]);
+                    break;
+                case "INVITE":
                     string[] data = Payload[1].Split('-');
+                    if (!onlinePlayers.ContainsKey(data[1])) {
+                        SendData("REP_INVITE:0", client);
+                    } else {
+                        if (!onlinePlayers[data[1]].Item2) {
+                            SendData("REP_INVITE:1", client);
+                        } else {
+                            SendData($"INVITE:{data[0]}-{data[2]}", onlinePlayers[data[1]].Item1);
+                        }
+                    }
+                    break;
+                case "REP_INVITE":
+                    data = Payload[1].Split('-');
+                    if (data[0] == "0") {
+                        SendData("REP_INVITE:2", onlinePlayers[data[1]].Item1);
+                    } else {
+                        SendData("REP_INVITE:3", onlinePlayers[data[1]].Item1);
+                    }
+                    break;
+                case "CONNECT":
+                    data = Payload[1].Split('-');
+                    onlinePlayers[data[1]] = (client, false);
                     if (!numConnection.ContainsKey(data[0]))
                         numConnection[data[0]] = 0;
                     numConnection[data[0]]++;
@@ -101,19 +130,32 @@ namespace Server {
                     break;
                 case "DISCONNECT":
                     data = Payload[1].Split('-');
-                    users[data[0]].Remove(data[1]);
+                    packets[data[0]].Clear();
                     rooms[data[0]].Remove(client);
+                    onlinePlayers[data[1]] = (client, true);
                     int temp = --numConnection[data[0]];
                     List<string> keys = users[data[0]].Keys.ToList();
+                    bool af = false;
+                    List<string> infos = new List<string>();
                     for (int i = 0; i < keys.Count; i++) {
-                        users[data[0]][keys[i]][0]--;
+                        if (keys[i] == data[1]) {
+                            af = true;
+                            users[data[0]].Remove(data[1]);
+                            keys.Remove(keys[i]);
+                            i--;
+                            continue;
+                        }
+                        if (af)
+                            users[data[0]][keys[i]][0]--;
                         string str = data[0] + "-" + numConnection[data[0]] + "-" + keys[i] + "-" + users[data[0]][keys[i]][0];
-                        cmd = "INFO_DISCON:" + str;
+                        infos.Add(str);
                         packets[data[0]].Add("INFO_CON:" + str);
-                        Broadcast(cmd, data[0], client);
                     }
                     if (temp == 0) {
                         DeleteRoom(data[0]);
+                    } else {
+                        cmd = "INFO_DISCON:" + JsonConvert.SerializeObject(infos);
+                        Broadcast(cmd, data[0], client);
                     }
                     break;
                 case "START":
@@ -399,25 +441,27 @@ namespace Server {
                     SendData($"WINNER:{pk[0]}-{pls[pk[0]][1]}-{pls[data[1]][1]}", client);
                     break;
                 case "END":
-                    DeleteRoom(Payload[1]);
-                    if (isTrue.ContainsKey(Payload[1]))
-                        isTrue.Remove(Payload[1]);
-                    if (ans.ContainsKey(Payload[1]))
-                        ans.Remove(Payload[1]);
-                    if (playerAnswers.ContainsKey(Payload[1]))
-                        playerAnswers.Remove(Payload[1]);
-                    if (answerDescrpt.ContainsKey(Payload[1]))
-                        answerDescrpt.Remove(Payload[1]);
-                    if (Answers.ContainsKey(Payload[1]))
-                        Answers.Remove(Payload[1]);
-                    if (QuestionsR1.ContainsKey(Payload[1]))
-                        QuestionsR1.Remove(Payload[1]);
-                    if (QuestionsR2.ContainsKey(Payload[1]))
-                        QuestionsR2.Remove(Payload[1]);
-                    if (roomCode.Contains(Payload[1]))
-                        roomCode.Remove(Payload[1]);
-                    if (sem.ContainsKey(Payload[1]))
-                        sem.Remove(Payload[1]);
+                    data = Payload[1].Split('-');
+                    onlinePlayers[data[1]] = (client, true);
+                    DeleteRoom(data[0]);
+                    if (isTrue.ContainsKey(data[0]))
+                        isTrue.Remove(data[0]);
+                    if (ans.ContainsKey(data[0]))
+                        ans.Remove(data[0]);
+                    if (playerAnswers.ContainsKey(data[0]))
+                        playerAnswers.Remove(data[0]);
+                    if (answerDescrpt.ContainsKey(data[0]))
+                        answerDescrpt.Remove(data[0]);
+                    if (Answers.ContainsKey(data[0]))
+                        Answers.Remove(data[0]);
+                    if (QuestionsR1.ContainsKey(data[0]))
+                        QuestionsR1.Remove(data[0]);
+                    if (QuestionsR2.ContainsKey(data[0]))
+                        QuestionsR2.Remove(data[0]);
+                    if (roomCode.Contains(data[0]))
+                        roomCode.Remove(data[0]);
+                    if (sem.ContainsKey(data[0]))
+                        sem.Remove(data[0]);
                     break;
             }
         }
