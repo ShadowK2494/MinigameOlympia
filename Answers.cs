@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using MinigameOlympia.Models;
+using System.Threading;
 
 namespace MinigameOlympia {
     public partial class Answer : Form {
@@ -58,7 +61,7 @@ namespace MinigameOlympia {
             Close();
         }
 
-        private void ShowAnswer_Load(object sender, EventArgs e) {
+        private void Answers_Load(object sender, EventArgs e)
             sound = new SoundPlayer(Properties.Resources.ShowAns);
             sound.Play();
             Thread.Sleep(1000);

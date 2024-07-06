@@ -58,10 +58,9 @@
             // 
             this.lbUsername1.AutoSize = true;
             this.lbUsername1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbUsername1.Location = new System.Drawing.Point(34, 16);
-            this.lbUsername1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsername1.Location = new System.Drawing.Point(51, 25);
             this.lbUsername1.Name = "lbUsername1";
-            this.lbUsername1.Size = new System.Drawing.Size(65, 17);
+            this.lbUsername1.Size = new System.Drawing.Size(90, 25);
             this.lbUsername1.TabIndex = 36;
             this.lbUsername1.Tag = "1";
             this.lbUsername1.Text = "Tên 1 nè";
@@ -70,10 +69,9 @@
             // 
             this.lbScore1.AutoSize = true;
             this.lbScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbScore1.Location = new System.Drawing.Point(449, 16);
-            this.lbScore1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbScore1.Location = new System.Drawing.Point(674, 25);
             this.lbScore1.Name = "lbScore1";
-            this.lbScore1.Size = new System.Drawing.Size(72, 17);
+            this.lbScore1.Size = new System.Drawing.Size(100, 25);
             this.lbScore1.TabIndex = 37;
             this.lbScore1.Tag = "4";
             this.lbScore1.Text = "Điểm 1 nè";
@@ -82,10 +80,9 @@
             // 
             this.lbScore2.AutoSize = true;
             this.lbScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbScore2.Location = new System.Drawing.Point(449, 18);
-            this.lbScore2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbScore2.Location = new System.Drawing.Point(674, 28);
             this.lbScore2.Name = "lbScore2";
-            this.lbScore2.Size = new System.Drawing.Size(72, 17);
+            this.lbScore2.Size = new System.Drawing.Size(100, 25);
             this.lbScore2.TabIndex = 40;
             this.lbScore2.Tag = "4";
             this.lbScore2.Text = "Điểm 2 nè";
@@ -94,10 +91,9 @@
             // 
             this.lbUsername2.AutoSize = true;
             this.lbUsername2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbUsername2.Location = new System.Drawing.Point(34, 18);
-            this.lbUsername2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsername2.Location = new System.Drawing.Point(51, 28);
             this.lbUsername2.Name = "lbUsername2";
-            this.lbUsername2.Size = new System.Drawing.Size(65, 17);
+            this.lbUsername2.Size = new System.Drawing.Size(90, 25);
             this.lbUsername2.TabIndex = 39;
             this.lbUsername2.Tag = "1";
             this.lbUsername2.Text = "Tên 2 nè";
@@ -106,10 +102,9 @@
             // 
             this.lbScore3.AutoSize = true;
             this.lbScore3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbScore3.Location = new System.Drawing.Point(449, 18);
-            this.lbScore3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbScore3.Location = new System.Drawing.Point(674, 28);
             this.lbScore3.Name = "lbScore3";
-            this.lbScore3.Size = new System.Drawing.Size(72, 17);
+            this.lbScore3.Size = new System.Drawing.Size(100, 25);
             this.lbScore3.TabIndex = 43;
             this.lbScore3.Tag = "4";
             this.lbScore3.Text = "Điểm 3 nè";
@@ -118,10 +113,9 @@
             // 
             this.lbUsername3.AutoSize = true;
             this.lbUsername3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbUsername3.Location = new System.Drawing.Point(33, 18);
-            this.lbUsername3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsername3.Location = new System.Drawing.Point(50, 28);
             this.lbUsername3.Name = "lbUsername3";
-            this.lbUsername3.Size = new System.Drawing.Size(65, 17);
+            this.lbUsername3.Size = new System.Drawing.Size(90, 25);
             this.lbUsername3.TabIndex = 42;
             this.lbUsername3.Tag = "1";
             this.lbUsername3.Text = "Tên 3 nè";
@@ -130,10 +124,9 @@
             // 
             this.lbScore4.AutoSize = true;
             this.lbScore4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbScore4.Location = new System.Drawing.Point(449, 18);
-            this.lbScore4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbScore4.Location = new System.Drawing.Point(674, 28);
             this.lbScore4.Name = "lbScore4";
-            this.lbScore4.Size = new System.Drawing.Size(72, 17);
+            this.lbScore4.Size = new System.Drawing.Size(100, 25);
             this.lbScore4.TabIndex = 46;
             this.lbScore4.Tag = "4";
             this.lbScore4.Text = "Điểm 4 nè";
@@ -142,10 +135,9 @@
             // 
             this.lbUsername4.AutoSize = true;
             this.lbUsername4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbUsername4.Location = new System.Drawing.Point(33, 18);
-            this.lbUsername4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsername4.Location = new System.Drawing.Point(50, 28);
             this.lbUsername4.Name = "lbUsername4";
-            this.lbUsername4.Size = new System.Drawing.Size(65, 17);
+            this.lbUsername4.Size = new System.Drawing.Size(90, 25);
             this.lbUsername4.TabIndex = 45;
             this.lbUsername4.Tag = "1";
             this.lbUsername4.Text = "Tên 4 nè";
@@ -154,10 +146,9 @@
             // 
             this.lbAnswer1.AutoSize = true;
             this.lbAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbAnswer1.Location = new System.Drawing.Point(153, 16);
-            this.lbAnswer1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAnswer1.Location = new System.Drawing.Point(230, 25);
             this.lbAnswer1.Name = "lbAnswer1";
-            this.lbAnswer1.Size = new System.Drawing.Size(86, 17);
+            this.lbAnswer1.Size = new System.Drawing.Size(121, 25);
             this.lbAnswer1.TabIndex = 48;
             this.lbAnswer1.Tag = "2";
             this.lbAnswer1.Text = "Answer 1 nè";
@@ -166,10 +157,9 @@
             // 
             this.lbAnswer2.AutoSize = true;
             this.lbAnswer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbAnswer2.Location = new System.Drawing.Point(153, 18);
-            this.lbAnswer2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAnswer2.Location = new System.Drawing.Point(230, 28);
             this.lbAnswer2.Name = "lbAnswer2";
-            this.lbAnswer2.Size = new System.Drawing.Size(86, 17);
+            this.lbAnswer2.Size = new System.Drawing.Size(121, 25);
             this.lbAnswer2.TabIndex = 49;
             this.lbAnswer2.Tag = "2";
             this.lbAnswer2.Text = "Answer 2 nè";
@@ -178,10 +168,9 @@
             // 
             this.lbAnswer3.AutoSize = true;
             this.lbAnswer3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbAnswer3.Location = new System.Drawing.Point(152, 18);
-            this.lbAnswer3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAnswer3.Location = new System.Drawing.Point(228, 28);
             this.lbAnswer3.Name = "lbAnswer3";
-            this.lbAnswer3.Size = new System.Drawing.Size(86, 17);
+            this.lbAnswer3.Size = new System.Drawing.Size(121, 25);
             this.lbAnswer3.TabIndex = 50;
             this.lbAnswer3.Tag = "2";
             this.lbAnswer3.Text = "Answer 3 nè";
@@ -190,10 +179,9 @@
             // 
             this.lbAnswer4.AutoSize = true;
             this.lbAnswer4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbAnswer4.Location = new System.Drawing.Point(152, 18);
-            this.lbAnswer4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAnswer4.Location = new System.Drawing.Point(228, 28);
             this.lbAnswer4.Name = "lbAnswer4";
-            this.lbAnswer4.Size = new System.Drawing.Size(86, 17);
+            this.lbAnswer4.Size = new System.Drawing.Size(121, 25);
             this.lbAnswer4.TabIndex = 51;
             this.lbAnswer4.Tag = "2";
             this.lbAnswer4.Text = "Answer 4 nè";
@@ -202,10 +190,9 @@
             // 
             this.lbTime1.AutoSize = true;
             this.lbTime1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbTime1.Location = new System.Drawing.Point(318, 16);
-            this.lbTime1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTime1.Location = new System.Drawing.Point(477, 25);
             this.lbTime1.Name = "lbTime1";
-            this.lbTime1.Size = new System.Drawing.Size(71, 17);
+            this.lbTime1.Size = new System.Drawing.Size(99, 25);
             this.lbTime1.TabIndex = 52;
             this.lbTime1.Tag = "3";
             this.lbTime1.Text = "Time 1 nè";
@@ -214,10 +201,9 @@
             // 
             this.lbTime2.AutoSize = true;
             this.lbTime2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbTime2.Location = new System.Drawing.Point(318, 18);
-            this.lbTime2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTime2.Location = new System.Drawing.Point(477, 28);
             this.lbTime2.Name = "lbTime2";
-            this.lbTime2.Size = new System.Drawing.Size(71, 17);
+            this.lbTime2.Size = new System.Drawing.Size(99, 25);
             this.lbTime2.TabIndex = 53;
             this.lbTime2.Tag = "3";
             this.lbTime2.Text = "Time 2 nè";
@@ -226,10 +212,9 @@
             // 
             this.lbTime3.AutoSize = true;
             this.lbTime3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbTime3.Location = new System.Drawing.Point(317, 18);
-            this.lbTime3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTime3.Location = new System.Drawing.Point(476, 28);
             this.lbTime3.Name = "lbTime3";
-            this.lbTime3.Size = new System.Drawing.Size(71, 17);
+            this.lbTime3.Size = new System.Drawing.Size(99, 25);
             this.lbTime3.TabIndex = 54;
             this.lbTime3.Tag = "3";
             this.lbTime3.Text = "Time 3 nè";
@@ -238,10 +223,9 @@
             // 
             this.lbTime4.AutoSize = true;
             this.lbTime4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbTime4.Location = new System.Drawing.Point(317, 18);
-            this.lbTime4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTime4.Location = new System.Drawing.Point(476, 28);
             this.lbTime4.Name = "lbTime4";
-            this.lbTime4.Size = new System.Drawing.Size(71, 17);
+            this.lbTime4.Size = new System.Drawing.Size(99, 25);
             this.lbTime4.TabIndex = 55;
             this.lbTime4.Tag = "3";
             this.lbTime4.Text = "Time 4 nè";
@@ -256,7 +240,7 @@
             this.panel1.Location = new System.Drawing.Point(142, 123);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(555, 51);
+            this.panel1.Size = new System.Drawing.Size(832, 78);
             this.panel1.TabIndex = 56;
             // 
             // panel2
@@ -270,7 +254,7 @@
             this.panel2.Location = new System.Drawing.Point(142, 181);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(555, 51);
+            this.panel2.Size = new System.Drawing.Size(832, 78);
             this.panel2.TabIndex = 57;
             // 
             // panel3
@@ -283,7 +267,7 @@
             this.panel3.Location = new System.Drawing.Point(143, 239);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(555, 51);
+            this.panel3.Size = new System.Drawing.Size(832, 78);
             this.panel3.TabIndex = 58;
             // 
             // panel4
@@ -296,7 +280,7 @@
             this.panel4.Location = new System.Drawing.Point(143, 297);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(555, 51);
+            this.panel4.Size = new System.Drawing.Size(832, 78);
             this.panel4.TabIndex = 59;
             // 
             // label1
@@ -304,10 +288,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LemonChiffon;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(160, 84);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(240, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(129, 29);
             this.label1.TabIndex = 60;
             this.label1.Text = "Người chơi";
             // 
@@ -316,10 +299,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LemonChiffon;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(294, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(441, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.Size = new System.Drawing.Size(121, 29);
             this.label2.TabIndex = 61;
             this.label2.Text = "Câu trả lời";
             // 
@@ -340,16 +322,52 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LemonChiffon;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(592, 84);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(888, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.Size = new System.Drawing.Size(102, 29);
             this.label4.TabIndex = 63;
             this.label4.Text = "Điểm số";
             // 
             // ShowAnswer
+            // label5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(1185, 435);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 69);
+            this.label5.TabIndex = 64;
+            this.label5.Text = ".";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(1216, 408);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 69);
+            this.label6.TabIndex = 65;
+            this.label6.Text = ".";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(732, 602);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 25);
+            this.label7.TabIndex = 66;
+            this.label7.Text = ".....";
+            // 
+            // Answers
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.ckhung2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
