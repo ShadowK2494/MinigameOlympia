@@ -19,6 +19,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.CodeDom;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MinigameOlympia {
     public partial class Vong1 : Form {
@@ -369,6 +374,16 @@ namespace MinigameOlympia {
                 Close();
             }));
         }
+        private void Vong1_Load(object sender, EventArgs e)
+        {
+          //
+        }
+        //Hàm đếm thời gian
+        public void CountdownTimer()
+        {
+            int secondsRemaining = 10;
+            progressBar_time.Minimum = 0;
+            progressBar_time.Maximum = 10;
 
         private void FlipPic(string cnv, string note) {
             //Invoke(new MethodInvoker(delegate {
@@ -739,5 +754,26 @@ namespace MinigameOlympia {
                 btnAnswer.Visible = false;
             }
         }
+        //Not completed, fix later
+        //public static async Task<Question> GetGroupQuestion_Async(string IDQuestion)
+        //{
+        //    using (var httpClient = new HttpClient())
+        //    {
+        //        var url = "https://olympiawebservice.azurewebsites.net/api/GroupQuestion";
+        //        var response = await httpClient.GetAsync(url);
+        //        response.EnsureSuccessStatusCode();
+        //        var questions = JsonConvert.DeserializeObject<List<Question>>(await response.Content.ReadAsStringAsync());
+        //        var groupQuestions = questions.Where(q => q.IsMain).ToList();
+        //        if (groupQuestions.Count > 0)
+        //        {
+        //            var randomIndex = new Random().Next(0, groupQuestions.Count);
+        //            return groupQuestions[randomIndex];
+        //        }
+        //        else
+        //        {
+        //            return null;
+        //        }
+        //    }
+        //}
     }
 }
