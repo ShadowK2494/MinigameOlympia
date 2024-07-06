@@ -1,33 +1,17 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System;
 using System.Net;
-using System.Net.Http;
 using System.Net.Mail;
-using System.Net.NetworkInformation;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace MinigameOlympia {
     public partial class VerifyEmail : Form {
-        private string email;
+        public string email;
         private int otp;
-        public event EventHandler<bool> isValid;
+        private bool isValid;
         private Thread updateUI;
         public VerifyEmail() {
             InitializeComponent();
-        }
-
-        // Nhận dữ liệu email từ form Đăng ký
-        public void SignUp_EmailSent(object sender, string data) {
-            email = data;
         }
 
         // Gửi mã OTP
@@ -40,7 +24,7 @@ namespace MinigameOlympia {
                 const string fromPass = "nykchlcckwiivfsb";
                 const string subject = "Xác thực đăng ký email";
                 string body = "OTP: " + otp.ToString();
-
+                //MessageBox.Show(otp.ToString());
                 var smtp = new SmtpClient {
                     Host = "smtp.gmail.com",
                     Port = 587,
@@ -63,21 +47,19 @@ namespace MinigameOlympia {
         }
 
         // Khi xác thực email thành công gửi tín hiệu cho form Đăng ký
-        public void IsValidEmail(bool data) {
-            isValid?.Invoke(this, data);
+        public bool IsValidEmail() {
+            return isValid;
         }
 
         // Xác thực mã OTP
         private void btnSubmit_Click(object sender, EventArgs e) {
-            bool data;
             if (otp.ToString() == tbOTP.Text) {
                 MessageBox.Show("Xác thực email thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                data = true;
-                IsValidEmail(true);
+                isValid = true;
                 Close();
             } else {
                 MessageBox.Show("Mã OTP không chính xác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                IsValidEmail(false);
+                isValid = false;
             }
         }
 

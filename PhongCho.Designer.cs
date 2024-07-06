@@ -183,7 +183,7 @@
             // 
             this.lblPlayer1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblPlayer1.ForeColor = System.Drawing.Color.White;
-            this.lblPlayer1.Location = new System.Drawing.Point(30, 169);
+            this.lblPlayer1.Location = new System.Drawing.Point(34, 169);
             this.lblPlayer1.Name = "lblPlayer1";
             this.lblPlayer1.Size = new System.Drawing.Size(114, 23);
             this.lblPlayer1.TabIndex = 4;
@@ -193,10 +193,10 @@
             // 
             // ptbPlayer2
             // 
-            this.ptbPlayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer2.BackgroundImage")));
             this.ptbPlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbPlayer2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer2.Image = global::MinigameOlympia.Properties.Resources.plus;
             this.ptbPlayer2.Location = new System.Drawing.Point(187, 69);
             this.ptbPlayer2.Name = "ptbPlayer2";
             this.ptbPlayer2.Size = new System.Drawing.Size(81, 81);
@@ -207,10 +207,10 @@
             // 
             // ptbPlayer3
             // 
-            this.ptbPlayer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer3.BackgroundImage")));
             this.ptbPlayer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbPlayer3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer3.Image = global::MinigameOlympia.Properties.Resources.plus;
             this.ptbPlayer3.Location = new System.Drawing.Point(327, 68);
             this.ptbPlayer3.Name = "ptbPlayer3";
             this.ptbPlayer3.Size = new System.Drawing.Size(81, 81);
@@ -221,10 +221,10 @@
             // 
             // ptbPlayer4
             // 
-            this.ptbPlayer4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbPlayer4.BackgroundImage")));
             this.ptbPlayer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbPlayer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbPlayer4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer4.Image = global::MinigameOlympia.Properties.Resources.plus;
             this.ptbPlayer4.Location = new System.Drawing.Point(465, 68);
             this.ptbPlayer4.Name = "ptbPlayer4";
             this.ptbPlayer4.Size = new System.Drawing.Size(81, 81);
@@ -276,7 +276,7 @@
             this.lblInfo.Text = "Đang ghép phòng...";
             this.lblInfo.Visible = false;
             // 
-            // PhongCho
+            // Room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -290,7 +290,7 @@
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PhongCho";
+            this.Name = "Room";
             this.Text = "Phòng chờ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhongCho_FormClosing);
             this.Load += new System.EventHandler(this.PhongCho_Load);

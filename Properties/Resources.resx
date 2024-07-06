@@ -154,4 +154,52 @@
   <data name="ckhung2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ckhung2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\Intro.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Result" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\Result.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ShowAns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\ShowAns.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TT_10s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\TT_10s.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TT_20s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\TT_20s.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TT_30s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\TT_30s.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TT_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\TT_Open.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VCNC_Bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VCNC_Bell.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VCNV_15s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VCNV_15s.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VCNV_False" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VCNV_False.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VCNV_OpenCNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VCNV_OpenCNV.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VCNV_Select" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VCNV_Select.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VCNV_True" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VCNV_True.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VNCV_OpenAns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sound\VNCV_OpenAns.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picture\Bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuestionMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picture\QuestionMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
