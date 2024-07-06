@@ -1,17 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 using MinigameOlympia.Models;
 using MinigameOlympia;
-using System.Security.Cryptography;
 
 namespace MinigameOlympia {
     public partial class DangNhap : Form {
@@ -19,7 +13,7 @@ namespace MinigameOlympia {
         private bool isOKUsername = false;
         private bool isOKPassword = false;
         private bool showPass = true;
-        private event EventHandler<string> usernameSent;
+        private Player player;
         public DangNhap(RootForm rootForm) {
             InitializeComponent();
             _rootForm = rootForm;
@@ -37,20 +31,23 @@ namespace MinigameOlympia {
                 lblAlertUsername.Visible = true;
                 isOKUsername = false;
             } else {
-                HttpClient client = new HttpClient();
-                try {
-                    string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
-                    var response = await client.GetAsync(url);
-                    if (!response.IsSuccessStatusCode) {
-                        lblAlertUsername.Text = "ⓘ Username không tồn tại";
-                        lblAlertUsername.Visible = true;
-                        isOKUsername = false;
-                    } else {
-                        lblAlertUsername.Visible = false;
-                        isOKUsername = true;
+                using (HttpClient client = new HttpClient()) {
+                    try {
+                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                        var response = await client.GetAsync(url);
+                        if (!response.IsSuccessStatusCode) {
+                            lblAlertUsername.Text = "ⓘ Username không tồn tại";
+                            lblAlertUsername.Visible = true;
+                            isOKUsername = false;
+                        } else {
+                            lblAlertUsername.Visible = false;
+                            isOKUsername = true;
+                            string jsonContent = await response.Content.ReadAsStringAsync();
+                            player = JsonConvert.DeserializeObject<Player>(jsonContent);
+                        }
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
                     }
-                } catch (Exception ex) {
-
                 }
             }
         }
@@ -92,16 +89,13 @@ namespace MinigameOlympia {
         }
 
         // Phương thức băm mật khẩu bằng SHA-256
-        private string HashPassword(string password)
-        {
+        private string HashPassword(string password) {
             password += "group17";
-            using (SHA256 sha256 = SHA256.Create())
-            {
+            using (SHA256 sha256 = SHA256.Create()) {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
 
                 StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
+                foreach (byte b in bytes) {
                     builder.Append(b.ToString("x2"));
                 }
 
@@ -110,44 +104,32 @@ namespace MinigameOlympia {
         }
 
         // Phương thức xác thực mật khẩu đã băm
-        private bool VerifyHashedPassword(string hashedPassword, string password)
-        {
+        private bool VerifyHashedPassword(string hashedPassword, string password) {
             string hashOfInput = HashPassword(password);
 
             return StringComparer.OrdinalIgnoreCase.Compare(hashedPassword, hashOfInput) == 0;
         }
 
 
-        private async void btnSignIn_Click(object sender, EventArgs e) {
+        private void btnSignIn_Click(object sender, EventArgs e) {
             if (isOKUsername && isOKPassword) {
-                HttpClient client = new HttpClient();
-                try {
-                    string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
-                    var response = await client.GetAsync(url);
-                    if (response.IsSuccessStatusCode) {
-                        string jsonContent = await response.Content.ReadAsStringAsync();
-                        Player player = JsonConvert.DeserializeObject<Player>(jsonContent);
-                        if (VerifyHashedPassword(player.Password, tbPassword.Text)) {
-                            Close();
-                            GiaoDienChinh mainScreen = new GiaoDienChinh();
-                            usernameSent += mainScreen.LogIn_username;
-                            usernameSent?.Invoke(this, tbUsername.Text);
-                            mainScreen.Show();
-                        } else {
-                            lblAlertPassword.Text = "ⓘ Sai mật khẩu";
-                            lblAlertPassword.Visible = true;
-                        }
-                    }
-                } catch (Exception ex) {
-
+                if (VerifyHashedPassword(player.Password, tbPassword.Text)) {
+                    //if (player.Password == tbPassword.Text) {
+                    GiaoDienChinh mainScreen = new GiaoDienChinh();
+                    mainScreen.username = tbUsername.Text;
+                    mainScreen.Show();
+                    Close();
+                } else {
+                    lblAlertPassword.Text = "ⓘ Sai mật khẩu";
+                    lblAlertPassword.Visible = true;
                 }
             }
         }
 
         private void btnSignUp_Click(object sender, EventArgs e) {
-            Close();
             DangKy signUp = new DangKy(_rootForm);
             signUp.Show();
+            Close();
         }
 
         private void ForgetPassword(object sender, EventArgs e) {

@@ -1,12 +1,8 @@
 ﻿using MinigameOlympia.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,20 +10,27 @@ using System.Windows.Forms;
 
 namespace MinigameOlympia {
     public partial class TaoLaiMatKhau : Form {
-        private string email;
+        public string email;
         private bool isOKPassword = false;
         private bool isOKRePass = false;
         private bool showPass = true;
         private bool showRePass = true;
-        private event EventHandler<string> usernameSent;
-        private QuenMK _forgetPassword;
-        public TaoLaiMatKhau(QuenMK forgetPassword) {
+        public TaoLaiMatKhau() {
             InitializeComponent();
-            _forgetPassword = forgetPassword;
         }
 
-        public void ForgetPassword_Email(object sender, string data) {
-            email = data;
+        private string HashPassword(string password) {
+            password += "group17";
+            // Tạo đối tượng SHA256
+            using (SHA256 sha256 = SHA256.Create()) {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes) {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
 
         private void BackToSignInForm(object sender, EventArgs args) {
@@ -43,16 +46,17 @@ namespace MinigameOlympia {
 
         private async Task<Player> getPlayerAsync(string email) {
             Player player = null;
-            HttpClient client = new HttpClient();
-            try {
-                string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + email;
-                var response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode) {
-                    string jsonContent = await response.Content.ReadAsStringAsync();
-                    player = JsonConvert.DeserializeObject<Player>(jsonContent);
+            using (HttpClient client = new HttpClient()) {
+                try {
+                    string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + email;
+                    var response = await client.GetAsync(url);
+                    if (response.IsSuccessStatusCode) {
+                        string jsonContent = await response.Content.ReadAsStringAsync();
+                        player = JsonConvert.DeserializeObject<Player>(jsonContent);
+                    }
+                } catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
                 }
-            } catch (Exception ex) {
-
             }
             return player;
         }
@@ -132,25 +136,24 @@ namespace MinigameOlympia {
         }
 
         private async void btnSubmit_ClickAsync(object sender, EventArgs e) {
-            Thread.Sleep(5000);
             if (isOKPassword && isOKRePass) {
                 Player player = await getPlayerAsync(email);
-                player.Password = tbPassword.Text;
+                player.Password = HashPassword(tbPassword.Text);
                 string jsonContent = JsonConvert.SerializeObject(player);
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-                HttpClient client = new HttpClient();
-                try {
-                    var response = await client.PutAsync("https://olympiawebservice.azurewebsites.net/api/Player", content);
-                    if (response.IsSuccessStatusCode) {
-                        MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Close();
-                        GiaoDienChinh mainScreen = new GiaoDienChinh();
-                        usernameSent += mainScreen.CreateNewPassword_username;
-                        usernameSent?.Invoke(this, player.Username);
-                        mainScreen.Show();
+                using (HttpClient client = new HttpClient()) {
+                    try {
+                        var response = await client.PutAsync("https://olympiawebservice.azurewebsites.net/api/Player", content);
+                        if (response.IsSuccessStatusCode) {
+                            MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            GiaoDienChinh mainScreen = new GiaoDienChinh();
+                            mainScreen.username = player.Username;
+                            mainScreen.Show();
+                            Close();
+                        }
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
                     }
-                } catch (Exception ex) {
-                    MessageBox.Show(ex.Message);
                 }
             }
         }

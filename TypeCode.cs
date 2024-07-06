@@ -2,13 +2,8 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MinigameOlympia {
@@ -43,7 +38,7 @@ namespace MinigameOlympia {
                         pc.Show();
                         Close();
                         foreach (Form form in Application.OpenForms) {
-                            if (form.Name == "GiaoDienChinh") {
+                            if (form.Name == "MainScreen") {
                                 form.Visible = false;
                                 break;
                             }
@@ -53,7 +48,7 @@ namespace MinigameOlympia {
                     MessageBox.Show("Không tìm thấy phòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception ex) {
-            
+                MessageBox.Show(ex.Message);
             }
         }
     }

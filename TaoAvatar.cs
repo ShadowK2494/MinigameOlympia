@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,27 +10,10 @@ using Newtonsoft.Json;
 
 namespace MinigameOlympia {
     public partial class TaoAvatar : Form {
-        private PlayerSignUp newPlayer = new PlayerSignUp();
+        public PlayerSignUp newPlayer;
         private bool selected = false;
-        private event EventHandler<string> usernameSent;
         public TaoAvatar() {
             InitializeComponent();
-        }
-
-        // Nhận dữ liệu người chơi từ form Đăng ký
-        public void DangKy_DataSent(object sender, string[] data) {
-            newPlayer.Name = data[0];
-            newPlayer.Username = data[1];
-            newPlayer.Password = data[2];
-            int gender = int.Parse(data[3]);
-            if (gender == 0)
-                newPlayer.Gender = Gender.Male;
-            else if (gender == 1)
-                newPlayer.Gender = Gender.Female;
-            else
-                newPlayer.Gender = Gender.Other;
-            newPlayer.Email = data[4];
-            newPlayer.PhoneNumber = data[5];
         }
 
         // Tạo tái khoản + avatar + chuyển đến form Giao diện chính
@@ -44,22 +23,20 @@ namespace MinigameOlympia {
                     MessageBox.Show("Bạn chưa chọn hình đại diện", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else {
                     await PostPlayerAsync(newPlayer);
-                    Close();
                     GiaoDienChinh mainScreen = new GiaoDienChinh();
-                    usernameSent += mainScreen.CreateAvatar_username;
-                    usernameSent?.Invoke(this, newPlayer.Username);
+                    mainScreen.username = newPlayer.Username;
                     mainScreen.Show();
+                    Close();
                 }
             } else {
                 if (!selected)
                     MessageBox.Show("Bạn chưa chọn hình đại diện", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else {
                     await PostPlayerAsync(newPlayer);
-                    Close();
                     GiaoDienChinh mainScreen = new GiaoDienChinh();
-                    usernameSent += mainScreen.CreateAvatar_username;
-                    usernameSent?.Invoke(this, newPlayer.Username);
+                    mainScreen.username = newPlayer.Username;
                     mainScreen.Show();
+                    Close();
                 }
             }
         }
@@ -108,14 +85,15 @@ namespace MinigameOlympia {
         private async Task PostPlayerAsync(PlayerSignUp player) {
             string jsonContent = JsonConvert.SerializeObject(player);
             var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-            HttpClient client = new HttpClient();
-            try {
-                var response = await client.PostAsync("https://olympiawebservice.azurewebsites.net/api/Player", content);
-                if (response.IsSuccessStatusCode) {
-                    MessageBox.Show("Tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (HttpClient client = new HttpClient()) {
+                try {
+                    var response = await client.PostAsync("https://olympiawebservice.azurewebsites.net/api/Player", content);
+                    if (response.IsSuccessStatusCode) {
+                        MessageBox.Show("Tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                } catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
                 }
-            } catch (Exception ex) {
-                MessageBox.Show(ex.Message);
             }
         }
     }

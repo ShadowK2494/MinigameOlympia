@@ -35,6 +35,7 @@
             this.ptbRePass = new System.Windows.Forms.PictureBox();
             this.lblAlertPassword = new System.Windows.Forms.Label();
             this.lblAlertRePass = new System.Windows.Forms.Label();
+            this.lblBack = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRePass)).BeginInit();
@@ -112,7 +113,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MinigameOlympia.Properties.Resources.BackgroundLogin;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(266, 368);
@@ -170,11 +171,25 @@
             this.lblAlertRePass.Text = "a";
             this.lblAlertRePass.Visible = false;
             // 
-            // TaoLaiMatKhau
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblBack.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblBack.Location = new System.Drawing.Point(5, 9);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(66, 18);
+            this.lblBack.TabIndex = 37;
+            this.lblBack.Text = "Quay về";
+            this.lblBack.Click += new System.EventHandler(this.BackToSignInForm);
+            // 
+            // CreateNewPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 317);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.lblAlertRePass);
             this.Controls.Add(this.lblAlertPassword);
             this.Controls.Add(this.ptbRePass);
@@ -189,7 +204,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "TaoLaiMatKhau";
+            this.Name = "CreateNewPassword";
             this.Text = "Tạo lại mật khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPassword)).EndInit();
@@ -212,5 +227,6 @@
         private System.Windows.Forms.PictureBox ptbRePass;
         private System.Windows.Forms.Label lblAlertPassword;
         private System.Windows.Forms.Label lblAlertRePass;
+        private System.Windows.Forms.Label lblBack;
     }
 }

@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using System.Net;
 using Unidecode.NET;
 using System.Net.Mail;
-using System.Xml.Schema;
-using System.Runtime.CompilerServices;
-using System.Xml.Linq;
-using MinigameOlympia;
 using System.Security.Cryptography;
+using MinigameOlympia.Models;
+using MinigameOlympia;
+using System.Xml.Linq;
 
 namespace MinigameOlympia {
     public partial class DangKy : Form {
@@ -29,9 +20,7 @@ namespace MinigameOlympia {
         private bool isOKGender = false;
         private bool showPass = true;
         private bool showRePass = true;
-        private event EventHandler<string> EmailSent;
         private bool isEmailVerify;
-        private event EventHandler<string[]> DataSent;
         private RootForm _rootForm { get; set; }
         public DangKy(RootForm rootForm) {
             InitializeComponent();
@@ -44,23 +33,15 @@ namespace MinigameOlympia {
             _rootForm.Visible = true;
         }
 
-        // Lấy dữ liệu kết quả xác thực bên form Xác thực email
-        private void VerifyEmail_isValid(object sender, bool data) {
-            isEmailVerify = data;
-        }
-
         // Phương thức băm mật khẩu bằng SHA-256
-        private string HashPassword(string password)
-        {
+        private string HashPassword(string password) {
             password += "group17";
             // Tạo đối tượng SHA256
-            using (SHA256 sha256 = SHA256.Create())
-            {
+            using (SHA256 sha256 = SHA256.Create()) {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
 
                 StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
+                foreach (byte b in bytes) {
                     builder.Append(b.ToString("x2"));
                 }
                 return builder.ToString();
@@ -68,32 +49,31 @@ namespace MinigameOlympia {
         }
 
         // Chuyển đến form xác thực email
-        private async void btnSubmit_Click(object sender, EventArgs e) {
+        private void btnSubmit_Click(object sender, EventArgs e) {
             if (isOKName && isOKUsername && isOKPassword && isOKRePassword && isOKEmail && isOKPhone && isOKGender) {
 
-                string data = tbEmail.Text;
                 VerifyEmail verifyEmail = new VerifyEmail();
-                EmailSent += verifyEmail.SignUp_EmailSent;
-                EmailSent?.Invoke(this, data);
+                verifyEmail.email = tbEmail.Text;
 
                 //băm password
                 string pw = HashPassword(tbPassword.Text);
-
-                verifyEmail.isValid += VerifyEmail_isValid;
                 verifyEmail.ShowDialog();
+                isEmailVerify = verifyEmail.IsValidEmail();
                 if (isEmailVerify) {
-                    Visible = false;
-                    string[] playerData = {
-                        tbName.Text.Trim(),
-                        tbUsername.Text.Trim(),
-                        pw.Trim(),
-                        cbbGender.SelectedIndex.ToString(),
-                        tbEmail.Text.Trim(),
-                        tbPhone.Text.Trim()
-                    };
                     TaoAvatar createAvatar = new TaoAvatar();
-                    DataSent += createAvatar.DangKy_DataSent;
-                    DataSent?.Invoke(this, playerData);
+                    createAvatar.newPlayer = new PlayerSignUp();
+                    createAvatar.newPlayer.Name = tbName.Text;
+                    createAvatar.newPlayer.Username = tbUsername.Text;
+                    createAvatar.newPlayer.Password = pw.Trim();
+                    int gender = cbbGender.SelectedIndex;
+                    if (gender == 0)
+                        createAvatar.newPlayer.Gender = Gender.Male;
+                    else if (gender == 1)
+                        createAvatar.newPlayer.Gender = Gender.Female;
+                    else
+                        createAvatar.newPlayer.Gender = Gender.Other;
+                    createAvatar.newPlayer.Email = tbEmail.Text;
+                    createAvatar.newPlayer.PhoneNumber = tbPhone.Text;
                     Close();
                     createAvatar.Show();
                 }
@@ -217,20 +197,21 @@ namespace MinigameOlympia {
                 lblAlertUsername.Visible = true;
                 isOKUsername = false;
             } else {
-                HttpClient client = new HttpClient();
-                try {
-                    string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
-                    var response = await client.GetAsync(url);
-                    if (response.IsSuccessStatusCode) {
-                        lblAlertUsername.Text = "ⓘ Username đã tồn tại";
-                        lblAlertUsername.Visible = true;
-                        isOKUsername = false;
-                    } else {
-                        lblAlertUsername.Visible = false;
-                        isOKUsername = true;
+                using (HttpClient client = new HttpClient()) {
+                    try {
+                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                        var response = await client.GetAsync(url);
+                        if (response.IsSuccessStatusCode) {
+                            lblAlertUsername.Text = "ⓘ Username đã tồn tại";
+                            lblAlertUsername.Visible = true;
+                            isOKUsername = false;
+                        } else {
+                            lblAlertUsername.Visible = false;
+                            isOKUsername = true;
+                        }
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
                     }
-                } catch (Exception ex) {
-
                 }
             }
         }
@@ -257,20 +238,21 @@ namespace MinigameOlympia {
                     lblAlertEmail.Visible = true;
                     isOKEmail = false;
                 } else {
-                    HttpClient client = new HttpClient();
-                    try {
-                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + tbEmail.Text.Trim();
-                        var response = await client.GetAsync(url);
-                        if (response.IsSuccessStatusCode) {
-                            lblAlertEmail.Text = "ⓘ Email đã được sử dụng";
-                            lblAlertEmail.Visible = true;
-                            isOKEmail = false;
-                        } else {
-                            lblAlertEmail.Visible = false;
-                            isOKEmail = true;
+                    using (HttpClient client = new HttpClient()) {
+                        try {
+                            string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + tbEmail.Text.Trim();
+                            var response = await client.GetAsync(url);
+                            if (response.IsSuccessStatusCode) {
+                                lblAlertEmail.Text = "ⓘ Email đã được sử dụng";
+                                lblAlertEmail.Visible = true;
+                                isOKEmail = false;
+                            } else {
+                                lblAlertEmail.Visible = false;
+                                isOKEmail = true;
+                            }
+                        } catch (Exception ex) {
+                            MessageBox.Show(ex.Message);
                         }
-                    } catch (Exception ex) {
-
                     }
                 }
             }
@@ -300,20 +282,21 @@ namespace MinigameOlympia {
                     lblAlertPhone.Visible = true;
                     isOKPhone = false;
                 } else {
-                    HttpClient client = new HttpClient();
-                    try {
-                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/phone?lookup=" + tbPhone.Text.Trim();
-                        var response = await client.GetAsync(url);
-                        if (response.IsSuccessStatusCode) {
-                            lblAlertPhone.Text = "ⓘ Số điện thoại đã được sử dụng";
-                            lblAlertPhone.Visible = true;
-                            isOKPhone = false;
-                        } else {
-                            lblAlertPhone.Visible = false;
-                            isOKPhone = true;
+                    using (HttpClient client = new HttpClient()) {
+                        try {
+                            string url = "https://olympiawebservice.azurewebsites.net/api/Player/phone?lookup=" + tbPhone.Text.Trim();
+                            var response = await client.GetAsync(url);
+                            if (response.IsSuccessStatusCode) {
+                                lblAlertPhone.Text = "ⓘ Số điện thoại đã được sử dụng";
+                                lblAlertPhone.Visible = true;
+                                isOKPhone = false;
+                            } else {
+                                lblAlertPhone.Visible = false;
+                                isOKPhone = true;
+                            }
+                        } catch (Exception ex) {
+                            MessageBox.Show(ex.Message);
                         }
-                    } catch (Exception ex) {
-
                     }
                 }
             }

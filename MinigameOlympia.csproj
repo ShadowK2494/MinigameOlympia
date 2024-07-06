@@ -27,6 +27,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +50,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibVLCSharp, Version=3.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\LibVLCSharp.3.8.5\lib\net471\LibVLCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVLCSharp.WinForms, Version=3.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\LibVLCSharp.WinForms.3.8.5\lib\net40\LibVLCSharp.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
     </Reference>
@@ -213,6 +221,39 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuideScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuideScreen.Designer.cs">
+      <DependentUpon>GuideScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoRound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoRound.Designer.cs">
+      <DependentUpon>InfoRound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionRound1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructionRound1.Designer.cs">
+      <DependentUpon>InstructionRound1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionRound2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructionRound2.Designer.cs">
+      <DependentUpon>InstructionRound2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VerticalProgressbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuestionRound1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionRound1.Designer.cs">
+      <DependentUpon>QuestionRound1.cs</DependentUpon>
+    </Compile>
     <Compile Include="TypeCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +351,12 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstructionRound1.resx">
+      <DependentUpon>InstructionRound1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructionRound2.resx">
+      <DependentUpon>InstructionRound2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TypeCode.resx">
       <DependentUpon>TypeCode.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,8 +423,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture\BackgroundLogin.jpg" />
+    <Content Include="picture\Bell.png" />
     <Content Include="picture\ckhung2.png" />
     <Content Include="picture\HidePass.png" />
+    <Content Include="picture\QuestionMark.png" />
+    <Content Include="Sound\Intro.wav" />
+    <Content Include="Sound\Result.wav" />
+    <Content Include="Sound\ShowAns.wav" />
+    <Content Include="Sound\TT_10s.wav" />
+    <Content Include="Sound\TT_20s.wav" />
+    <Content Include="Sound\TT_30s.wav" />
+    <Content Include="Sound\TT_Open.wav" />
+    <Content Include="Sound\VCNC_Bell.wav" />
+    <Content Include="Sound\VCNV_15s.wav" />
+    <Content Include="Sound\VCNV_False.wav" />
+    <Content Include="Sound\VCNV_OpenCNV.wav" />
+    <Content Include="Sound\VCNV_Select.wav" />
+    <Content Include="Sound\VCNV_True.wav" />
+    <Content Include="Sound\VNCV_OpenAns.wav" />
     <None Include="Resources\ckhung2.png" />
     <None Include="picture\Icon.ico" />
     <Content Include="picture\ShowPass.png" />
@@ -408,4 +471,11 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\VideoLAN.LibVLC.Windows.3.0.20\build\VideoLAN.LibVLC.Windows.targets" Condition="Exists('packages\VideoLAN.LibVLC.Windows.3.0.20\build\VideoLAN.LibVLC.Windows.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\VideoLAN.LibVLC.Windows.3.0.20\build\VideoLAN.LibVLC.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\VideoLAN.LibVLC.Windows.3.0.20\build\VideoLAN.LibVLC.Windows.targets'))" />
+  </Target>
 </Project>

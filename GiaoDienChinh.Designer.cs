@@ -32,6 +32,7 @@
             this.pnFriendList = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCreateRoom = new System.Windows.Forms.Button();
+            this.btnGuide = new System.Windows.Forms.Button();
             this.grbRank.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.btnEnter.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnEnter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnEnter.Location = new System.Drawing.Point(263, 208);
+            this.btnEnter.Location = new System.Drawing.Point(376, 138);
             this.btnEnter.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(184, 66);
@@ -78,6 +79,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(112, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(496, 39);
@@ -102,13 +104,14 @@
             this.pnFriendList.Name = "pnFriendList";
             this.pnFriendList.Size = new System.Drawing.Size(81, 265);
             this.pnFriendList.TabIndex = 7;
+            this.pnFriendList.Visible = false;
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnExit.Location = new System.Drawing.Point(263, 298);
+            this.btnExit.Location = new System.Drawing.Point(376, 245);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(184, 66);
@@ -122,7 +125,7 @@
             this.btnCreateRoom.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCreateRoom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnCreateRoom.Location = new System.Drawing.Point(263, 118);
+            this.btnCreateRoom.Location = new System.Drawing.Point(149, 138);
             this.btnCreateRoom.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateRoom.Name = "btnCreateRoom";
             this.btnCreateRoom.Size = new System.Drawing.Size(184, 66);
@@ -131,7 +134,21 @@
             this.btnCreateRoom.UseVisualStyleBackColor = false;
             this.btnCreateRoom.Click += new System.EventHandler(this.btnCreateRoom_Click);
             // 
-            // GiaoDienChinh
+            // btnGuide
+            // 
+            this.btnGuide.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGuide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuide.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnGuide.Location = new System.Drawing.Point(149, 245);
+            this.btnGuide.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuide.Name = "btnGuide";
+            this.btnGuide.Size = new System.Drawing.Size(184, 66);
+            this.btnGuide.TabIndex = 10;
+            this.btnGuide.Text = "Hướng dẫn";
+            this.btnGuide.UseVisualStyleBackColor = false;
+            this.btnGuide.Click += new System.EventHandler(this.btnGuide_Click);
+            // 
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,6 +157,7 @@
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(867, 414);
+            this.Controls.Add(this.btnGuide);
             this.Controls.Add(this.btnCreateRoom);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pnFriendList);
@@ -151,7 +169,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "GiaoDienChinh";
+            this.Name = "MainScreen";
             this.Text = "Giao diện chính";
             this.Load += new System.EventHandler(this.GiaoDienChinh_Load);
             this.grbRank.ResumeLayout(false);
@@ -170,5 +188,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnCreateRoom;
         private System.Windows.Forms.Panel pnRank;
+        private System.Windows.Forms.Button btnGuide;
     }
 }

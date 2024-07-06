@@ -1,7 +1,5 @@
-﻿namespace MinigameOlympia
-{
-    partial class Answers
-    {
+﻿namespace MinigameOlympia {
+    partial class Answer {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,9 +22,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Answers));
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Answer));
             this.lbUsername1 = new System.Windows.Forms.Label();
             this.lbScore1 = new System.Windows.Forms.Label();
             this.lbScore2 = new System.Windows.Forms.Label();
@@ -53,9 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,6 +63,7 @@
             this.lbUsername1.Name = "lbUsername1";
             this.lbUsername1.Size = new System.Drawing.Size(65, 17);
             this.lbUsername1.TabIndex = 36;
+            this.lbUsername1.Tag = "1";
             this.lbUsername1.Text = "Tên 1 nè";
             // 
             // lbScore1
@@ -82,6 +75,7 @@
             this.lbScore1.Name = "lbScore1";
             this.lbScore1.Size = new System.Drawing.Size(72, 17);
             this.lbScore1.TabIndex = 37;
+            this.lbScore1.Tag = "4";
             this.lbScore1.Text = "Điểm 1 nè";
             // 
             // lbScore2
@@ -93,6 +87,7 @@
             this.lbScore2.Name = "lbScore2";
             this.lbScore2.Size = new System.Drawing.Size(72, 17);
             this.lbScore2.TabIndex = 40;
+            this.lbScore2.Tag = "4";
             this.lbScore2.Text = "Điểm 2 nè";
             // 
             // lbUsername2
@@ -104,6 +99,7 @@
             this.lbUsername2.Name = "lbUsername2";
             this.lbUsername2.Size = new System.Drawing.Size(65, 17);
             this.lbUsername2.TabIndex = 39;
+            this.lbUsername2.Tag = "1";
             this.lbUsername2.Text = "Tên 2 nè";
             // 
             // lbScore3
@@ -115,6 +111,7 @@
             this.lbScore3.Name = "lbScore3";
             this.lbScore3.Size = new System.Drawing.Size(72, 17);
             this.lbScore3.TabIndex = 43;
+            this.lbScore3.Tag = "4";
             this.lbScore3.Text = "Điểm 3 nè";
             // 
             // lbUsername3
@@ -126,6 +123,7 @@
             this.lbUsername3.Name = "lbUsername3";
             this.lbUsername3.Size = new System.Drawing.Size(65, 17);
             this.lbUsername3.TabIndex = 42;
+            this.lbUsername3.Tag = "1";
             this.lbUsername3.Text = "Tên 3 nè";
             // 
             // lbScore4
@@ -137,6 +135,7 @@
             this.lbScore4.Name = "lbScore4";
             this.lbScore4.Size = new System.Drawing.Size(72, 17);
             this.lbScore4.TabIndex = 46;
+            this.lbScore4.Tag = "4";
             this.lbScore4.Text = "Điểm 4 nè";
             // 
             // lbUsername4
@@ -148,6 +147,7 @@
             this.lbUsername4.Name = "lbUsername4";
             this.lbUsername4.Size = new System.Drawing.Size(65, 17);
             this.lbUsername4.TabIndex = 45;
+            this.lbUsername4.Tag = "1";
             this.lbUsername4.Text = "Tên 4 nè";
             // 
             // lbAnswer1
@@ -159,6 +159,7 @@
             this.lbAnswer1.Name = "lbAnswer1";
             this.lbAnswer1.Size = new System.Drawing.Size(86, 17);
             this.lbAnswer1.TabIndex = 48;
+            this.lbAnswer1.Tag = "2";
             this.lbAnswer1.Text = "Answer 1 nè";
             // 
             // lbAnswer2
@@ -170,6 +171,7 @@
             this.lbAnswer2.Name = "lbAnswer2";
             this.lbAnswer2.Size = new System.Drawing.Size(86, 17);
             this.lbAnswer2.TabIndex = 49;
+            this.lbAnswer2.Tag = "2";
             this.lbAnswer2.Text = "Answer 2 nè";
             // 
             // lbAnswer3
@@ -181,6 +183,7 @@
             this.lbAnswer3.Name = "lbAnswer3";
             this.lbAnswer3.Size = new System.Drawing.Size(86, 17);
             this.lbAnswer3.TabIndex = 50;
+            this.lbAnswer3.Tag = "2";
             this.lbAnswer3.Text = "Answer 3 nè";
             // 
             // lbAnswer4
@@ -192,6 +195,7 @@
             this.lbAnswer4.Name = "lbAnswer4";
             this.lbAnswer4.Size = new System.Drawing.Size(86, 17);
             this.lbAnswer4.TabIndex = 51;
+            this.lbAnswer4.Tag = "2";
             this.lbAnswer4.Text = "Answer 4 nè";
             // 
             // lbTime1
@@ -203,6 +207,7 @@
             this.lbTime1.Name = "lbTime1";
             this.lbTime1.Size = new System.Drawing.Size(71, 17);
             this.lbTime1.TabIndex = 52;
+            this.lbTime1.Tag = "3";
             this.lbTime1.Text = "Time 1 nè";
             // 
             // lbTime2
@@ -214,6 +219,7 @@
             this.lbTime2.Name = "lbTime2";
             this.lbTime2.Size = new System.Drawing.Size(71, 17);
             this.lbTime2.TabIndex = 53;
+            this.lbTime2.Tag = "3";
             this.lbTime2.Text = "Time 2 nè";
             // 
             // lbTime3
@@ -225,6 +231,7 @@
             this.lbTime3.Name = "lbTime3";
             this.lbTime3.Size = new System.Drawing.Size(71, 17);
             this.lbTime3.TabIndex = 54;
+            this.lbTime3.Tag = "3";
             this.lbTime3.Text = "Time 3 nè";
             // 
             // lbTime4
@@ -236,6 +243,7 @@
             this.lbTime4.Name = "lbTime4";
             this.lbTime4.Size = new System.Drawing.Size(71, 17);
             this.lbTime4.TabIndex = 55;
+            this.lbTime4.Tag = "3";
             this.lbTime4.Text = "Time 4 nè";
             // 
             // panel1
@@ -246,7 +254,7 @@
             this.panel1.Controls.Add(this.lbScore1);
             this.panel1.Controls.Add(this.lbUsername1);
             this.panel1.Location = new System.Drawing.Point(142, 123);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 51);
             this.panel1.TabIndex = 56;
@@ -260,7 +268,7 @@
             this.panel2.Controls.Add(this.lbScore2);
             this.panel2.Controls.Add(this.lbUsername2);
             this.panel2.Location = new System.Drawing.Point(142, 181);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(555, 51);
             this.panel2.TabIndex = 57;
@@ -273,7 +281,7 @@
             this.panel3.Controls.Add(this.lbScore3);
             this.panel3.Controls.Add(this.lbUsername3);
             this.panel3.Location = new System.Drawing.Point(143, 239);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(555, 51);
             this.panel3.TabIndex = 58;
@@ -286,7 +294,7 @@
             this.panel4.Controls.Add(this.lbScore4);
             this.panel4.Controls.Add(this.lbUsername4);
             this.panel4.Location = new System.Drawing.Point(143, 297);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(555, 51);
             this.panel4.TabIndex = 59;
@@ -320,12 +328,12 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LemonChiffon;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(439, 84);
+            this.label3.Location = new System.Drawing.Point(458, 84);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 20);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 62;
-            this.label3.Text = "Mốc thời gian";
+            this.label3.Text = "Thời gian";
             // 
             // label4
             // 
@@ -339,55 +347,13 @@
             this.label4.TabIndex = 63;
             this.label4.Text = "Điểm số";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(790, 283);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 46);
-            this.label5.TabIndex = 64;
-            this.label5.Text = ".";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(811, 265);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 46);
-            this.label6.TabIndex = 65;
-            this.label6.Text = ".";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(488, 391);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 17);
-            this.label7.TabIndex = 66;
-            this.label7.Text = ".....";
-            // 
-            // Answers
+            // ShowAnswer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.ckhung2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(831, 413);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -399,9 +365,11 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Answers";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ShowAnswer";
             this.Text = "Câu trả lời";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ShowAnswer_FormClosing);
+            this.Load += new System.EventHandler(this.ShowAnswer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -440,8 +408,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
     }
 }

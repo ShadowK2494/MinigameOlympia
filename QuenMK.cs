@@ -1,26 +1,15 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Mail;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Threading;
 using System.Net.Http;
-using System.Drawing.Text;
 
 namespace MinigameOlympia {
     public partial class QuenMK : Form {
         private int otp;
         private Thread updateUI;
         private bool isOKEmail = false;
-        private event EventHandler<string> EmailSent;
         public QuenMK() {
             InitializeComponent();
         }
@@ -70,12 +59,10 @@ namespace MinigameOlympia {
         // Xác thực mã OTP
         private void btnSubmit_Click(object sender, EventArgs e) {
             if (otp.ToString() == tbOTP.Text) {
-                string data = tbEmail.Text;
-                Close();
-                TaoLaiMatKhau createNewPassword = new TaoLaiMatKhau(this);
-                EmailSent += createNewPassword.ForgetPassword_Email;
-                EmailSent?.Invoke(this, data);
+                TaoAvatar createNewPassword = new TaoAvatar();
+                createNewPassword.email = tbEmail.Text;
                 createNewPassword.Show();
+                Close();
             } else {
                 MessageBox.Show("Mã OTP không chính xác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -129,20 +116,21 @@ namespace MinigameOlympia {
                     lblAlertEmail.Visible = true;
                     isOKEmail = false;
                 } else {
-                    HttpClient client = new HttpClient();
-                    try {
-                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + tbEmail.Text.Trim();
-                        var response = await client.GetAsync(url);
-                        if (!response.IsSuccessStatusCode) {
-                            lblAlertEmail.Text = "ⓘ Email chưa được đăng ký";
-                            lblAlertEmail.Visible = true;
-                            isOKEmail = false;
-                        } else {
-                            lblAlertEmail.Visible = false;
-                            isOKEmail = true;
+                    using (HttpClient client = new HttpClient()) {
+                        try {
+                            string url = "https://olympiawebservice.azurewebsites.net/api/Player/email?lookup=" + tbEmail.Text.Trim();
+                            var response = await client.GetAsync(url);
+                            if (!response.IsSuccessStatusCode) {
+                                lblAlertEmail.Text = "ⓘ Email chưa được đăng ký";
+                                lblAlertEmail.Visible = true;
+                                isOKEmail = false;
+                            } else {
+                                lblAlertEmail.Visible = false;
+                                isOKEmail = true;
+                            }
+                        } catch (Exception ex) {
+                            MessageBox.Show(ex.Message);
                         }
-                    } catch (Exception ex) {
-
                     }
                 }
             }

@@ -1,7 +1,5 @@
-﻿namespace MinigameOlympia
-{
-    partial class Vong2
-    {
+﻿namespace MinigameOlympia {
+    partial class Vong2 {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,331 +22,339 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vong2));
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.progressBar_time = new System.Windows.Forms.ProgressBar();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label_answerD = new System.Windows.Forms.Label();
-            this.label_answerB = new System.Windows.Forms.Label();
-            this.label_answerC = new System.Windows.Forms.Label();
-            this.label_answerA = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox_user4 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user3 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user2 = new System.Windows.Forms.GroupBox();
-            this.groupBox_user1 = new System.Windows.Forms.GroupBox();
-            this.ptbAvatar1 = new System.Windows.Forms.PictureBox();
-            this.ptbAvatar2 = new System.Windows.Forms.PictureBox();
-            this.ptbAvatar3 = new System.Windows.Forms.PictureBox();
-            this.ptbAvatar4 = new System.Windows.Forms.PictureBox();
-            this.label_score4 = new System.Windows.Forms.Label();
-            this.label_score3 = new System.Windows.Forms.Label();
-            this.label_score2 = new System.Windows.Forms.Label();
-            this.label_score1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox_user4.SuspendLayout();
-            this.groupBox_user3.SuspendLayout();
-            this.groupBox_user2.SuspendLayout();
-            this.groupBox_user1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar4)).BeginInit();
+            this.gbQuestion = new System.Windows.Forms.GroupBox();
+            this.vvwQuestion = new LibVLCSharp.WinForms.VideoView();
+            this.ptbQuestion = new System.Windows.Forms.PictureBox();
+            this.pnInfo = new System.Windows.Forms.Panel();
+            this.lblPointPlayer1 = new System.Windows.Forms.Label();
+            this.ptbPlayer1 = new System.Windows.Forms.PictureBox();
+            this.lblPointPlayer4 = new System.Windows.Forms.Label();
+            this.lblPlayer4 = new System.Windows.Forms.Label();
+            this.ptbPlayer4 = new System.Windows.Forms.PictureBox();
+            this.lblPointPlayer3 = new System.Windows.Forms.Label();
+            this.lblPlayer3 = new System.Windows.Forms.Label();
+            this.ptbPlayer3 = new System.Windows.Forms.PictureBox();
+            this.lblPlayer1 = new System.Windows.Forms.Label();
+            this.lblPointPlayer2 = new System.Windows.Forms.Label();
+            this.lblPlayer2 = new System.Windows.Forms.Label();
+            this.ptbPlayer2 = new System.Windows.Forms.PictureBox();
+            this.btnAnswer = new System.Windows.Forms.Button();
+            this.tbAnswer = new System.Windows.Forms.TextBox();
+            this.Guide = new System.Windows.Forms.PictureBox();
+            this.gbQuestion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vvwQuestion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuestion)).BeginInit();
+            this.pnInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guide)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox7
+            // gbQuestion
             // 
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox7.Image = global::MinigameOlympia.Properties.Resources.Room;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(1109, 554);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 33;
-            this.pictureBox7.TabStop = false;
+            this.gbQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gbQuestion.Controls.Add(this.vvwQuestion);
+            this.gbQuestion.Controls.Add(this.ptbQuestion);
+            this.gbQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.gbQuestion.Location = new System.Drawing.Point(335, 12);
+            this.gbQuestion.Margin = new System.Windows.Forms.Padding(2);
+            this.gbQuestion.Name = "gbQuestion";
+            this.gbQuestion.Padding = new System.Windows.Forms.Padding(2);
+            this.gbQuestion.Size = new System.Drawing.Size(600, 434);
+            this.gbQuestion.TabIndex = 35;
+            this.gbQuestion.TabStop = false;
+            this.gbQuestion.Text = "Câu hỏi";
             // 
-            // progressBar_time
+            // vvwQuestion
             // 
-            this.progressBar_time.BackColor = System.Drawing.Color.IndianRed;
-            this.progressBar_time.ForeColor = System.Drawing.Color.Green;
-            this.progressBar_time.Location = new System.Drawing.Point(228, 27);
-            this.progressBar_time.Margin = new System.Windows.Forms.Padding(2);
-            this.progressBar_time.Name = "progressBar_time";
-            this.progressBar_time.Size = new System.Drawing.Size(45, 481);
-            this.progressBar_time.TabIndex = 34;
+            this.vvwQuestion.BackColor = System.Drawing.Color.Black;
+            this.vvwQuestion.Location = new System.Drawing.Point(5, 28);
+            this.vvwQuestion.MediaPlayer = null;
+            this.vvwQuestion.Name = "vvwQuestion";
+            this.vvwQuestion.Size = new System.Drawing.Size(590, 401);
+            this.vvwQuestion.TabIndex = 1;
+            this.vvwQuestion.Text = "videoView1";
             // 
-            // groupBox1
+            // ptbQuestion
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.label_answerD);
-            this.groupBox1.Controls.Add(this.label_answerB);
-            this.groupBox1.Controls.Add(this.label_answerC);
-            this.groupBox1.Controls.Add(this.label_answerA);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.groupBox1.Location = new System.Drawing.Point(285, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(522, 391);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Câu hỏi";
+            this.ptbQuestion.Location = new System.Drawing.Point(47, 55);
+            this.ptbQuestion.Name = "ptbQuestion";
+            this.ptbQuestion.Size = new System.Drawing.Size(512, 332);
+            this.ptbQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbQuestion.TabIndex = 0;
+            this.ptbQuestion.TabStop = false;
+            this.ptbQuestion.Visible = false;
             // 
-            // label_answerD
+            // pnInfo
             // 
-            this.label_answerD.AutoSize = true;
-            this.label_answerD.Location = new System.Drawing.Point(415, 396);
-            this.label_answerD.Name = "label_answerD";
-            this.label_answerD.Size = new System.Drawing.Size(151, 29);
-            this.label_answerD.TabIndex = 5;
-            this.label_answerD.Text = "D. Đáp án D";
+            this.pnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnInfo.Controls.Add(this.lblPointPlayer1);
+            this.pnInfo.Controls.Add(this.ptbPlayer1);
+            this.pnInfo.Controls.Add(this.lblPointPlayer4);
+            this.pnInfo.Controls.Add(this.lblPlayer4);
+            this.pnInfo.Controls.Add(this.ptbPlayer4);
+            this.pnInfo.Controls.Add(this.lblPointPlayer3);
+            this.pnInfo.Controls.Add(this.lblPlayer3);
+            this.pnInfo.Controls.Add(this.ptbPlayer3);
+            this.pnInfo.Controls.Add(this.lblPlayer1);
+            this.pnInfo.Controls.Add(this.lblPointPlayer2);
+            this.pnInfo.Controls.Add(this.lblPlayer2);
+            this.pnInfo.Controls.Add(this.ptbPlayer2);
+            this.pnInfo.Location = new System.Drawing.Point(28, 12);
+            this.pnInfo.Name = "pnInfo";
+            this.pnInfo.Size = new System.Drawing.Size(239, 434);
+            this.pnInfo.TabIndex = 55;
             // 
-            // label_answerB
+            // lblPointPlayer1
             // 
-            this.label_answerB.AutoSize = true;
-            this.label_answerB.Location = new System.Drawing.Point(415, 337);
-            this.label_answerB.Name = "label_answerB";
-            this.label_answerB.Size = new System.Drawing.Size(149, 29);
-            this.label_answerB.TabIndex = 4;
-            this.label_answerB.Text = "B. Đáp án B";
+            this.lblPointPlayer1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPointPlayer1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPointPlayer1.ForeColor = System.Drawing.Color.White;
+            this.lblPointPlayer1.Location = new System.Drawing.Point(109, 53);
+            this.lblPointPlayer1.Name = "lblPointPlayer1";
+            this.lblPointPlayer1.Size = new System.Drawing.Size(114, 32);
+            this.lblPointPlayer1.TabIndex = 53;
+            this.lblPointPlayer1.Tag = "info1";
+            this.lblPointPlayer1.Text = "0";
+            this.lblPointPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label_answerC
+            // ptbPlayer1
             // 
-            this.label_answerC.AutoSize = true;
-            this.label_answerC.Location = new System.Drawing.Point(11, 396);
-            this.label_answerC.Name = "label_answerC";
-            this.label_answerC.Size = new System.Drawing.Size(151, 29);
-            this.label_answerC.TabIndex = 3;
-            this.label_answerC.Text = "C. Đáp án C";
+            this.ptbPlayer1.BackColor = System.Drawing.Color.Transparent;
+            this.ptbPlayer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer1.Location = new System.Drawing.Point(23, 14);
+            this.ptbPlayer1.Name = "ptbPlayer1";
+            this.ptbPlayer1.Size = new System.Drawing.Size(81, 81);
+            this.ptbPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPlayer1.TabIndex = 51;
+            this.ptbPlayer1.TabStop = false;
+            this.ptbPlayer1.Tag = "info1";
             // 
-            // label_answerA
+            // lblPointPlayer4
             // 
-            this.label_answerA.AutoSize = true;
-            this.label_answerA.Location = new System.Drawing.Point(11, 337);
-            this.label_answerA.Name = "label_answerA";
-            this.label_answerA.Size = new System.Drawing.Size(149, 29);
-            this.label_answerA.TabIndex = 2;
-            this.label_answerA.Text = "A. Đáp án A";
+            this.lblPointPlayer4.BackColor = System.Drawing.Color.Transparent;
+            this.lblPointPlayer4.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPointPlayer4.ForeColor = System.Drawing.Color.White;
+            this.lblPointPlayer4.Location = new System.Drawing.Point(113, 373);
+            this.lblPointPlayer4.Name = "lblPointPlayer4";
+            this.lblPointPlayer4.Size = new System.Drawing.Size(110, 32);
+            this.lblPointPlayer4.TabIndex = 61;
+            this.lblPointPlayer4.Tag = "info4";
+            this.lblPointPlayer4.Text = "0";
+            this.lblPointPlayer4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // lblPlayer4
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(652, 258);
-            this.panel1.TabIndex = 1;
+            this.lblPlayer4.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPlayer4.ForeColor = System.Drawing.Color.White;
+            this.lblPlayer4.Location = new System.Drawing.Point(111, 348);
+            this.lblPlayer4.Name = "lblPlayer4";
+            this.lblPlayer4.Size = new System.Drawing.Size(112, 23);
+            this.lblPlayer4.TabIndex = 60;
+            this.lblPlayer4.Tag = "info4";
+            this.lblPlayer4.Text = "Player 4";
+            this.lblPlayer4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // ptbPlayer4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Câu hỏi gì đó?";
+            this.ptbPlayer4.BackColor = System.Drawing.Color.Transparent;
+            this.ptbPlayer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer4.Location = new System.Drawing.Point(23, 335);
+            this.ptbPlayer4.Name = "ptbPlayer4";
+            this.ptbPlayer4.Size = new System.Drawing.Size(81, 81);
+            this.ptbPlayer4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPlayer4.TabIndex = 59;
+            this.ptbPlayer4.TabStop = false;
+            this.ptbPlayer4.Tag = "info4";
             // 
-            // groupBox_user4
+            // lblPointPlayer3
             // 
-            this.groupBox_user4.Controls.Add(this.label_score4);
-            this.groupBox_user4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user4.Location = new System.Drawing.Point(32, 310);
-            this.groupBox_user4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_user4.Name = "groupBox_user4";
-            this.groupBox_user4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_user4.Size = new System.Drawing.Size(137, 72);
-            this.groupBox_user4.TabIndex = 37;
-            this.groupBox_user4.TabStop = false;
-            this.groupBox_user4.Text = "Thí sinh 4";
+            this.lblPointPlayer3.BackColor = System.Drawing.Color.Transparent;
+            this.lblPointPlayer3.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPointPlayer3.ForeColor = System.Drawing.Color.White;
+            this.lblPointPlayer3.Location = new System.Drawing.Point(113, 271);
+            this.lblPointPlayer3.Name = "lblPointPlayer3";
+            this.lblPointPlayer3.Size = new System.Drawing.Size(114, 32);
+            this.lblPointPlayer3.TabIndex = 58;
+            this.lblPointPlayer3.Tag = "info3";
+            this.lblPointPlayer3.Text = "0";
+            this.lblPointPlayer3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox_user3
+            // lblPlayer3
             // 
-            this.groupBox_user3.Controls.Add(this.label_score3);
-            this.groupBox_user3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user3.Location = new System.Drawing.Point(32, 219);
-            this.groupBox_user3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_user3.Name = "groupBox_user3";
-            this.groupBox_user3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_user3.Size = new System.Drawing.Size(137, 72);
-            this.groupBox_user3.TabIndex = 38;
-            this.groupBox_user3.TabStop = false;
-            this.groupBox_user3.Text = "Thí sinh 3";
+            this.lblPlayer3.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPlayer3.ForeColor = System.Drawing.Color.White;
+            this.lblPlayer3.Location = new System.Drawing.Point(111, 242);
+            this.lblPlayer3.Name = "lblPlayer3";
+            this.lblPlayer3.Size = new System.Drawing.Size(112, 23);
+            this.lblPlayer3.TabIndex = 57;
+            this.lblPlayer3.Tag = "info3";
+            this.lblPlayer3.Text = "Player 3";
+            this.lblPlayer3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox_user2
+            // ptbPlayer3
             // 
-            this.groupBox_user2.Controls.Add(this.label_score2);
-            this.groupBox_user2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user2.Location = new System.Drawing.Point(32, 128);
-            this.groupBox_user2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_user2.Name = "groupBox_user2";
-            this.groupBox_user2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_user2.Size = new System.Drawing.Size(137, 72);
-            this.groupBox_user2.TabIndex = 39;
-            this.groupBox_user2.TabStop = false;
-            this.groupBox_user2.Text = "Thí sinh 2";
+            this.ptbPlayer3.BackColor = System.Drawing.Color.Transparent;
+            this.ptbPlayer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer3.Location = new System.Drawing.Point(23, 231);
+            this.ptbPlayer3.Name = "ptbPlayer3";
+            this.ptbPlayer3.Size = new System.Drawing.Size(81, 81);
+            this.ptbPlayer3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPlayer3.TabIndex = 56;
+            this.ptbPlayer3.TabStop = false;
+            this.ptbPlayer3.Tag = "info3";
             // 
-            // groupBox_user1
+            // lblPlayer1
             // 
-            this.groupBox_user1.Controls.Add(this.label_score1);
-            this.groupBox_user1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox_user1.Location = new System.Drawing.Point(32, 42);
-            this.groupBox_user1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_user1.Name = "groupBox_user1";
-            this.groupBox_user1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_user1.Size = new System.Drawing.Size(137, 72);
-            this.groupBox_user1.TabIndex = 36;
-            this.groupBox_user1.TabStop = false;
-            this.groupBox_user1.Text = "Thí sinh 1";
+            this.lblPlayer1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPlayer1.ForeColor = System.Drawing.Color.White;
+            this.lblPlayer1.Location = new System.Drawing.Point(111, 25);
+            this.lblPlayer1.Name = "lblPlayer1";
+            this.lblPlayer1.Size = new System.Drawing.Size(114, 23);
+            this.lblPlayer1.TabIndex = 52;
+            this.lblPlayer1.Tag = "info1";
+            this.lblPlayer1.Text = "Player 1";
+            this.lblPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ptbAvatar1
+            // lblPointPlayer2
             // 
-            this.ptbAvatar1.Location = new System.Drawing.Point(8, 52);
-            this.ptbAvatar1.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbAvatar1.Name = "ptbAvatar1";
-            this.ptbAvatar1.Size = new System.Drawing.Size(50, 50);
-            this.ptbAvatar1.TabIndex = 40;
-            this.ptbAvatar1.TabStop = false;
+            this.lblPointPlayer2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPointPlayer2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPointPlayer2.ForeColor = System.Drawing.Color.White;
+            this.lblPointPlayer2.Location = new System.Drawing.Point(109, 159);
+            this.lblPointPlayer2.Name = "lblPointPlayer2";
+            this.lblPointPlayer2.Size = new System.Drawing.Size(114, 32);
+            this.lblPointPlayer2.TabIndex = 55;
+            this.lblPointPlayer2.Tag = "info2";
+            this.lblPointPlayer2.Text = "0";
+            this.lblPointPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ptbAvatar2
+            // lblPlayer2
             // 
-            this.ptbAvatar2.Location = new System.Drawing.Point(8, 158);
-            this.ptbAvatar2.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbAvatar2.Name = "ptbAvatar2";
-            this.ptbAvatar2.Size = new System.Drawing.Size(50, 50);
-            this.ptbAvatar2.TabIndex = 41;
-            this.ptbAvatar2.TabStop = false;
+            this.lblPlayer2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPlayer2.ForeColor = System.Drawing.Color.White;
+            this.lblPlayer2.Location = new System.Drawing.Point(109, 130);
+            this.lblPlayer2.Name = "lblPlayer2";
+            this.lblPlayer2.Size = new System.Drawing.Size(114, 23);
+            this.lblPlayer2.TabIndex = 55;
+            this.lblPlayer2.Tag = "info2";
+            this.lblPlayer2.Text = "Player 2";
+            this.lblPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ptbAvatar3
+            // ptbPlayer2
             // 
-            this.ptbAvatar3.Location = new System.Drawing.Point(8, 275);
-            this.ptbAvatar3.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbAvatar3.Name = "ptbAvatar3";
-            this.ptbAvatar3.Size = new System.Drawing.Size(50, 50);
-            this.ptbAvatar3.TabIndex = 42;
-            this.ptbAvatar3.TabStop = false;
+            this.ptbPlayer2.BackColor = System.Drawing.Color.Transparent;
+            this.ptbPlayer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPlayer2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbPlayer2.Location = new System.Drawing.Point(23, 120);
+            this.ptbPlayer2.Name = "ptbPlayer2";
+            this.ptbPlayer2.Size = new System.Drawing.Size(81, 81);
+            this.ptbPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPlayer2.TabIndex = 55;
+            this.ptbPlayer2.TabStop = false;
+            this.ptbPlayer2.Tag = "info2";
             // 
-            // ptbAvatar4
+            // btnAnswer
             // 
-            this.ptbAvatar4.Location = new System.Drawing.Point(8, 382);
-            this.ptbAvatar4.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbAvatar4.Name = "ptbAvatar4";
-            this.ptbAvatar4.Size = new System.Drawing.Size(50, 50);
-            this.ptbAvatar4.TabIndex = 43;
-            this.ptbAvatar4.TabStop = false;
+            this.btnAnswer.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAnswer.ForeColor = System.Drawing.Color.Black;
+            this.btnAnswer.Location = new System.Drawing.Point(827, 462);
+            this.btnAnswer.Name = "btnAnswer";
+            this.btnAnswer.Size = new System.Drawing.Size(108, 39);
+            this.btnAnswer.TabIndex = 72;
+            this.btnAnswer.Text = "Trả lời";
+            this.btnAnswer.UseVisualStyleBackColor = false;
+            this.btnAnswer.Visible = false;
+            this.btnAnswer.Click += new System.EventHandler(this.btnAnswer_Click);
             // 
-            // label_score4
+            // tbAnswer
             // 
-            this.label_score4.AutoSize = true;
-            this.label_score4.Font = new System.Drawing.Font("UTM Loko", 15F);
-            this.label_score4.Location = new System.Drawing.Point(42, 26);
-            this.label_score4.Name = "label_score4";
-            this.label_score4.Size = new System.Drawing.Size(82, 40);
-            this.label_score4.TabIndex = 0;
-            this.label_score4.Text = "Điểm";
+            this.tbAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbAnswer.Location = new System.Drawing.Point(82, 466);
+            this.tbAnswer.MaxLength = 20;
+            this.tbAnswer.Name = "tbAnswer";
+            this.tbAnswer.Size = new System.Drawing.Size(726, 30);
+            this.tbAnswer.TabIndex = 71;
+            this.tbAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label_score3
+            // Guide
             // 
-            this.label_score3.AutoSize = true;
-            this.label_score3.Font = new System.Drawing.Font("UTM Loko", 15F);
-            this.label_score3.Location = new System.Drawing.Point(44, 27);
-            this.label_score3.Name = "label_score3";
-            this.label_score3.Size = new System.Drawing.Size(82, 40);
-            this.label_score3.TabIndex = 1;
-            this.label_score3.Text = "Điểm";
+            this.Guide.BackColor = System.Drawing.Color.Transparent;
+            this.Guide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Guide.Image = global::MinigameOlympia.Properties.Resources.QuestionMark;
+            this.Guide.Location = new System.Drawing.Point(24, 462);
+            this.Guide.Name = "Guide";
+            this.Guide.Size = new System.Drawing.Size(39, 39);
+            this.Guide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Guide.TabIndex = 73;
+            this.Guide.TabStop = false;
+            this.Guide.Click += new System.EventHandler(this.Guide_Click);
             // 
-            // label_score2
+            // Round2
             // 
-            this.label_score2.AutoSize = true;
-            this.label_score2.Font = new System.Drawing.Font("UTM Loko", 15F);
-            this.label_score2.Location = new System.Drawing.Point(44, 32);
-            this.label_score2.Name = "label_score2";
-            this.label_score2.Size = new System.Drawing.Size(82, 40);
-            this.label_score2.TabIndex = 2;
-            this.label_score2.Text = "Điểm";
-            // 
-            // label_score1
-            // 
-            this.label_score1.AutoSize = true;
-            this.label_score1.Font = new System.Drawing.Font("UTM Loko", 15F);
-            this.label_score1.Location = new System.Drawing.Point(44, 29);
-            this.label_score1.Name = "label_score1";
-            this.label_score1.Size = new System.Drawing.Size(82, 40);
-            this.label_score1.TabIndex = 3;
-            this.label_score1.Text = "Điểm";
-            // 
-            // Vong2
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 554);
-            this.Controls.Add(this.ptbAvatar4);
-            this.Controls.Add(this.ptbAvatar3);
-            this.Controls.Add(this.ptbAvatar2);
-            this.Controls.Add(this.ptbAvatar1);
-            this.Controls.Add(this.groupBox_user4);
-            this.Controls.Add(this.groupBox_user3);
-            this.Controls.Add(this.groupBox_user2);
-            this.Controls.Add(this.groupBox_user1);
-            this.Controls.Add(this.progressBar_time);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox7);
+            this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(951, 522);
+            this.Controls.Add(this.Guide);
+            this.Controls.Add(this.btnAnswer);
+            this.Controls.Add(this.tbAnswer);
+            this.Controls.Add(this.gbQuestion);
+            this.Controls.Add(this.pnInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Vong2";
+            this.Name = "Round2";
             this.Text = "Vòng thi Tăng tốc";
-            this.Load += new System.EventHandler(this.Vong2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox_user4.ResumeLayout(false);
-            this.groupBox_user4.PerformLayout();
-            this.groupBox_user3.ResumeLayout(false);
-            this.groupBox_user3.PerformLayout();
-            this.groupBox_user2.ResumeLayout(false);
-            this.groupBox_user2.PerformLayout();
-            this.groupBox_user1.ResumeLayout(false);
-            this.groupBox_user1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar4)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Round2_FormClosing);
+            this.Load += new System.EventHandler(this.Round2_Load);
+            this.gbQuestion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.vvwQuestion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuestion)).EndInit();
+            this.pnInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guide)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ProgressBar progressBar_time;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label_answerD;
-        private System.Windows.Forms.Label label_answerB;
-        private System.Windows.Forms.Label label_answerC;
-        private System.Windows.Forms.Label label_answerA;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox_user4;
-        private System.Windows.Forms.GroupBox groupBox_user3;
-        private System.Windows.Forms.GroupBox groupBox_user2;
-        private System.Windows.Forms.GroupBox groupBox_user1;
-        private System.Windows.Forms.Label label_score4;
-        private System.Windows.Forms.Label label_score3;
-        private System.Windows.Forms.Label label_score2;
-        private System.Windows.Forms.Label label_score1;
-        private System.Windows.Forms.PictureBox ptbAvatar1;
-        private System.Windows.Forms.PictureBox ptbAvatar2;
-        private System.Windows.Forms.PictureBox ptbAvatar3;
-        private System.Windows.Forms.PictureBox ptbAvatar4;
+        private System.Windows.Forms.GroupBox gbQuestion;
+        private System.Windows.Forms.Panel pnInfo;
+        private System.Windows.Forms.Label lblPointPlayer1;
+        private System.Windows.Forms.PictureBox ptbPlayer1;
+        private System.Windows.Forms.Label lblPointPlayer4;
+        private System.Windows.Forms.Label lblPlayer4;
+        private System.Windows.Forms.PictureBox ptbPlayer4;
+        private System.Windows.Forms.Label lblPointPlayer3;
+        private System.Windows.Forms.Label lblPlayer3;
+        private System.Windows.Forms.PictureBox ptbPlayer3;
+        private System.Windows.Forms.Label lblPlayer1;
+        private System.Windows.Forms.Label lblPointPlayer2;
+        private System.Windows.Forms.Label lblPlayer2;
+        private System.Windows.Forms.PictureBox ptbPlayer2;
+        private System.Windows.Forms.PictureBox ptbQuestion;
+        private System.Windows.Forms.Button btnAnswer;
+        private System.Windows.Forms.TextBox tbAnswer;
+        private LibVLCSharp.WinForms.VideoView vvwQuestion;
+        private System.Windows.Forms.PictureBox Guide;
     }
 }
