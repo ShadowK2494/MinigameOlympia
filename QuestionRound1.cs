@@ -1,6 +1,7 @@
 ﻿using MinigameOlympia.Models;
 using MinigameOlympia;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Media;
 using System.Net.Sockets;
@@ -15,6 +16,7 @@ namespace MinigameOlympia {
         public TcpClient client;
         public string roomCode;
         public Player player;
+        public bool isTerminated;
         private string[] analyzedData;
         private bool isReady = false;
         private bool isQuestDone = false;
@@ -38,6 +40,7 @@ namespace MinigameOlympia {
         }
 
         private void QuestionRound1_Load(object sender, EventArgs e) {
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
             analyzedData = data.Split('*');
             isReady = true;
             Clock.Invalidate();
@@ -45,6 +48,10 @@ namespace MinigameOlympia {
             totalTime = new TimeSpan(0, 0, 15);
             timeLeft = totalTime;
             startTimer.Start();
+            if (isTerminated) {
+                tbAnswer.Enabled = false;
+                btnAnswer.Enabled = false;
+            }
         }
 
         private void startTimer_Tick(object sender, EventArgs e) {

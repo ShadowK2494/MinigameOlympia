@@ -351,6 +351,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InfoRound.resx">
+      <DependentUpon>InfoRound.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InstructionRound1.resx">
       <DependentUpon>InstructionRound1.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,11 +425,14 @@
     <None Include="picture\plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="picture\add.png" />
     <Content Include="picture\BackgroundLogin.jpg" />
     <Content Include="picture\Bell.png" />
     <Content Include="picture\ckhung2.png" />
+    <Content Include="picture\Cross.png" />
     <Content Include="picture\HidePass.png" />
     <Content Include="picture\QuestionMark.png" />
+    <Content Include="picture\Tick.png" />
     <Content Include="Sound\Intro.wav" />
     <Content Include="Sound\Result.wav" />
     <Content Include="Sound\ShowAns.wav" />
@@ -434,6 +440,7 @@
     <Content Include="Sound\TT_20s.wav" />
     <Content Include="Sound\TT_30s.wav" />
     <Content Include="Sound\TT_Open.wav" />
+    <Content Include="Sound\TT_Start.wav" />
     <Content Include="Sound\VCNC_Bell.wav" />
     <Content Include="Sound\VCNV_15s.wav" />
     <Content Include="Sound\VCNV_False.wav" />

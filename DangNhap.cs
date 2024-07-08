@@ -33,7 +33,7 @@ namespace MinigameOlympia {
             } else {
                 using (HttpClient client = new HttpClient()) {
                     try {
-                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text.Trim();
+                        string url = "https://olympiawebservice.azurewebsites.net/api/Player/username?lookup=" + tbUsername.Text;
                         var response = await client.GetAsync(url);
                         if (!response.IsSuccessStatusCode) {
                             lblAlertUsername.Text = "ⓘ Username không tồn tại";
@@ -53,7 +53,7 @@ namespace MinigameOlympia {
         }
 
         private void PasswordTextbox(object sender, EventArgs e) {
-            tbPassword.MaxLength = 20;
+            tbPassword.MaxLength = 15;
             if (showPass)
                 tbPassword.PasswordChar = '●';
             else

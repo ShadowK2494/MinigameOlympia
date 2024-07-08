@@ -1,4 +1,5 @@
 ﻿using MinigameOlympia.Models;
+using MinigameOlympia;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -17,13 +18,22 @@ namespace MinigameOlympia {
         public Image image;
         public string roomCode;
         public bool isAdmin = true;
-        private TcpClient client;
+        public TcpClient client;
         private Thread receive;
         private int numConnection = 0;
         public List<List<Player>> friendList;
+        private PictureBox addButton;
+        private System.Windows.Forms.Timer countdownTimer = new System.Windows.Forms.Timer();
 
         public PhongCho() {
             InitializeComponent();
+            countdownTimer.Interval = 5000;
+            countdownTimer.Tick += countdownTimer_Tick;
+        }
+
+        private void countdownTimer_Tick(object sender, EventArgs e) {
+            countdownTimer.Stop();
+            addButton.Enabled = true;
         }
 
         private void PhongCho_Load(object sender, EventArgs e) {
@@ -42,7 +52,7 @@ namespace MinigameOlympia {
         }
 
         private void LoadFriendList() {
-            if (friendList[0] != null) {
+            if (friendList != null && friendList[0] != null) {
                 friendList[0].Sort((p1, p2) => p2.WinCount.CompareTo(p1.WinCount));
                 int y = 0;
                 for (int i = 0; i < friendList[0].Count; i++) {
@@ -52,7 +62,18 @@ namespace MinigameOlympia {
                         Size = new Size(233, 81)
                     };
                     pnFriend.Controls.Add(pn);
-                    PictureBox ptb = new PictureBox() {
+                    PictureBox ptb1 = new PictureBox() {
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Image = Properties.Resources.add,
+                        Location = new Point(190, 45),
+                        BorderStyle = BorderStyle.None,
+                        Size = new Size(22, 22),
+                        Cursor = Cursors.Hand,
+                        Tag = i
+                    };
+                    ptb1.Click += Add_Player;
+                    pn.Controls.Add(ptb1);
+                    PictureBox ptb2 = new PictureBox() {
                         SizeMode = PictureBoxSizeMode.StretchImage,
                         Image = LoadImage(friendList[0][i].Avatar),
                         Dock = DockStyle.Left,
@@ -61,8 +82,8 @@ namespace MinigameOlympia {
                         Cursor = Cursors.Hand,
                         Tag = i
                     };
-                    ptb.Click += Information;
-                    pn.Controls.Add(ptb);
+                    ptb2.Click += Information;
+                    pn.Controls.Add(ptb2);
                     Label lb = new Label() {
                         AutoSize = true,
                         Location = new Point(95, 14),
@@ -74,6 +95,15 @@ namespace MinigameOlympia {
                     y += 81;
                 }
             }
+        }
+
+        private void Add_Player(object sender, EventArgs e) {
+            PictureBox ptb = (PictureBox)sender;
+            Player p = friendList[0][int.Parse(ptb.Tag.ToString())];
+            addButton = ptb;
+            ptb.Enabled = false;
+            SendData($"INVITE:{roomCode}-{p.Username}-{player.Username}", client);
+            countdownTimer.Start();
         }
 
         private void Information(object sender, EventArgs e) {
@@ -97,17 +127,17 @@ namespace MinigameOlympia {
             foreach (Form form in Application.OpenForms) {
                 if (form.Name == "GiaoDienChinh") {
                     form.Visible = true;
+                    ((GiaoDienChinh)form).suspendEvent.Set();
                     break;
                 }
             }
             SendData("DISCONNECT:" + roomCode + "-" + player.Username, client);
             Thread.Sleep(1000);
-            client.Close();
             Close();
         }
 
         private void Connect() {
-            client = new TcpClient("127.0.0.1", 12345);
+            //client = new TcpClient("127.0.0.1", 12345);
             receive = new Thread(() => ReceiveMessage(client));
             receive.IsBackground = true;
             receive.Start();
@@ -177,6 +207,17 @@ namespace MinigameOlympia {
         private async void AnalyzingMessage(string mess, TcpClient tcpClient) {
             string[] Payload = mess.Split(':');
             switch (Payload[0]) {
+                case "REP_INVITE":
+                    if (Payload[1] == "0") {
+                        MessageBox.Show("Người chơi này chưa online!");
+                    } else if (Payload[1] == "1") {
+                        MessageBox.Show("Người chơi này đã vào phòng khác!");
+                    } else if (Payload[1] == "2") {
+                        MessageBox.Show("Người chơi đã từ chối tham gia phòng!");
+                    } else {
+                        MessageBox.Show("Người chơi đã đồng ý vào phòng!");
+                    }
+                    break;
                 case "INFO_CON":
                     string[] data = Payload[1].Split('-');
                     roomCode = data[0];
@@ -204,8 +245,9 @@ namespace MinigameOlympia {
                             if (p.Tag.ToString() == data[3]) {
                                 i++;
                                 if (data[2] == player.Username) {
-                                    if (!isAdmin)
+                                    if (!isAdmin) {
                                         p.Image = image;
+                                    }
                                 } else
                                     p.Image = LoadImage(avatarByte);
                             }
@@ -216,44 +258,49 @@ namespace MinigameOlympia {
                     break;
                 case "INFO_DISCON":
                     RestoreDefault();
-                    data = Payload[1].Split('-');
-                    numConnection = int.Parse(data[1]);
-                    if (numConnection == 1) {
-                        if (InvokeRequired) {
-                            Invoke(new MethodInvoker(delegate {
+                    var list = JsonConvert.DeserializeObject<List<string>>(Payload[1]);
+                    foreach (var item in list) {
+                        data = item.Split('-');
+                        numConnection = int.Parse(data[1]);
+                        if (numConnection == 1) {
+                            if (InvokeRequired) {
+                                Invoke(new MethodInvoker(delegate {
+                                    BtnStart.Visible = true;
+                                }));
+                            } else {
                                 BtnStart.Visible = true;
-                            }));
-                        } else {
-                            BtnStart.Visible = true;
+                            }
                         }
-                    }
-                    avatarByte = await getAvatar(data[2]);
-                    i = 0;
-                    foreach (Control c in panelMain.Controls) {
-                        if (c is Label) {
-                            Label l = (Label)c;
-                            if (l.Tag.ToString() == data[3]) {
-                                i++;
-                                if (data[2] == player.Username) {
-                                    l.Text = player.Username;
-                                    l.ForeColor = Color.Yellow;
-                                } else {
-                                    l.Text = data[2];
-                                    l.ForeColor = Color.White;
+                        avatarByte = await getAvatar(data[2]);
+                        i = 0;
+                        foreach (Control c in panelMain.Controls) {
+                            Invoke(new MethodInvoker(delegate {
+                                if (c is Label) {
+                                    Label l = (Label)c;
+                                    if (l.Tag.ToString() == data[3]) {
+                                        i++;
+                                        if (data[2] == player.Username) {
+                                            l.Text = player.Username;
+                                            l.ForeColor = Color.Yellow;
+                                        } else {
+                                            l.Text = data[2];
+                                            l.ForeColor = Color.White;
+                                        }
+                                    }
+                                } else if (c is PictureBox) {
+                                    PictureBox p = (PictureBox)c;
+                                    if (p.Tag.ToString() == data[3]) {
+                                        i++;
+                                        if (data[2] == player.Username)
+                                            p.Image = image;
+                                        else
+                                            p.Image = LoadImage(avatarByte);
+                                    }
                                 }
-                            }
-                        } else if (c is PictureBox) {
-                            PictureBox p = (PictureBox)c;
-                            if (p.Tag.ToString() == data[3]) {
-                                i++;
-                                if (data[2] == player.Username)
-                                    p.Image = image;
-                                else
-                                    p.Image = LoadImage(avatarByte);
-                            }
+                            }));
+                            if (i == 2)
+                                break;
                         }
-                        if (i == 2)
-                            break;
                     }
                     break;
                 case "START":

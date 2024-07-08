@@ -3,6 +3,7 @@ using MinigameOlympia;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -19,11 +20,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Http;
-using Newtonsoft.Json;
-using System.CodeDom;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MinigameOlympia {
     public partial class Vong1 : Form {
@@ -99,8 +95,11 @@ namespace MinigameOlympia {
         }
 
         private void Round1_Load(object sender, EventArgs e) {
-            sound = new SoundPlayer(Properties.Resources.VCNV_OpenCNV);
-            sound.Play();
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
+            Invoke(new MethodInvoker(delegate {
+                sound = new SoundPlayer(Properties.Resources.VCNV_OpenCNV);
+                sound.Play();
+            }));
             Cursor = Cursors.WaitCursor;
             SendData("INFO_START:" + roomCode, client);
             receive = new Thread(() => ReceiveMessage(client));
@@ -284,6 +283,7 @@ namespace MinigameOlympia {
                         btnQuest3.Enabled = false;
                         btnQuest4.Enabled = false;
                         Bell.Enabled = false;
+                        isPress = false;
                         remainPlayer--;
                         if (player.Username != playerTurn)
                             AddText(1, $"Lượt của người chơi {playerTurn}\r\n");
@@ -307,6 +307,7 @@ namespace MinigameOlympia {
                     data = Payload[1].Split('-');
                     if (data[0] == "0") {
                         remainPlayer--;
+                        isPress = false;
                         AddText(0, $"Không chính xác! Người chơi {data[1]} bị loại!\r\n");
                         btnAnswer.Enabled = true;
                         foreach (Button b in remainButton) {
@@ -374,16 +375,6 @@ namespace MinigameOlympia {
                 Close();
             }));
         }
-        private void Vong1_Load(object sender, EventArgs e)
-        {
-          //
-        }
-        //Hàm đếm thời gian
-        public void CountdownTimer()
-        {
-            int secondsRemaining = 10;
-            progressBar_time.Minimum = 0;
-            progressBar_time.Maximum = 10;
 
         private void FlipPic(string cnv, string note) {
             //Invoke(new MethodInvoker(delegate {
@@ -458,10 +449,10 @@ namespace MinigameOlympia {
             form.client = client;
             form.roomCode = roomCode;
             form.player = player;
-            form.Visible = false;
+            form.isTerminated = isTerminated;
             Visible = false;
-            if (isTerminated)
-                form.Visible = false;
+            form.WindowState = FormWindowState.Normal;
+            form.Activate();
             form.ShowDialog();
             if (form.IsQuestDone()) {
                 suspendEvent.Reset();
@@ -469,6 +460,8 @@ namespace MinigameOlympia {
                 show.client = client;
                 show.roomCode = roomCode;
                 show.round = 1;
+                show.WindowState = FormWindowState.Normal;
+                show.Activate();
                 show.ShowDialog();
                 numGuess++;
                 if (show.IsGetPic()) {
@@ -738,8 +731,9 @@ namespace MinigameOlympia {
 
         private void countdownFinalTimer_Tick(object sender, EventArgs e) {
             if (finalTimeLeft.TotalSeconds > 0) {
-                if (!isPress)
+                if (!isPress) {
                     finalTimeLeft = finalTimeLeft.Subtract(TimeSpan.FromSeconds(1));
+                }
             } else {
                 countdownFinalTimer.Stop();
                 AddText(0, "Đã hết 5 giây cuối cùng, không ai trả lời được chướng ngại vật\r\n");
@@ -754,26 +748,5 @@ namespace MinigameOlympia {
                 btnAnswer.Visible = false;
             }
         }
-        //Not completed, fix later
-        //public static async Task<Question> GetGroupQuestion_Async(string IDQuestion)
-        //{
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        var url = "https://olympiawebservice.azurewebsites.net/api/GroupQuestion";
-        //        var response = await httpClient.GetAsync(url);
-        //        response.EnsureSuccessStatusCode();
-        //        var questions = JsonConvert.DeserializeObject<List<Question>>(await response.Content.ReadAsStringAsync());
-        //        var groupQuestions = questions.Where(q => q.IsMain).ToList();
-        //        if (groupQuestions.Count > 0)
-        //        {
-        //            var randomIndex = new Random().Next(0, groupQuestions.Count);
-        //            return groupQuestions[randomIndex];
-        //        }
-        //        else
-        //        {
-        //            return null;
-        //        }
-        //    }
-        //}
     }
 }

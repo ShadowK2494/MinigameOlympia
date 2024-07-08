@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace MinigameOlympia {
@@ -11,16 +12,22 @@ namespace MinigameOlympia {
         public Player player;
         public Image image;
         public string roomCode = "";
+        public TcpClient client;
         public List<List<Player>> friendList;
+        private bool isExit = false;
         public TypeCode() {
             InitializeComponent();
         }
 
+        public bool getIsExit() {
+            return isExit;
+        }
+
         private async void btnEnter_Click(object sender, EventArgs e) {
-            HttpClient client = new HttpClient();
+            HttpClient httpClient = new HttpClient();
             try {
                 string url = "https://olympiawebservice.azurewebsites.net/api/Room/" + tbRoomCode.Text;
-                var response = await client.GetAsync(url);
+                var response = await httpClient.GetAsync(url);
                 if (response.IsSuccessStatusCode) {
                     var res = await response.Content.ReadAsStringAsync();
                     JObject keyValuePairs = JObject.Parse(res);
@@ -30,19 +37,15 @@ namespace MinigameOlympia {
                     } else {
                         roomCode = tbRoomCode.Text;
                         PhongCho pc = new PhongCho();
+                        pc.client = client;
                         pc.player = player;
                         pc.image = image;
                         pc.roomCode = roomCode;
                         pc.friendList = friendList;
                         pc.isAdmin = false;
                         pc.Show();
+                        isExit = true;
                         Close();
-                        foreach (Form form in Application.OpenForms) {
-                            if (form.Name == "MainScreen") {
-                                form.Visible = false;
-                                break;
-                            }
-                        }
                     }
                 } else {
                     MessageBox.Show("Không tìm thấy phòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

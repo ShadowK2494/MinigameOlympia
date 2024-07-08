@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiaoDienChinh));
-            this.grbRank = new System.Windows.Forms.GroupBox();
             this.pnRank = new System.Windows.Forms.Panel();
             this.btnEnter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -33,31 +32,28 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCreateRoom = new System.Windows.Forms.Button();
             this.btnGuide = new System.Windows.Forms.Button();
-            this.grbRank.SuspendLayout();
+            this.tabCtrl = new System.Windows.Forms.TabControl();
+            this.tpgRank = new System.Windows.Forms.TabPage();
+            this.tpgFind = new System.Windows.Forms.TabPage();
+            this.pnResultFind = new System.Windows.Forms.Panel();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.tbFind = new System.Windows.Forms.TextBox();
+            this.tpgRequest = new System.Windows.Forms.TabPage();
+            this.pnRequest = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
+            this.tabCtrl.SuspendLayout();
+            this.tpgRank.SuspendLayout();
+            this.tpgFind.SuspendLayout();
+            this.tpgRequest.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grbRank
-            // 
-            this.grbRank.BackColor = System.Drawing.Color.Transparent;
-            this.grbRank.Controls.Add(this.pnRank);
-            this.grbRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.grbRank.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.grbRank.Location = new System.Drawing.Point(613, 21);
-            this.grbRank.Margin = new System.Windows.Forms.Padding(2);
-            this.grbRank.Name = "grbRank";
-            this.grbRank.Padding = new System.Windows.Forms.Padding(2);
-            this.grbRank.Size = new System.Drawing.Size(243, 382);
-            this.grbRank.TabIndex = 4;
-            this.grbRank.TabStop = false;
-            this.grbRank.Text = "BẢNG XẾP HẠNG";
             // 
             // pnRank
             // 
             this.pnRank.AutoScroll = true;
-            this.pnRank.Location = new System.Drawing.Point(5, 43);
+            this.pnRank.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRank.Location = new System.Drawing.Point(3, 3);
             this.pnRank.Name = "pnRank";
-            this.pnRank.Size = new System.Drawing.Size(233, 319);
+            this.pnRank.Size = new System.Drawing.Size(227, 337);
             this.pnRank.TabIndex = 0;
             // 
             // btnEnter
@@ -148,6 +144,92 @@
             this.btnGuide.UseVisualStyleBackColor = false;
             this.btnGuide.Click += new System.EventHandler(this.btnGuide_Click);
             // 
+            // tabCtrl
+            // 
+            this.tabCtrl.Controls.Add(this.tpgRank);
+            this.tabCtrl.Controls.Add(this.tpgFind);
+            this.tabCtrl.Controls.Add(this.tpgRequest);
+            this.tabCtrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tabCtrl.Location = new System.Drawing.Point(614, 21);
+            this.tabCtrl.Name = "tabCtrl";
+            this.tabCtrl.SelectedIndex = 0;
+            this.tabCtrl.Size = new System.Drawing.Size(241, 372);
+            this.tabCtrl.TabIndex = 11;
+            this.tabCtrl.SelectedIndexChanged += new System.EventHandler(this.tabCtrl_SelectedIndexChanged);
+            // 
+            // tpgRank
+            // 
+            this.tpgRank.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.tpgRank.Controls.Add(this.pnRank);
+            this.tpgRank.Location = new System.Drawing.Point(4, 25);
+            this.tpgRank.Name = "tpgRank";
+            this.tpgRank.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgRank.Size = new System.Drawing.Size(233, 343);
+            this.tpgRank.TabIndex = 0;
+            this.tpgRank.Text = "Bảng xếp hạng";
+            // 
+            // tpgFind
+            // 
+            this.tpgFind.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.tpgFind.Controls.Add(this.pnResultFind);
+            this.tpgFind.Controls.Add(this.btnFind);
+            this.tpgFind.Controls.Add(this.tbFind);
+            this.tpgFind.Location = new System.Drawing.Point(4, 25);
+            this.tpgFind.Name = "tpgFind";
+            this.tpgFind.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgFind.Size = new System.Drawing.Size(233, 343);
+            this.tpgFind.TabIndex = 1;
+            this.tpgFind.Text = "Tìm kiếm";
+            // 
+            // pnResultFind
+            // 
+            this.pnResultFind.AutoScroll = true;
+            this.pnResultFind.Location = new System.Drawing.Point(3, 35);
+            this.pnResultFind.Name = "pnResultFind";
+            this.pnResultFind.Size = new System.Drawing.Size(227, 308);
+            this.pnResultFind.TabIndex = 2;
+            // 
+            // btnFind
+            // 
+            this.btnFind.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.Location = new System.Drawing.Point(168, 0);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(65, 31);
+            this.btnFind.TabIndex = 1;
+            this.btnFind.Text = "Tìm";
+            this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // tbFind
+            // 
+            this.tbFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbFind.Location = new System.Drawing.Point(3, 3);
+            this.tbFind.Name = "tbFind";
+            this.tbFind.Size = new System.Drawing.Size(167, 26);
+            this.tbFind.TabIndex = 0;
+            this.tbFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tpgRequest
+            // 
+            this.tpgRequest.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.tpgRequest.Controls.Add(this.pnRequest);
+            this.tpgRequest.Location = new System.Drawing.Point(4, 25);
+            this.tpgRequest.Name = "tpgRequest";
+            this.tpgRequest.Size = new System.Drawing.Size(233, 343);
+            this.tpgRequest.TabIndex = 2;
+            this.tpgRequest.Text = "Lời mời";
+            // 
+            // pnRequest
+            // 
+            this.pnRequest.AutoScroll = true;
+            this.pnRequest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRequest.Location = new System.Drawing.Point(0, 0);
+            this.pnRequest.Name = "pnRequest";
+            this.pnRequest.Size = new System.Drawing.Size(233, 343);
+            this.pnRequest.TabIndex = 1;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +239,7 @@
             this.BackgroundImage = global::MinigameOlympia.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(867, 414);
+            this.Controls.Add(this.tabCtrl);
             this.Controls.Add(this.btnGuide);
             this.Controls.Add(this.btnCreateRoom);
             this.Controls.Add(this.btnExit);
@@ -164,23 +247,26 @@
             this.Controls.Add(this.ptbAvatar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnter);
-            this.Controls.Add(this.grbRank);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainScreen";
             this.Text = "Giao diện chính";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.GiaoDienChinh_Load);
-            this.grbRank.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
+            this.tabCtrl.ResumeLayout(false);
+            this.tpgRank.ResumeLayout(false);
+            this.tpgFind.ResumeLayout(false);
+            this.tpgFind.PerformLayout();
+            this.tpgRequest.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox grbRank;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox ptbAvatar;
@@ -189,5 +275,13 @@
         private System.Windows.Forms.Button btnCreateRoom;
         private System.Windows.Forms.Panel pnRank;
         private System.Windows.Forms.Button btnGuide;
+        private System.Windows.Forms.TabControl tabCtrl;
+        private System.Windows.Forms.TabPage tpgRank;
+        private System.Windows.Forms.TabPage tpgFind;
+        private System.Windows.Forms.TextBox tbFind;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Panel pnResultFind;
+        private System.Windows.Forms.TabPage tpgRequest;
+        private System.Windows.Forms.Panel pnRequest;
     }
 }

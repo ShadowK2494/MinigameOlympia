@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoRound));
             this.lblInfoRound = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -37,7 +36,7 @@
             this.lblInfoRound.Size = new System.Drawing.Size(591, 98);
             this.lblInfoRound.TabIndex = 63;
             this.lblInfoRound.Tag = "";
-            this.lblInfoRound.Text = "Chướng ngại vật gồm có n ký tự";
+            this.lblInfoRound.Text = "Tên vòng thi";
             this.lblInfoRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InfoRound
@@ -49,7 +48,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblInfoRound);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InfoRound";
             this.Text = "InfoRound";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InfoRound_FormClosing);

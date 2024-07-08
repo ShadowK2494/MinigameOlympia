@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -39,6 +40,8 @@ namespace MinigameOlympia {
                 vong1.roomCode = roomCode;
                 vong1.player = player;
                 vong1.avatar = image;
+                vong1.WindowState = FormWindowState.Normal;
+                vong1.Activate();
                 vong1.Show();
                 Close();
             }
@@ -50,24 +53,23 @@ namespace MinigameOlympia {
                 vong2.player = player;
                 vong2.players = players;
                 vong2.avatars = avatars;
+                vong2.WindowState = FormWindowState.Normal;
+                vong2.Activate();
                 vong2.Show();
                 Close();
             }
         }
 
         private void InfoRound_Load(object sender, EventArgs e) {
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
             if (round == 1) {
                 lblInfoRound.Text = "Vượt chướng ngại vật";
-                Invoke(new MethodInvoker(delegate {
-                    sound = new SoundPlayer(Properties.Resources.Intro);
-                    sound.Play();
-                }));
+                sound = new SoundPlayer(Properties.Resources.Intro);
+                sound.Play();
             } else {
                 lblInfoRound.Text = "Tăng tốc";
-                Invoke(new MethodInvoker(delegate {
-                    sound = new SoundPlayer(Properties.Resources.Intro);
-                    sound.Play();
-                }));
+                sound = new SoundPlayer(Properties.Resources.TT_Start);
+                sound.Play();
             }
             startTimer.Start();
         }
